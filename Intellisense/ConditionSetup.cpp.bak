@@ -1,0 +1,764 @@
+﻿// ConditionSetup.cpp : 구현 파일입니다.
+//
+
+#include "stdafx.h"
+#include "Intellisense.h"
+#include "ConditionSetup.h"
+#include "afxdialogex.h"
+
+
+// CConditionSetup 대화 상자입니다.
+
+IMPLEMENT_DYNAMIC(CConditionSetup, CDialogEx)
+
+CConditionSetup::CConditionSetup(CWnd* pParent /*=NULL*/)
+	: CDialogEx(CConditionSetup::IDD, pParent)
+{
+	g_OffInspection=false;
+	m_RKindCondition=0;
+}
+
+CConditionSetup::~CConditionSetup()
+{
+}
+
+void CConditionSetup::DoDataExchange(CDataExchange* pDX)
+{
+	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_BT_SAVE, m_Bt_Save);
+	DDX_Control(pDX, IDCANCEL, m_Bt_Close);
+	DDX_Radio(pDX, IDC_RKINDCONDITION_0, m_RKindCondition);
+	DDX_Control(pDX, IDC_CONDITIONSETUPTAB, m_tabCtrl);
+	DDX_Control(pDX, IDC_RKINDCONDITION_0, m_BtKind0);
+	DDX_Control(pDX, IDC_RKINDCONDITION_1, m_BtKind1);
+	DDX_Control(pDX, IDC_RKINDCONDITION_2, m_BtKind2);
+	DDX_Check(pDX, IDC_CHECK1, m_OffInspection);
+}
+
+
+BEGIN_MESSAGE_MAP(CConditionSetup, CDialogEx)
+	ON_WM_PAINT()
+	ON_WM_CTLCOLOR()
+	ON_BN_CLICKED(IDC_RKINDCONDITION_0, &CConditionSetup::OnClickedRkindcondition0)
+	ON_COMMAND(IDC_RKINDCONDITION_1, &CConditionSetup::OnRkindcondition1)
+	ON_COMMAND(IDC_RKINDCONDITION_2, &CConditionSetup::OnRkindcondition2)
+	ON_BN_CLICKED(IDC_BT_SAVE, &CConditionSetup::OnBnClickedBtSave)
+	ON_BN_CLICKED(IDC_CHECK1, &CConditionSetup::OnClickedCheck1)
+	ON_BN_CLICKED(IDCANCEL, &CConditionSetup::OnBnClickedCancel)
+END_MESSAGE_MAP()
+
+
+// CConditionSetup 메시지 처리기입니다.
+BOOL CConditionSetup::OnInitDialog()
+{
+	CDialogEx::OnInitDialog();
+
+	// TODO:  여기에 추가 초기화 작업을 추가합니다.
+	Brush.CreateStockObject(NULL_BRUSH);
+	SetWindowPos(NULL, 672, 119, 0, 0, SWP_NOSIZE | SWP_NOZORDER);
+	LoadBackground();
+	m_Kindtab=0;
+	m_tabCtrl.m_Kindtab=m_Kindtab;
+	if(m_Kindtab==0)
+	{
+		m_tabCtrl.InsertItem(0, g_MessageArr[23]);
+		m_tabCtrl.InsertItem(1, g_MessageArr[24]);
+		m_tabCtrl.InsertItem(2, g_MessageArr[25]);
+		m_tabCtrl.InsertItem(3, g_MessageArr[26]);
+		m_tabCtrl.InsertItem(4, g_MessageArr[27]);
+		m_tabCtrl.InsertItem(5, g_MessageArr[28]);
+
+	}	
+	m_tabCtrl.Init();
+
+	//메뉴선택 기능 추가 20171102
+	if(g_Masking1==false && g_Masking2 == false)
+		GetDlgItem(IDC_RKINDCONDITION_2)->EnableWindow(false); 
+
+	if(g_Special1 == false && g_Special2 == false && g_Special3 == false)
+		GetDlgItem(IDC_RKINDCONDITION_1)->EnableWindow(false);
+	//메뉴선택 기능 추가 20171102
+	
+
+	return TRUE;  // return TRUE unless you set the focus to a control
+	// 예외: OCX 속성 페이지는 FALSE를 반환해야 합니다.
+}
+
+void CConditionSetup::LoadBackground()
+{
+	BITMAP bmpInfo;
+	if(g_NationalCode==0)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_CONDITIONSETUP); 
+		m_Bt_Close.LoadBitmaps(IDB_SELPRODUCT_EXIT,IDB_SELPRODUCT_EXIT_0); 
+		m_Bt_Save.LoadBitmaps(IDB_BTSETUPMENU_SAVE,IDB_BTSETUPMENU_SAVE_1); 
+		m_bmpTab0.LoadBitmap(IDB_BTKINDCOND0);
+		m_bmpTab0_0.LoadBitmap(IDB_BTKINDCOND0_0);
+		m_bmpTab1.LoadBitmap(IDB_BTKINDCOND1);
+		m_bmpTab1_0.LoadBitmap(IDB_BTKINDCOND1_0);
+		m_bmpTab2.LoadBitmap(IDB_BTKINDCOND2);
+		m_bmpTab2_0.LoadBitmap(IDB_BTKINDCOND2_0);
+	}
+	else if(g_NationalCode==1)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_CONDITIONSETUP_ENG); 
+		m_Bt_Close.LoadBitmaps(IDB_SELPRODUCT_EXIT_ENG,IDB_SELPRODUCT_EXIT_0_ENG); 
+		m_Bt_Save.LoadBitmaps(IDB_BTSETUPMENU_SAVE_ENG,IDB_BTSETUPMENU_SAVE_1_ENG); 
+		m_bmpTab0.LoadBitmap(IDB_BTKINDCOND0_ENG);
+		m_bmpTab0_0.LoadBitmap(IDB_BTKINDCOND0_0_ENG);
+		m_bmpTab1.LoadBitmap(IDB_BTKINDCOND1_ENG);
+		m_bmpTab1_0.LoadBitmap(IDB_BTKINDCOND1_0_ENG);
+		m_bmpTab2.LoadBitmap(IDB_BTKINDCOND2_ENG);
+		m_bmpTab2_0.LoadBitmap(IDB_BTKINDCOND2_0_ENG);
+	}
+	else if(g_NationalCode==2)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_CONDITIONSETUP_CHI); 
+		m_Bt_Close.LoadBitmaps(IDB_SELPRODUCT_EXIT_CHI,IDB_SELPRODUCT_EXIT_0_CHI); 
+		m_Bt_Save.LoadBitmaps(IDB_BTSETUPMENU_SAVE_CHI,IDB_BTSETUPMENU_SAVE_1_CHI); 
+		m_bmpTab0.LoadBitmap(IDB_BTKINDCOND0_CHI);
+		m_bmpTab0_0.LoadBitmap(IDB_BTKINDCOND0_0_CHI);
+		m_bmpTab1.LoadBitmap(IDB_BTKINDCOND1_CHI);
+		m_bmpTab1_0.LoadBitmap(IDB_BTKINDCOND1_0_CHI);
+		m_bmpTab2.LoadBitmap(IDB_BTKINDCOND2_CHI);
+		m_bmpTab2_0.LoadBitmap(IDB_BTKINDCOND2_0_CHI);
+	}
+	else if(g_NationalCode==3)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_CONDITIONSETUP_SPN); 
+		m_Bt_Close.LoadBitmaps(IDB_SELPRODUCT_EXIT_SPN,IDB_SELPRODUCT_EXIT_0_SPN); 
+		m_Bt_Save.LoadBitmaps(IDB_BTSETUPMENU_SAVE_SPN,IDB_BTSETUPMENU_SAVE_1_SPN); 
+		m_bmpTab0.LoadBitmap(IDB_BTKINDCOND0_SPN);
+		m_bmpTab0_0.LoadBitmap(IDB_BTKINDCOND0_0_SPN);
+		m_bmpTab1.LoadBitmap(IDB_BTKINDCOND1_SPN);
+		m_bmpTab1_0.LoadBitmap(IDB_BTKINDCOND1_0_SPN);
+		m_bmpTab2.LoadBitmap(IDB_BTKINDCOND2_SPN);
+		m_bmpTab2_0.LoadBitmap(IDB_BTKINDCOND2_0_SPN);
+	}
+
+    m_bmpMainBG.GetBitmap(&bmpInfo);
+    m_nMainWidth = bmpInfo.bmWidth; 
+    m_nMainHeight = bmpInfo.bmHeight; 
+	
+	m_Bt_Close.SizeToContent();	
+	m_Bt_Save.SizeToContent();
+
+	m_BtKind0.SetBitmap(m_bmpTab0);
+	m_BtKind1.SetBitmap(m_bmpTab1_0);
+	m_BtKind2.SetBitmap(m_bmpTab2_0);
+}
+
+BOOL CConditionSetup::PreTranslateMessage(MSG* pMsg)
+{
+	// TODO: 여기에 특수화된 코드를 추가 및/또는 기본 클래스를 호출합니다.
+	if(pMsg->wParam == VK_ESCAPE)
+		return FALSE; 
+	
+	if(pMsg->wParam == VK_RETURN)
+		return FALSE;
+
+	return CDialogEx::PreTranslateMessage(pMsg);
+}
+
+
+void CConditionSetup::OnPaint()
+{
+	CPaintDC dc(this); // device context for painting
+	
+	CDC MemDC; 
+	MemDC.CreateCompatibleDC(&dc);
+	MemDC.SelectObject(&m_bmpMainBG);
+    dc.BitBlt(0, 0, m_nMainWidth, m_nMainHeight, &MemDC, 0, 0, SRCCOPY);
+	MemDC.DeleteDC();
+}
+
+
+HBRUSH CConditionSetup::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
+{
+	HBRUSH hbr = CDialogEx::OnCtlColor(pDC, pWnd, nCtlColor);
+
+	if(nCtlColor == CTLCOLOR_STATIC) 
+	{
+		pDC->SetTextColor(RGB(255,255,255));  //글씨색 변경	
+        pOldBrush = (CBrush*)pDC->SelectObject(&Brush);
+        pDC->SetBkMode(TRANSPARENT);
+        return (HBRUSH) Brush;
+    }
+	return hbr;
+}
+
+void CConditionSetup::OnClickedRkindcondition0()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_BtKind0.SetBitmap(m_bmpTab0);
+	m_BtKind1.SetBitmap(m_bmpTab1_0);
+	m_BtKind2.SetBitmap(m_bmpTab2_0);
+	m_tabCtrl.DeleteAllItems();
+	m_Kindtab=0;
+	m_tabCtrl.m_Kindtab=m_Kindtab;
+	if(m_Kindtab==0)
+	{
+		m_tabCtrl.InsertItem(0, g_MessageArr[23]);
+		m_tabCtrl.InsertItem(1, g_MessageArr[24]);
+		m_tabCtrl.InsertItem(2, g_MessageArr[25]);
+		m_tabCtrl.InsertItem(3, g_MessageArr[26]);
+		m_tabCtrl.InsertItem(4, g_MessageArr[27]);
+		m_tabCtrl.InsertItem(5, g_MessageArr[28]);
+	}	
+	m_tabCtrl.SetRectangle();
+}
+
+
+void CConditionSetup::OnRkindcondition1()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	m_BtKind0.SetBitmap(m_bmpTab0_0);
+	m_BtKind1.SetBitmap(m_bmpTab1);
+	m_BtKind2.SetBitmap(m_bmpTab2_0);
+	m_tabCtrl.DeleteAllItems();
+	m_Kindtab=1;
+	m_tabCtrl.m_Kindtab=m_Kindtab;
+	if(m_Kindtab==1)
+	{
+
+		if(g_Special1 == true) //메뉴선택 기능 추가 20171102
+			m_tabCtrl.InsertItem(0, g_MessageArr[32]);
+		//20160428
+		if(g_Special2 == true) //메뉴선택 기능 추가 20171102
+			m_tabCtrl.InsertItem(1, g_MessageArr[227]);
+			
+	}
+	m_tabCtrl.SetRectangle();
+}
+
+
+void CConditionSetup::OnRkindcondition2()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	m_BtKind0.SetBitmap(m_bmpTab0_0);
+	m_BtKind1.SetBitmap(m_bmpTab1_0);
+	m_BtKind2.SetBitmap(m_bmpTab2);
+	m_tabCtrl.DeleteAllItems();
+	m_Kindtab=2;
+	m_tabCtrl.m_Kindtab=m_Kindtab;
+	if(m_Kindtab==2)
+	{
+		if(g_Masking1 == true) //메뉴선택 기능 추가 20171102
+			m_tabCtrl.InsertItem(0, g_MessageArr[228]);
+		if(g_Masking2 == true) //메뉴선택 기능 추가 20171102
+			m_tabCtrl.InsertItem(1, g_MessageArr[229]);
+		if(g_Masking3 == true) //메뉴선택 기능 추가 20171102
+			m_tabCtrl.InsertItem(2, g_MessageArr[230]);
+	}
+	m_tabCtrl.SetRectangle();
+}
+
+
+void CConditionSetup::OnBnClickedBtSave()
+{
+	/*
+	if(!m_pSet_p.Open_DB(g_StrDirPath[0]))		
+	{
+		return;
+	}
+	
+	g_ChangeNGCond = false;
+	g_ChangeOmitCond[0] = false;
+	g_ChangeOmitCond[1] = false;
+	g_ChangeOmitCond[2] = false;
+	g_ChangeMaskCond[0] = false;
+	g_ChangeMaskCond[1] = false;
+	g_ChangeMaskCond[2] = false;
+
+	CString strQuery;
+
+	int c1=m_tabCtrl.m_tabPagesNg[0]->GetDlgItemInt(IDC_SETUPCONDITION1);
+	int c2=m_tabCtrl.m_tabPagesNg[1]->GetDlgItemInt(IDC_SETUPCONDITION2);
+	int c3=m_tabCtrl.m_tabPagesNg[2]->GetDlgItemInt(IDC_SETUPCONDITION3);
+	int c4=m_tabCtrl.m_tabPagesNg[3]->GetDlgItemInt(IDC_SETUPCONDITION4);
+	int c5=m_tabCtrl.m_tabPagesNg[4]->GetDlgItemInt(IDC_SETUPCONDITION5);
+	int c6=m_tabCtrl.m_tabPagesNg[5]->GetDlgItemInt(IDC_SETUPCONDITION6);
+
+	if(c1==g_Condition1 && c2==g_Condition2 && c3==g_Condition3 && c4==g_Condition4 && c5==g_Condition5 && c6==g_Condition6)
+	{
+	
+	}
+	else
+	{
+		g_Condition1 = c1;
+		g_Condition2 = c2;
+		g_Condition3 = c3;
+		g_Condition4 = c4;
+		g_Condition5 = c5;
+		g_Condition6 = c6;
+
+		g_ChangeNGCond = true;
+
+		strQuery.Format(_T("Update Product SET ProductCond1 = %d, ProductCond2 = %d, ProductCond3 = %d, ProductCond4 = %d, ProductCond5 = %d, ProductCond6 = %d WHERE ProductName = '%s'"),
+			g_Condition1, g_Condition2, g_Condition3, g_Condition4, g_Condition5, g_Condition6, g_ProductName);
+		m_pSet_p.Update_DB(strQuery);
+	}			
+	
+	////////////////누락
+	int oc0=m_tabCtrl.m_tabPagesOmit[0]->GetCheckedRadioButton(IDC_RUSEOMIT_0, IDC_RUSEOMIT_1);
+	if(oc0==IDC_RUSEOMIT_0)
+		oc0=0;
+	else
+		oc0=1;
+	int oc1=m_tabCtrl.m_tabPagesOmit[0]->GetDlgItemInt(IDC_SETUPOMITCONDITION1);
+	int oc2=m_tabCtrl.m_tabPagesOmit[0]->GetDlgItemInt(IDC_SETUPOMITCONDITION2);
+	int oc3=m_tabCtrl.m_tabPagesOmit[0]->GetDlgItemInt(IDC_SETUPOMITCONDITION3);
+	int oc4=m_tabCtrl.m_tabPagesOmit[0]->GetDlgItemInt(IDC_SETUPOMITCONDITION4);
+	int oc5=m_tabCtrl.m_tabPagesOmit[0]->GetDlgItemInt(IDC_SETUPOMITCONDITION5);
+	if(((CButton*)m_tabCtrl.m_tabPagesOmit[0]->GetDlgItem(IDC_CHECKDISP))->GetCheck()==1)
+		g_DispArea=true;
+	else
+		g_DispArea=false;
+
+	if(oc0==g_OmitCondUse && oc1==g_OmitCondition1 && oc2==g_OmitCondition2 && oc3 == g_OmitCondition3
+		&& oc4==g_OmitCondition4 && oc5==g_OmitCondition5)
+	{
+	}
+	else
+	{
+
+		g_OmitCondUse = oc0;
+		g_OmitCondition1 = oc1;
+	    g_OmitCondition2 = oc2;
+	    g_OmitCondition3 = oc3;
+	    g_OmitCondition4 = oc4;
+		g_OmitCondition5 = oc5;
+		g_ChangeOmitCond[0] = true;
+
+		strQuery.Format(_T("Update Product SET ProductUseOmit = %d, ProductOmitCond1 = %d, ProductOmitCond2 = %d, ProductOmitCond3 = %d, ProductOmitCond4 = %d, ProductOmitCond5 = %d WHERE ProductName = '%s'"),
+			g_OmitCondUse, g_OmitCondition1, g_OmitCondition2, g_OmitCondition3, g_OmitCondition4, g_OmitCondition5, g_ProductName);
+		m_pSet_p.Update_DB(strQuery);
+	}
+
+	//20160428
+	////////////////누락1
+	int oc10=m_tabCtrl.m_tabPagesOmit[1]->GetCheckedRadioButton(IDC_RUSEMASS_0, IDC_RUSEMASS_1);
+	if(oc10==IDC_RUSEMASS_0)
+		oc10=0;
+	else
+		oc10=1;
+	int oc11=m_tabCtrl.m_tabPagesOmit[1]->GetDlgItemInt(IDC_SETUPMASSCONDITION1);
+	int oc12=m_tabCtrl.m_tabPagesOmit[1]->GetDlgItemInt(IDC_SETUPMASSCONDITION2);
+	int oc13=m_tabCtrl.m_tabPagesOmit[1]->GetDlgItemInt(IDC_SETUPMASSCONDITION3);
+
+	if(oc10==g_MassCondUse && oc11==g_MassCondition1 && oc12==g_MassCondition2 && oc13 == g_MassCondition3)
+	{
+	}
+	else
+	{
+		g_MassCondUse = oc10;
+		g_MassCondition1 = oc11;
+	    g_MassCondition2 = oc12;
+	    g_MassCondition3 = oc13;
+		g_ChangeOmitCond[1] = true;
+		strQuery.Format(_T("Update Product SET ProductUseMass = %d, ProductMassCond1 = %d, ProductMassCond2 = %d, ProductMassCond3 = %d WHERE ProductName = '%s'"),
+			g_MassCondUse, g_MassCondition1, g_MassCondition2, g_MassCondition3, g_ProductName);
+		m_pSet_p.Update_DB(strQuery);
+	}	
+
+	////////////누락2
+	int oc20=m_tabCtrl.m_tabPagesOmit[2]->GetCheckedRadioButton(IDC_RUSECOUNT_0, IDC_RUSECOUNT_1);
+	if(oc20==IDC_RUSECOUNT_0)
+		oc20=0;
+	else
+		oc20=1;
+	int oc21=m_tabCtrl.m_tabPagesOmit[2]->GetDlgItemInt(IDC_SETUPCOUNTCONDITION1);
+	int oc22=m_tabCtrl.m_tabPagesOmit[2]->GetDlgItemInt(IDC_SETUPCOUNTCONDITION2);
+
+	if(oc20==g_CountCondUse && oc21==g_Countnum && oc22 == g_Countnoise)
+	{
+	}
+	else
+	{
+		g_CountCondUse = oc20;
+		g_Countnum = oc21;
+	    g_Countnoise = oc22;
+		g_ChangeOmitCond[2] = true;
+		strQuery.Format(_T("Update Product SET ProductUseCount = %d, ProductCountnum = %d, ProductCountnoise = %d WHERE ProductName = '%s'"),
+			g_CountCondUse, g_Countnum, g_Countnoise, g_ProductName);
+		m_pSet_p.Update_DB(strQuery);
+	}	
+
+/*	////////////누락2
+	int oc20=m_tabCtrl.m_tabPagesOmit[1]->GetCheckedRadioButton(IDC_RUSECOUNT_0, IDC_RUSECOUNT_1);
+	if(oc20==IDC_RUSECOUNT_0)
+		oc20=0;
+	else
+		oc20=1;
+	int oc21=m_tabCtrl.m_tabPagesOmit[1]->GetDlgItemInt(IDC_SETUPCOUNTCONDITION1);
+	int oc22=m_tabCtrl.m_tabPagesOmit[1]->GetDlgItemInt(IDC_SETUPCOUNTCONDITION2);
+
+	if(oc20==g_CountCondUse && oc21==g_Countnum && oc22 == g_Countnoise)
+	{
+	}
+	else
+	{
+		g_CountCondUse = oc20;
+		g_Countnum = oc21;
+	    g_Countnoise = oc22;
+		g_ChangeOmitCond[2] = true;
+		strQuery.Format(_T("Update Product SET ProductUseCount = %d, ProductCountnum = %d, ProductCountnoise = %d WHERE ProductName = '%s'"),
+			g_CountCondUse, g_Countnum, g_Countnoise, g_ProductName);
+		m_pSet_p.Update_DB(strQuery);
+	}	
+	*/
+	/////////////////////마스킹0
+/*	int mb0=m_tabCtrl.m_tabPagesMask[0]->GetCheckedRadioButton(IDC_RUSEMASKBOX_0, IDC_RUSEMASKBOX_1);
+	if(mb0==IDC_RUSEMASKBOX_0)
+		mb0=0;
+	else
+		mb0=1;
+	int mb1=m_tabCtrl.m_tabPagesMask[0]->GetDlgItemInt(IDC_SETUPMASKBOX1);
+	int mb2=m_tabCtrl.m_tabPagesMask[0]->GetDlgItemInt(IDC_SETUPMASKBOX2);
+
+	if(mb0==g_MaskBoxUse && mb1==g_MaskBoxCondition1 && mb2 == g_MaskBoxCondition2)
+	{
+
+	}
+	else
+	{
+		g_MaskBoxUse = mb0;
+		g_MaskBoxCondition1 = mb1;
+	    g_MaskBoxCondition2 = mb2;
+		g_ChangeMaskCond[0] = true;
+		strQuery.Format(_T("Update Product SET ProductUseMask = %d, ProductMaskx = %d, ProductMasky = %d WHERE ProductName = '%s'"),
+			g_MaskBoxUse, g_MaskBoxCondition1, g_MaskBoxCondition2, g_ProductName);
+		m_pSet_p.Update_DB(strQuery);
+	}	
+
+	/////////////////////마스킹1
+	int mc0=m_tabCtrl.m_tabPagesMask[1]->GetCheckedRadioButton(IDC_RUSEMASKCLIP_0, IDC_RUSEMASKCLIP_1);
+	if(mc0==IDC_RUSEMASKCLIP_0)
+		mc0=0;
+	else
+		mc0=1;
+	
+	int mc1=m_tabCtrl.m_tabPagesMask[1]->GetCheckedRadioButton(IDC_SETUPMASKCLIP_DIRECTiON0, IDC_SETUPMASKCLIP_DIRECTiON1);
+	if(mc1==IDC_SETUPMASKCLIP_DIRECTiON0)
+		mc1=0;
+	else
+		mc1=1;
+	int mc2=m_tabCtrl.m_tabPagesMask[1]->GetDlgItemInt(IDC_SETUPMASKCLIP1);
+	int mc3=m_tabCtrl.m_tabPagesMask[1]->GetDlgItemInt(IDC_SETUPMASKCLIP2);
+
+	if(mc0==g_MaskClipUse && mc1==g_MaskClip_Direction && mc2==g_MaskClip_Length && mc3 == g_MaskClip_Deep)
+	{
+
+	}
+	else
+	{
+		g_MaskClipUse = mc0;
+		g_MaskClip_Direction = mc1;
+	    g_MaskClip_Length = mc2;
+		g_MaskClip_Deep = mc3;
+		g_ChangeMaskCond[1] = true;
+		strQuery.Format(_T("Update Product SET ProductUseClip =%d, ProductClipnum = %d, ProductClipgray = %d, ProductClipdeep = %d WHERE ProductName = '%s'"),
+			g_MaskClipUse, g_MaskClip_Direction, g_MaskClip_Length, g_MaskClip_Deep, g_ProductName);
+		m_pSet_p.Update_DB(strQuery);
+	}	
+
+	/////////////////////마스킹2
+	int mt0=m_tabCtrl.m_tabPagesMask[2]->GetCheckedRadioButton(IDC_RUSEMASKTAL_0, IDC_RUSEMASKTAL_1);
+	if(mt0==IDC_RUSEMASKTAL_0)
+		mt0=0;
+	else
+		mt0=1;
+	
+	int mt1=m_tabCtrl.m_tabPagesMask[2]->GetDlgItemInt(IDC_SETUPMASKTAL1);
+	int mt2=m_tabCtrl.m_tabPagesMask[2]->GetDlgItemInt(IDC_SETUPMASKTAL2);
+
+	if(mt0==g_MaskTalUse && mt1==g_TalMask_Bright && mt2==g_TalMask_Bright2)
+	{
+
+	}
+	else
+	{
+		g_MaskTalUse = mt0;
+		g_TalMask_Bright = mt1;
+	    g_TalMask_Bright2 = mt2;
+		g_ChangeMaskCond[2] = true;
+		strQuery.Format(_T("Update Product SET ProductUseTalox = %d, ProductTalBright = %d, ProductTalBright2 = %d WHERE ProductName = '%s'"),
+			g_MaskTalUse, g_TalMask_Bright, g_TalMask_Bright2, g_ProductName);
+		m_pSet_p.Update_DB(strQuery);
+	}	
+
+
+	if(m_pSet_p.b_IsOpenedDB)
+		m_pSet_p.Close_DB();
+		*/
+
+if(g_bSavingCondition)
+		return;
+
+	g_bSavingCondition=true;
+	g_ChangeNGCond = false;
+	g_ChangeOmitCond[0] = false;
+	g_ChangeOmitCond[1] = false;
+	g_ChangeOmitCond[2] = false;
+	g_ChangeMaskCond[0] = false;
+	g_ChangeMaskCond[1] = false;
+	g_ChangeMaskCond[2] = false;
+
+	CString strQuery=_T("");
+	CString strQuery1=_T("");
+	CString strQuery2=_T("");
+
+	int c1=m_tabCtrl.m_tabPagesNg[0]->GetDlgItemInt(IDC_SETUPCONDITION1);
+	int c2=m_tabCtrl.m_tabPagesNg[1]->GetDlgItemInt(IDC_SETUPCONDITION2);
+	int c3=m_tabCtrl.m_tabPagesNg[2]->GetDlgItemInt(IDC_SETUPCONDITION3);
+	int c4=m_tabCtrl.m_tabPagesNg[3]->GetDlgItemInt(IDC_SETUPCONDITION4);
+	int c5=m_tabCtrl.m_tabPagesNg[4]->GetDlgItemInt(IDC_SETUPCONDITION5);
+	int c6=m_tabCtrl.m_tabPagesNg[5]->GetDlgItemInt(IDC_SETUPCONDITION6);
+
+	if(c1==g_Condition1 && c2==g_Condition2 && c3==g_Condition3 && c4==g_Condition4 && c5==g_Condition5 && c6==g_Condition6)
+	{
+	
+	}
+	else
+	{
+		g_Condition1 = c1;
+		g_Condition2 = c2;
+		g_Condition3 = c3;
+		g_Condition4 = c4;
+		g_Condition5 = c5;
+		g_Condition6 = c6;
+
+		g_ChangeNGCond = true;
+		strQuery.Format(_T("ProductCond1 = %d, ProductCond2 = %d, ProductCond3 = %d, ProductCond4 = %d, ProductCond5 = %d, ProductCond6 = %d"), g_Condition1, g_Condition2, g_Condition3, g_Condition4, g_Condition5, g_Condition6);
+
+	}			
+	
+	////////////////누락
+	int oc0=m_tabCtrl.m_tabPagesOmit[0]->GetCheckedRadioButton(IDC_RUSEOMIT_0, IDC_RUSEOMIT_1);
+	if(oc0==IDC_RUSEOMIT_0)
+		oc0=0;
+	else
+		oc0=1;
+	int oc1=m_tabCtrl.m_tabPagesOmit[0]->GetDlgItemInt(IDC_SETUPOMITCONDITION1);
+	int oc2=m_tabCtrl.m_tabPagesOmit[0]->GetDlgItemInt(IDC_SETUPOMITCONDITION2);
+	int oc3=m_tabCtrl.m_tabPagesOmit[0]->GetDlgItemInt(IDC_SETUPOMITCONDITION3);
+	int oc4=m_tabCtrl.m_tabPagesOmit[0]->GetDlgItemInt(IDC_SETUPOMITCONDITION4);
+	int oc5=m_tabCtrl.m_tabPagesOmit[0]->GetDlgItemInt(IDC_SETUPOMITCONDITION5);
+	if(((CButton*)m_tabCtrl.m_tabPagesOmit[0]->GetDlgItem(IDC_CHECKDISP))->GetCheck()==1)
+		g_DispArea=true;
+	else
+		g_DispArea=false;
+
+	if(oc0==g_OmitCondUse && oc1==g_OmitCondition1 && oc2==g_OmitCondition2 && oc3 == g_OmitCondition3
+		&& oc4==g_OmitCondition4 && oc5==g_OmitCondition5)
+	{
+	}
+	else
+	{
+		g_OmitCondUse = oc0;
+		g_OmitCondition1 = oc1;
+	    g_OmitCondition2 = oc2;
+	    g_OmitCondition3 = oc3;
+	    g_OmitCondition4 = oc4;
+		g_OmitCondition5 = oc5;
+		g_ChangeOmitCond[0] = true;
+
+		if(strQuery!=_T(""))
+			strQuery2.Format(_T("%s, ProductUseOmit = %d, ProductOmitCond1 = %d, ProductOmitCond2 = %d, ProductOmitCond3 = %d, ProductOmitCond4 = %d, ProductOmitCond5 = %d"), strQuery, g_OmitCondUse, g_OmitCondition1, g_OmitCondition2, g_OmitCondition3, g_OmitCondition4, g_OmitCondition5);
+		else		
+			strQuery2.Format(_T("ProductUseOmit = %d, ProductOmitCond1 = %d, ProductOmitCond2 = %d, ProductOmitCond3 = %d, ProductOmitCond4 = %d, ProductOmitCond5 = %d"), g_OmitCondUse, g_OmitCondition1, g_OmitCondition2, g_OmitCondition3, g_OmitCondition4, g_OmitCondition5);
+
+		strQuery=strQuery2;
+	}
+	//20160428
+	////////////////누락1
+	int oc10=m_tabCtrl.m_tabPagesOmit[1]->GetCheckedRadioButton(IDC_RUSEMASS_0, IDC_RUSEMASS_1);
+	if(oc10==IDC_RUSEMASS_0)
+		oc10=0;
+	else
+		oc10=1;
+	int oc11=m_tabCtrl.m_tabPagesOmit[1]->GetDlgItemInt(IDC_SETUPMASSCONDITION1);
+	int oc12=m_tabCtrl.m_tabPagesOmit[1]->GetDlgItemInt(IDC_SETUPMASSCONDITION2);
+	int oc13=m_tabCtrl.m_tabPagesOmit[1]->GetDlgItemInt(IDC_SETUPMASSCONDITION3);
+
+	if(oc10==g_MassCondUse && oc11==g_MassCondition1 && oc12==g_MassCondition2 && oc13 == g_MassCondition3)
+	{
+	}
+	else
+	{
+		g_MassCondUse = oc10;
+		g_MassCondition1 = oc11;
+	    g_MassCondition2 = oc12;
+	    g_MassCondition3 = oc13;
+		g_ChangeOmitCond[1] = true;
+
+		if(strQuery!=_T(""))
+			strQuery2.Format(_T("%s, ProductUseMass = %d, ProductMassCond1 = %d, ProductMassCond2 = %d, ProductMassCond3 = %d"), strQuery, g_MassCondUse, g_MassCondition1, g_MassCondition2, g_MassCondition3);	
+		else
+			strQuery2.Format(_T("ProductUseMass = %d, ProductMassCond1 = %d, ProductMassCond2 = %d, ProductMassCond3 = %d"), g_MassCondUse, g_MassCondition1, g_MassCondition2, g_MassCondition3);
+		strQuery=strQuery2;
+	}	
+	////////////누락2
+	/*int oc20=m_tabCtrl.m_tabPagesOmit[2]->GetCheckedRadioButton(IDC_RUSECOUNT_0, IDC_RUSECOUNT_1);
+	if(oc20==IDC_RUSECOUNT_0)
+		oc20=0;
+	else
+		oc20=1;
+	int oc21=m_tabCtrl.m_tabPagesOmit[2]->GetDlgItemInt(IDC_SETUPCOUNTCONDITION1);
+	int oc22=m_tabCtrl.m_tabPagesOmit[2]->GetDlgItemInt(IDC_SETUPCOUNTCONDITION2);
+
+	if(oc20==g_CountCondUse && oc21==g_Countnum && oc22 == g_Countnoise)
+	{
+	}
+	else
+	{
+		g_CountCondUse = oc20;
+		g_Countnum = oc21;
+	    g_Countnoise = oc22;
+		g_ChangeOmitCond[2] = true;
+
+		if(strQuery!=_T(""))
+			strQuery2.Format(_T("%s, ProductUseCount = %d, ProductCountnum = %d, ProductCountnoise = %d"), strQuery, g_CountCondUse, g_Countnum, g_Countnoise);
+		else
+			strQuery2.Format(_T("ProductUseCount = %d, ProductCountnum = %d, ProductCountnoise = %d"), g_CountCondUse, g_Countnum, g_Countnoise);
+		strQuery=strQuery2;
+	}	*/
+
+	/////////////////////마스킹0
+	int mb0=m_tabCtrl.m_tabPagesMask[0]->GetCheckedRadioButton(IDC_RUSEMASKBOX_0, IDC_RUSEMASKBOX_1);
+	if(mb0==IDC_RUSEMASKBOX_0)
+		mb0=0;
+	else
+		mb0=1;
+	int mb1=m_tabCtrl.m_tabPagesMask[0]->GetDlgItemInt(IDC_SETUPMASKBOX1);
+	int mb2=m_tabCtrl.m_tabPagesMask[0]->GetDlgItemInt(IDC_SETUPMASKBOX2);
+	int mb3=m_tabCtrl.m_tabPagesMask[0]->GetDlgItemInt(IDC_SETUPMASKBOX3);
+	int mb5=m_tabCtrl.m_tabPagesMask[0]->GetDlgItemInt(IDC_SETUPMASKBOX4);
+	int mb6=m_tabCtrl.m_tabPagesMask[0]->GetDlgItemInt(IDC_SETUPMASKBOX5);
+	int mb7=m_tabCtrl.m_tabPagesMask[0]->GetDlgItemInt(IDC_SETUPMASKBOX6);
+
+	int mb4=m_tabCtrl.m_tabPagesMask[0]->GetCheckedRadioButton(IDC_RUSEMASKBOX_2,IDC_RUSEMASKBOX_3);
+	if(mb4==IDC_RUSEMASKBOX_2)
+		mb4=0;
+	else
+		mb4=1;
+
+	if(mb0==g_MaskBoxUse && mb1==g_MaskBoxCondition1 && mb2 == g_MaskBoxCondition2 && mb3 == g_MaskBoxCondition3 &&
+		mb5==g_MaskBoxCondition4 && mb6==g_MaskBoxCondition5 && mb7==g_MaskBoxCondition6 && mb4 == g_ShowMaskUse)
+	{
+
+	}
+	else
+	{
+		g_ShowMaskUse = mb4; 
+		g_MaskBoxUse = mb0;
+		g_MaskBoxCondition1 = mb1;
+	    g_MaskBoxCondition2 = mb2;
+		g_MaskBoxCondition3 = mb3;
+
+		g_MaskBoxCondition4 = mb5;
+	    g_MaskBoxCondition5 = mb6;
+		g_MaskBoxCondition6 = mb7;
+		g_ChangeMaskCond[0] = true;
+
+		if(strQuery!=_T(""))
+			strQuery2.Format(_T("%s, ProductUseMask = %d, ProductMaskx = %d, ProductMasky = %d, ProductEtc8 = %d, ProductEtc9 = %d, ProductEtc10 = %d, ProductEtc11 = %d, ProductEtc12 = %d"), strQuery, g_MaskBoxUse, g_MaskBoxCondition1, g_MaskBoxCondition2, g_MaskBoxCondition3, g_ShowMaskUse, g_MaskBoxCondition4, g_MaskBoxCondition5, g_MaskBoxCondition6);
+		else 
+			strQuery2.Format(_T("ProductUseMask = %d, ProductMaskx = %d, ProductMasky = %d, ProductEtc8 = %d, ProductEtc9 = %d, ProductEtc10 = %d, ProductEtc11 = %d, ProductEtc12 = %d"), g_MaskBoxUse, g_MaskBoxCondition1, g_MaskBoxCondition2,g_MaskBoxCondition3,g_ShowMaskUse, g_MaskBoxCondition4, g_MaskBoxCondition5, g_MaskBoxCondition6);
+		strQuery=strQuery2;
+	}	
+	/////////////////////마스킹1
+	int mc0=m_tabCtrl.m_tabPagesMask[1]->GetCheckedRadioButton(IDC_RUSEMASKCLIP_0, IDC_RUSEMASKCLIP_1);
+	if(mc0==IDC_RUSEMASKCLIP_0)
+		mc0=0;
+	else
+		mc0=1;
+	
+	int mc1=m_tabCtrl.m_tabPagesMask[1]->GetCheckedRadioButton(IDC_SETUPMASKCLIP_DIRECTiON0, IDC_SETUPMASKCLIP_DIRECTiON1);
+	if(mc1==IDC_SETUPMASKCLIP_DIRECTiON0)
+		mc1=0;
+	else
+		mc1=1;
+	int mc2=m_tabCtrl.m_tabPagesMask[1]->GetDlgItemInt(IDC_SETUPMASKCLIP1);
+	int mc3=m_tabCtrl.m_tabPagesMask[1]->GetDlgItemInt(IDC_SETUPMASKCLIP2);
+
+	if(mc0==g_MaskClipUse && mc1==g_MaskClip_Direction && mc2==g_MaskClip_Length && mc3 == g_MaskClip_Deep)
+	{
+
+	}
+	else
+	{
+		g_MaskClipUse = mc0;
+		g_MaskClip_Direction = mc1;
+	    g_MaskClip_Length = mc2;
+		g_MaskClip_Deep = mc3;
+		g_ChangeMaskCond[1] = true;
+
+				
+		if(strQuery!=_T(""))
+			strQuery2.Format(_T("%s, ProductUseClip =%d, ProductClipnum = %d, ProductClipgray = %d, ProductClipdeep = %d"), strQuery, g_MaskClipUse, g_MaskClip_Direction, g_MaskClip_Length, g_MaskClip_Deep);
+		else
+			strQuery2.Format(_T("ProductUseClip =%d, ProductClipnum = %d, ProductClipgray = %d, ProductClipdeep = %d"), g_MaskClipUse, g_MaskClip_Direction, g_MaskClip_Length, g_MaskClip_Deep);
+		strQuery=strQuery2;
+	}	
+
+	/////////////////////마스킹2
+	int mt0=m_tabCtrl.m_tabPagesMask[2]->GetCheckedRadioButton(IDC_RUSEMASKTAL_0, IDC_RUSEMASKTAL_1);
+	if(mt0==IDC_RUSEMASKTAL_0)
+		mt0=0;
+	else
+		mt0=1;
+	
+	int mt1=m_tabCtrl.m_tabPagesMask[2]->GetDlgItemInt(IDC_SETUPMASKTAL1);
+	int mt2=m_tabCtrl.m_tabPagesMask[2]->GetDlgItemInt(IDC_SETUPMASKTAL2);
+
+	if(mt0==g_MaskTalUse && mt1==g_TalMask_Bright && mt2==g_TalMask_Bright2)
+	{
+
+	}
+	else
+	{
+		g_MaskTalUse = mt0;
+		g_TalMask_Bright = mt1;
+	    g_TalMask_Bright2 = mt2;
+		g_ChangeMaskCond[2] = true;
+
+		if(strQuery!=_T(""))
+			strQuery2.Format(_T("%s, ProductUseTalox = %d, ProductTalBright = %d, ProductTalBright2 = %d"), strQuery, g_MaskTalUse, g_TalMask_Bright, g_TalMask_Bright2);
+		else
+			strQuery2.Format(_T("ProductUseTalox = %d, ProductTalBright = %d, ProductTalBright2 = %d"), g_MaskTalUse, g_TalMask_Bright, g_TalMask_Bright2);
+		strQuery=strQuery2;
+	}	
+
+	if(strQuery!=_T(""))
+	{
+		/*if(!m_pSet_p.Open_DB(g_StrDirPath[0]))		
+		{
+			g_bSavingCondition=false;
+			return;
+		}
+	
+		strQuery1.Format(_T("Update Product SET %s WHERE ProductName = '%s'"), strQuery ,g_ProductName);
+		m_pSet_p.Update_DB(strQuery1);
+
+		if(m_pSet_p.b_IsOpenedDB)
+			m_pSet_p.Close_DB();*/
+	}	
+
+	g_bSavingCondition=false;
+}
+
+void CConditionSetup::OnClickedCheck1()
+{
+	UpdateData(true);
+	g_OffInspection=m_OffInspection;
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+}
+
+
+void CConditionSetup::OnBnClickedCancel()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	
+	CDialogEx::OnCancel();
+}

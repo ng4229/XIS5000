@@ -1,0 +1,46 @@
+# ==========================================
+# Visual Studio 2019 / C++ / MFC 기본 제외
+# ==========================================
+
+# Visual Studio 숨김 폴더 및 사용자 설정 파일
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.db
+*.opendb
+*.VC.db
+
+# 빌드 결과물 (각 프로젝트 하위의 폴더들도 모두 포함됨)
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+
+# C++ 및 MFC 관련 임시 파일과 바이너리 파일
+*.aps     # 리소스 뷰어(AppStudio) 임시 파일 - Git 충돌의 주원인이므로 반드시 제외
+*.pch     # 미리 컴파일된 헤더
+*.ipch    # 인텔리센스 임시 파일
+*.pdb     # 디버깅 심볼(용량이 매우 큼)
+*.ilk     # 증분 링크 상태 파일
+*.obj     # 컴파일된 오브젝트 파일
+*.idb     # 최소 다시 빌드 종속성 파일
+*.tlog    # 빌드 로그 파일
+*.res     # 컴파일된 리소스 파일
+intellisense/*.aps
+viewer/*.aps
+reportdll/*.aps
+
+# 출력 파일 (필요에 따라 주석 처리하여 형상관리에 포함 가능)
+*.exe
+*.dll
+*.lib
+*.exp
+
+# 기타 로그 및 캐시
+*.log
+*.iobj
+*.ipdb

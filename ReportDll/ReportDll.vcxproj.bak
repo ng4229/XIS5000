@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E6EF1AD4-592C-499A-A20B-B94E475C5543}</ProjectGuid>
+    <RootNamespace>ReportDll</RootNamespace>
+    <Keyword>MFCDLLProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\NSE\Program\Intellisense\TotalProgram\2015_07_09_GlobalIntellisense\Intellisense\ReportDll\MSChart;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\NSE\Program\Intellisense\TotalProgram\2015_07_09_GlobalIntellisense\Intellisense\ReportDll\MSChart;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files\MariaDB 10.1\include\mysql;C:\Program Files\MariaDB 10.1\include;$(SolutionDir)ReportDll\ChartDirector\include;$(SolutionDir)ReportDll\libharu\include;$(IncludePath)</IncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>C:\Program Files\MariaDB 10.1\lib\plugin;C:\Program Files\MariaDB 10.1\lib;$(SolutionDir)ReportDll\ChartDirector\lib64;$(SolutionDir)ReportDll\libharu\BIN64\Release;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files\MariaDB 10.1\include\mysql;C:\Program Files\MariaDB 10.1\include;$(SolutionDir)ReportDll\ChartDirector\include;$(SolutionDir)ReportDll\libharu\include;$(IncludePath)</IncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>C:\Program Files\MariaDB 10.1\lib\plugin;C:\Program Files\MariaDB 10.1\lib;$(SolutionDir)ReportDll\ChartDirector\lib64;$(SolutionDir)ReportDll\libharu\BIN64\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>.\ReportDll.def</ModuleDefinitionFile>
+      <AdditionalDependencies>../Debug/VkDll.lib;../Debug/Keyboard.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>.\ReportDll.def</ModuleDefinitionFile>
+      <AdditionalDependencies>../Debug/VkDll.lib;../Debug/Keyboard.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\ReportDll.def</ModuleDefinitionFile>
+      <AdditionalDependencies>../Release/VkDll.lib;libmysql.lib;chartdir70.lib;libhpdf.lib;libhpdfs.lib;libpng16.lib;libpng16_static.lib;zlib.lib;zlibstatic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\ReportDll.def</ModuleDefinitionFile>
+      <AdditionalDependencies>../x64/Release/VkDll.lib;libmysql.lib;chartdir70.lib;libhpdf.lib;libhpdfs.lib;libpng16.lib;libpng16_static.lib;zlib.lib;zlibstatic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="ReportDll.def" />
+    <None Include="res\BtExcel.bmp" />
+    <None Include="res\BtExcel_1.bmp" />
+    <None Include="res\BtExcel_1_CHI.bmp" />
+    <None Include="res\BtExcel_1_ENG.bmp" />
+    <None Include="res\BtExcel_CHI.bmp" />
+    <None Include="res\BtExcel_ENG.bmp" />
+    <None Include="res\BtSave.bmp" />
+    <None Include="res\BtSave_0.bmp" />
+    <None Include="res\BtSave_0_CHI.bmp" />
+    <None Include="res\BtSave_0_ENG.bmp" />
+    <None Include="res\BtSave_CHI.bmp" />
+    <None Include="res\BtSave_ENG.bmp" />
+    <None Include="res\BtSelectProduct_Add.bmp" />
+    <None Include="res\BtSelectProduct_Add_0.bmp" />
+    <None Include="res\BtSelectProduct_Add_0_CHI.bmp" />
+    <None Include="res\BtSelectProduct_Add_0_ENG.bmp" />
+    <None Include="res\BtSelectProduct_Add_CHI.bmp" />
+    <None Include="res\BtSelectProduct_Add_ENG.bmp" />
+    <None Include="res\BtSelectProduct_Del.bmp" />
+    <None Include="res\BtSelectProduct_Del_0.bmp" />
+    <None Include="res\BtSelectProduct_Del_0_CHI.bmp" />
+    <None Include="res\BtSelectProduct_Del_0_ENG.bmp" />
+    <None Include="res\BtSelectProduct_Del_CHI.bmp" />
+    <None Include="res\BtSelectProduct_Del_ENG.bmp" />
+    <None Include="res\BtSetupMenu_Close.bmp" />
+    <None Include="res\BtSetupMenu_Close_1.bmp" />
+    <None Include="res\BtSetupMenu_Close_1_CHI.bmp" />
+    <None Include="res\BtSetupMenu_Close_1_ENG.bmp" />
+    <None Include="res\BtSetupMenu_Close_CHI.bmp" />
+    <None Include="res\BtSetupMenu_Close_ENG.bmp" />
+    <None Include="res\HideButton.bmp" />
+    <None Include="res\ReportBackground.bmp" />
+    <None Include="res\ReportBackground_CHI.bmp" />
+    <None Include="res\ReportBackground_ENG.bmp" />
+    <None Include="res\ReportDll.rc2" />
+    <None Include="res\SubBackgroundChi_1.bmp" />
+    <None Include="res\SubBackgroundChi_2.bmp" />
+    <None Include="res\SubBackgroundChi_4.bmp" />
+    <None Include="res\SubBackgroundChi_5.bmp" />
+    <None Include="res\SubBackgroundChi_6.bmp" />
+    <None Include="res\SubBackgroundEng_1.bmp" />
+    <None Include="res\SubBackgroundEng_2.bmp" />
+    <None Include="res\SubBackgroundEng_4.bmp" />
+    <None Include="res\SubBackgroundEng_5.bmp" />
+    <None Include="res\SubBackgroundEng_6.bmp" />
+    <None Include="res\SubBackground_1.bmp" />
+    <None Include="res\SubBackground_2.bmp" />
+    <None Include="res\SubBackground_4.bmp" />
+    <None Include="res\SubBackground_5.bmp" />
+    <None Include="res\SubBackground_6.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DlgPage7.cpp" />
+    <ClCompile Include="ChartDirector\mfcdemo\mfcdemo\ChartViewer.cpp" />
+    <ClCompile Include="DlgPage1.cpp" />
+    <ClCompile Include="DlgPage2.cpp" />
+    <ClCompile Include="DlgPage3.cpp" />
+    <ClCompile Include="DlgPage4.cpp" />
+    <ClCompile Include="DlgPage5.cpp" />
+    <ClCompile Include="DlgPage6.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="EYH_ADO.cpp" />
+    <ClCompile Include="InputDlg.cpp" />
+    <ClCompile Include="InputDlg1.cpp" />
+    <ClCompile Include="InputDlg2.cpp" />
+    <ClCompile Include="MSChart\font.cpp" />
+    <ClCompile Include="MSChart\mschart.cpp" />
+    <ClCompile Include="MSChart\vcaxis.cpp" />
+    <ClCompile Include="MSChart\vcaxisgrid.cpp" />
+    <ClCompile Include="MSChart\vcaxisscale.cpp" />
+    <ClCompile Include="MSChart\vcaxistitle.cpp" />
+    <ClCompile Include="MSChart\vcbackdrop.cpp" />
+    <ClCompile Include="MSChart\vcbrush.cpp" />
+    <ClCompile Include="MSChart\vccategoryscale.cpp" />
+    <ClCompile Include="MSChart\vccolor.cpp" />
+    <ClCompile Include="MSChart\vccoor.cpp" />
+    <ClCompile Include="MSChart\vcdatagrid.cpp" />
+    <ClCompile Include="MSChart\vcdatapoint.cpp" />
+    <ClCompile Include="MSChart\vcdatapointlabel.cpp" />
+    <ClCompile Include="MSChart\vcdatapoints.cpp" />
+    <ClCompile Include="MSChart\vcfill.cpp" />
+    <ClCompile Include="MSChart\vcfont.cpp" />
+    <ClCompile Include="MSChart\vcfootnote.cpp" />
+    <ClCompile Include="MSChart\vcframe.cpp" />
+    <ClCompile Include="MSChart\vcintersection.cpp" />
+    <ClCompile Include="MSChart\vclabel.cpp" />
+    <ClCompile Include="MSChart\vclabels.cpp" />
+    <ClCompile Include="MSChart\vclcoor.cpp" />
+    <ClCompile Include="MSChart\vclegend.cpp" />
+    <ClCompile Include="MSChart\vclight.cpp" />
+    <ClCompile Include="MSChart\vclightsource.cpp" />
+    <ClCompile Include="MSChart\vclightsources.cpp" />
+    <ClCompile Include="MSChart\vclocation.cpp" />
+    <ClCompile Include="MSChart\vcmarker.cpp" />
+    <ClCompile Include="MSChart\vcpen.cpp" />
+    <ClCompile Include="MSChart\vcplot.cpp" />
+    <ClCompile Include="MSChart\vcplotbase.cpp" />
+    <ClCompile Include="MSChart\vcrect.cpp" />
+    <ClCompile Include="MSChart\vcseries.cpp" />
+    <ClCompile Include="MSChart\vcseriescollection.cpp" />
+    <ClCompile Include="MSChart\vcseriesmarker.cpp" />
+    <ClCompile Include="MSChart\vcseriesposition.cpp" />
+    <ClCompile Include="MSChart\vcshadow.cpp" />
+    <ClCompile Include="MSChart\vcstatline.cpp" />
+    <ClCompile Include="MSChart\vctextlayout.cpp" />
+    <ClCompile Include="MSChart\vctick.cpp" />
+    <ClCompile Include="MSChart\vctitle.cpp" />
+    <ClCompile Include="MSChart\vcvaluescale.cpp" />
+    <ClCompile Include="MSChart\vcview3d.cpp" />
+    <ClCompile Include="MSChart\vcwall.cpp" />
+    <ClCompile Include="MSChart\vcweighting.cpp" />
+    <ClCompile Include="ReportDlg.cpp" />
+    <ClCompile Include="ReportDll.cpp" />
+    <ClCompile Include="ReportTabCtrl.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DlgPage7.h" />
+    <ClInclude Include="ChartDirector\mfcdemo\mfcdemo\ChartViewer.h" />
+    <ClInclude Include="DlgPage1.h" />
+    <ClInclude Include="DlgPage2.h" />
+    <ClInclude Include="DlgPage3.h" />
+    <ClInclude Include="DlgPage4.h" />
+    <ClInclude Include="DlgPage5.h" />
+    <ClInclude Include="DlgPage6.h" />
+    <ClInclude Include="EYH_ADO.h" />
+    <ClInclude Include="InputDlg.h" />
+    <ClInclude Include="InputDlg1.h" />
+    <ClInclude Include="InputDlg2.h" />
+    <ClInclude Include="MSChart\font.h" />
+    <ClInclude Include="MSChart\mschart.h" />
+    <ClInclude Include="MSChart\vcaxis.h" />
+    <ClInclude Include="MSChart\vcaxisgrid.h" />
+    <ClInclude Include="MSChart\vcaxisscale.h" />
+    <ClInclude Include="MSChart\vcaxistitle.h" />
+    <ClInclude Include="MSChart\vcbackdrop.h" />
+    <ClInclude Include="MSChart\vcbrush.h" />
+    <ClInclude Include="MSChart\vccategoryscale.h" />
+    <ClInclude Include="MSChart\vccolor.h" />
+    <ClInclude Include="MSChart\vccoor.h" />
+    <ClInclude Include="MSChart\vcdatagrid.h" />
+    <ClInclude Include="MSChart\vcdatapoint.h" />
+    <ClInclude Include="MSChart\vcdatapointlabel.h" />
+    <ClInclude Include="MSChart\vcdatapoints.h" />
+    <ClInclude Include="MSChart\vcfill.h" />
+    <ClInclude Include="MSChart\vcfont.h" />
+    <ClInclude Include="MSChart\vcfootnote.h" />
+    <ClInclude Include="MSChart\vcframe.h" />
+    <ClInclude Include="MSChart\vcintersection.h" />
+    <ClInclude Include="MSChart\vclabel.h" />
+    <ClInclude Include="MSChart\vclabels.h" />
+    <ClInclude Include="MSChart\vclcoor.h" />
+    <ClInclude Include="MSChart\vclegend.h" />
+    <ClInclude Include="MSChart\vclight.h" />
+    <ClInclude Include="MSChart\vclightsource.h" />
+    <ClInclude Include="MSChart\vclightsources.h" />
+    <ClInclude Include="MSChart\vclocation.h" />
+    <ClInclude Include="MSChart\vcmarker.h" />
+    <ClInclude Include="MSChart\vcpen.h" />
+    <ClInclude Include="MSChart\vcplot.h" />
+    <ClInclude Include="MSChart\vcplotbase.h" />
+    <ClInclude Include="MSChart\vcrect.h" />
+    <ClInclude Include="MSChart\vcseries.h" />
+    <ClInclude Include="MSChart\vcseriescollection.h" />
+    <ClInclude Include="MSChart\vcseriesmarker.h" />
+    <ClInclude Include="MSChart\vcseriesposition.h" />
+    <ClInclude Include="MSChart\vcshadow.h" />
+    <ClInclude Include="MSChart\vcstatline.h" />
+    <ClInclude Include="MSChart\vctextlayout.h" />
+    <ClInclude Include="MSChart\vctick.h" />
+    <ClInclude Include="MSChart\vctitle.h" />
+    <ClInclude Include="MSChart\vcvaluescale.h" />
+    <ClInclude Include="MSChart\vcview3d.h" />
+    <ClInclude Include="MSChart\vcwall.h" />
+    <ClInclude Include="MSChart\vcweighting.h" />
+    <ClInclude Include="ReportDlg.h" />
+    <ClInclude Include="ReportTabCtrl.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ReportDll.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\BtExcel_1_POL.bmp" />
+    <Image Include="res\BtExcel_1_RUS.bmp" />
+    <Image Include="res\BtExcel_1_SPN.bmp" />
+    <Image Include="res\BtExcel_1_TIW.bmp" />
+    <Image Include="res\BtExcel_1_UKR.bmp" />
+    <Image Include="res\BtExcel_POL.bmp" />
+    <Image Include="res\BtExcel_RUS.bmp" />
+    <Image Include="res\BtExcel_SPN.bmp" />
+    <Image Include="res\BtExcel_TIW.bmp" />
+    <Image Include="res\BtExcel_UKR.bmp" />
+    <Image Include="res\BtSave_0_POL.bmp" />
+    <Image Include="res\BtSave_0_RUS.bmp" />
+    <Image Include="res\BtSave_0_SPN.bmp" />
+    <Image Include="res\BtSave_0_TIW.bmp" />
+    <Image Include="res\BtSave_0_UKR.bmp" />
+    <Image Include="res\BtSave_POL.bmp" />
+    <Image Include="res\BtSave_RUS.bmp" />
+    <Image Include="res\BtSave_SPN.bmp" />
+    <Image Include="res\BtSave_TIW.bmp" />
+    <Image Include="res\BtSave_UKR.bmp" />
+    <Image Include="res\BtSelectProduct_Add_0_POL.bmp" />
+    <Image Include="res\BtSelectProduct_Add_0_RUS.bmp" />
+    <Image Include="res\BtSelectProduct_Add_0_SPN.bmp" />
+    <Image Include="res\BtSelectProduct_Add_0_TIW.bmp" />
+    <Image Include="res\BtSelectProduct_Add_0_UKR.bmp" />
+    <Image Include="res\BtSelectProduct_Add_POL.bmp" />
+    <Image Include="res\BtSelectProduct_Add_RUS.bmp" />
+    <Image Include="res\BtSelectProduct_Add_SPN.bmp" />
+    <Image Include="res\BtSelectProduct_Add_TIW.bmp" />
+    <Image Include="res\BtSelectProduct_Add_UKR.bmp" />
+    <Image Include="res\BtSelectProduct_Del_0_POL.bmp" />
+    <Image Include="res\BtSelectProduct_Del_0_RUS.bmp" />
+    <Image Include="res\BtSelectProduct_Del_0_SPN.bmp" />
+    <Image Include="res\BtSelectProduct_Del_0_TIW.bmp" />
+    <Image Include="res\BtSelectProduct_Del_0_UKR.bmp" />
+    <Image Include="res\BtSelectProduct_Del_POL.bmp" />
+    <Image Include="res\BtSelectProduct_Del_RUS.bmp" />
+    <Image Include="res\BtSelectProduct_Del_SPN.bmp" />
+    <Image Include="res\BtSelectProduct_Del_TIW.bmp" />
+    <Image Include="res\BtSelectProduct_Del_UKR.bmp" />
+    <Image Include="res\BtSetupMenu_Close_1_POL.bmp" />
+    <Image Include="res\BtSetupMenu_Close_1_RUS.bmp" />
+    <Image Include="res\BtSetupMenu_Close_1_SPN.bmp" />
+    <Image Include="res\BtSetupMenu_Close_1_TIW.bmp" />
+    <Image Include="res\BtSetupMenu_Close_1_UKR.bmp" />
+    <Image Include="res\BtSetupMenu_Close_POL.bmp" />
+    <Image Include="res\BtSetupMenu_Close_RUS.bmp" />
+    <Image Include="res\BtSetupMenu_Close_SPN.bmp" />
+    <Image Include="res\BtSetupMenu_Close_TIW.bmp" />
+    <Image Include="res\BtSetupMenu_Close_UKR.bmp" />
+    <Image Include="res\ReportBackground_POL.bmp" />
+    <Image Include="res\ReportBackground_RUS.bmp" />
+    <Image Include="res\ReportBackground_SPN.bmp" />
+    <Image Include="res\ReportBackground_TIW.bmp" />
+    <Image Include="res\ReportBackground_UKR.bmp" />
+    <Image Include="res\SubBackgroundChi_7.bmp" />
+    <Image Include="res\SubBackgroundEng_7.bmp" />
+    <Image Include="res\SubBackgroundPol_1.bmp" />
+    <Image Include="res\SubBackgroundPol_2.bmp" />
+    <Image Include="res\SubBackgroundPol_4.bmp" />
+    <Image Include="res\SubBackgroundPol_5.bmp" />
+    <Image Include="res\SubBackgroundPol_6.bmp" />
+    <Image Include="res\SubBackgroundPol_7.bmp" />
+    <Image Include="res\SubBackgroundRus_1.bmp" />
+    <Image Include="res\SubBackgroundRus_2.bmp" />
+    <Image Include="res\SubBackgroundRus_4.bmp" />
+    <Image Include="res\SubBackgroundRus_5.bmp" />
+    <Image Include="res\SubBackgroundRus_6.bmp" />
+    <Image Include="res\SubBackgroundRus_7.bmp" />
+    <Image Include="res\SubBackgroundSpn_1.bmp" />
+    <Image Include="res\SubBackgroundSpn_2.bmp" />
+    <Image Include="res\SubBackgroundSpn_4.bmp" />
+    <Image Include="res\SubBackgroundSpn_5.bmp" />
+    <Image Include="res\SubBackgroundSpn_6.bmp" />
+    <Image Include="res\SubBackgroundSpn_7.bmp" />
+    <Image Include="res\SubBackgroundTiw_1.bmp" />
+    <Image Include="res\SubBackgroundTiw_2.bmp" />
+    <Image Include="res\SubBackgroundTiw_4.bmp" />
+    <Image Include="res\SubBackgroundTiw_5.bmp" />
+    <Image Include="res\SubBackgroundTiw_6.bmp" />
+    <Image Include="res\SubBackgroundTiw_7.bmp" />
+    <Image Include="res\SubBackgroundUkr_1.bmp" />
+    <Image Include="res\SubBackgroundUkr_2.bmp" />
+    <Image Include="res\SubBackgroundUkr_4.bmp" />
+    <Image Include="res\SubBackgroundUkr_5.bmp" />
+    <Image Include="res\SubBackgroundUkr_6.bmp" />
+    <Image Include="res\SubBackgroundUkr_7.bmp" />
+    <Image Include="res\SubBackground_7.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="ReportDll.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,531 @@
+// SetupMenu_0.cpp : 구현 파일입니다.
+//
+
+#include "stdafx.h"
+#include "Intellisense.h"
+#include "SetupMenu_0.h"
+#include "afxdialogex.h"
+
+#include "NumPadBack.h"
+#include "MessageBoxDlg.h"
+// CSetupMenu_0 대화 상자입니다.
+
+IMPLEMENT_DYNAMIC(CSetupMenu_0, CDialogEx)
+
+CSetupMenu_0::CSetupMenu_0(CWnd* pParent /*=NULL*/)
+	: CDialogEx(CSetupMenu_0::IDD, pParent)
+{
+
+	m_SetupXraykv = 0;
+	m_SetupXraykv2 = 0;
+	m_SetupXrayma = 0;
+	m_SetupXrayma2 = 0;
+}
+
+CSetupMenu_0::~CSetupMenu_0()
+{
+}
+
+void CSetupMenu_0::DoDataExchange(CDataExchange* pDX)
+{
+	CDialogEx::DoDataExchange(pDX);
+	DDX_Text(pDX, IDC_SETUPXRAYKV, m_SetupXraykv);
+	DDX_Text(pDX, IDC_SETUPXRAYKV2, m_SetupXraykv2);
+	DDX_Text(pDX, IDC_SETUPXRAYMA, m_SetupXrayma);
+	DDX_Text(pDX, IDC_SETUPXRAYMA2, m_SetupXrayma2);
+	DDX_Control(pDX, IDC_SETUPXRAYKV_UP, m_Btkv_Up);
+	DDX_Control(pDX, IDC_SETUPXRAYKV_UP2, m_Btkv_Up2);
+	DDX_Control(pDX, IDC_SETUPXRAYKV_DN, m_Btkv_Dn);
+	DDX_Control(pDX, IDC_SETUPXRAYKV_DN2, m_Btkv_Dn2);
+	DDX_Control(pDX, IDC_SETUPXRAYMA_DN, m_Btma_Dn);
+	DDX_Control(pDX, IDC_SETUPXRAYMA_DN2, m_Btma_Dn2);
+	DDX_Control(pDX, IDC_SETUPXRAYMA_UP, m_Btma_Up);
+	DDX_Control(pDX, IDC_SETUPXRAYMA_UP2, m_Btma_Up2);
+	DDX_Control(pDX, IDC_BT_SAVE, m_Bt_Save);
+	DDX_Control(pDX, IDCANCEL, m_Bt_Close);
+	DDX_Control(pDX, IDC_BT_XRAYAUTOSETUP, m_BtXrayAuto);
+}
+
+
+BEGIN_MESSAGE_MAP(CSetupMenu_0, CDialogEx)
+	ON_WM_PAINT()
+	ON_WM_TIMER()
+	ON_BN_CLICKED(IDC_BT_SAVE, &CSetupMenu_0::OnBnClickedBtSave)
+	ON_BN_CLICKED(IDC_BT_XRAYAUTOSETUP, &CSetupMenu_0::OnBnClickedBtXrayautosetup)
+END_MESSAGE_MAP()
+
+
+// CSetupMenu_0 메시지 처리기입니다.
+
+
+BOOL CSetupMenu_0::OnInitDialog()
+{
+	CDialogEx::OnInitDialog();
+
+	// TODO:  여기에 추가 초기화 작업을 추가합니다.
+	SetWindowPos(NULL, 672, 119, 0, 0, SWP_NOSIZE | SWP_NOZORDER);
+	LoadBackground();
+	LoadValue();
+
+	return TRUE;  // return TRUE unless you set the focus to a control
+	// 예외: OCX 속성 페이지는 FALSE를 반환해야 합니다.
+}
+
+void CSetupMenu_0::LoadBackground()
+{
+	BITMAP bmpInfo;
+	if(g_NationalCode==0)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_SETUPMENU_0); 
+		m_Bt_Save.LoadBitmaps(IDB_BTSETUPMENU_SAVE,IDB_BTSETUPMENU_SAVE_1);
+		m_Bt_Close.LoadBitmaps(IDB_SELPRODUCT_EXIT,IDB_SELPRODUCT_EXIT_0); 
+		m_BtXrayAuto.LoadBitmaps(IDB_BTXRAYAUTOSETUP,IDB_BTXRAYAUTOSETUP_1); 
+	}
+	else if(g_NationalCode==1)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_SETUPMENU_0_ENG); 
+		m_Bt_Save.LoadBitmaps(IDB_BTSETUPMENU_SAVE_ENG,IDB_BTSETUPMENU_SAVE_1_ENG); 
+		m_Bt_Close.LoadBitmaps(IDB_SELPRODUCT_EXIT_ENG,IDB_SELPRODUCT_EXIT_0_ENG); 
+		m_BtXrayAuto.LoadBitmaps(IDB_BTXRAYAUTOSETUP_ENG,IDB_BTXRAYAUTOSETUP_1_ENG); 
+	}
+	else if(g_NationalCode==2)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_SETUPMENU_0_CHI); 
+		m_Bt_Save.LoadBitmaps(IDB_BTSETUPMENU_SAVE_CHI,IDB_BTSETUPMENU_SAVE_1_CHI); 
+		m_Bt_Close.LoadBitmaps(IDB_SELPRODUCT_EXIT_CHI,IDB_SELPRODUCT_EXIT_0_CHI); 
+		m_BtXrayAuto.LoadBitmaps(IDB_BTXRAYAUTOSETUP_CHI,IDB_BTXRAYAUTOSETUP_1_CHI); 
+	}
+	else if(g_NationalCode==3)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_SETUPMENU_0_SPN); 
+		m_Bt_Save.LoadBitmaps(IDB_BTSETUPMENU_SAVE_SPN,IDB_BTSETUPMENU_SAVE_1_SPN); 
+		m_Bt_Close.LoadBitmaps(IDB_SELPRODUCT_EXIT_SPN,IDB_SELPRODUCT_EXIT_0_SPN); 
+		m_BtXrayAuto.LoadBitmaps(IDB_BTXRAYAUTOSETUP_SPN,IDB_BTXRAYAUTOSETUP_1_SPN); 
+	}
+    m_bmpMainBG.GetBitmap(&bmpInfo);
+    m_nMainWidth = bmpInfo.bmWidth; 
+    m_nMainHeight = bmpInfo.bmHeight; 	
+
+	m_Btkv_Up.LoadBitmaps(IDB_CONDPLUSBT,IDB_CONDPLUSBT_1); 
+	m_Btkv_Up.SizeToContent();
+	m_Btkv_Dn.LoadBitmaps(IDB_CONDMINUSBT,IDB_CONDMINUSBT_1); 
+	m_Btkv_Dn.SizeToContent();
+	m_Btma_Up.LoadBitmaps(IDB_CONDPLUSBT,IDB_CONDPLUSBT_1); 
+	m_Btma_Up.SizeToContent();
+	m_Btma_Dn.LoadBitmaps(IDB_CONDMINUSBT,IDB_CONDMINUSBT_1); 
+	m_Btma_Dn.SizeToContent();
+
+	m_Btkv_Up2.LoadBitmaps(IDB_CONDPLUSBT,IDB_CONDPLUSBT_1); 
+	m_Btkv_Up2.SizeToContent();
+	m_Btkv_Dn2.LoadBitmaps(IDB_CONDMINUSBT,IDB_CONDMINUSBT_1); 
+	m_Btkv_Dn2.SizeToContent();
+	m_Btma_Up2.LoadBitmaps(IDB_CONDPLUSBT,IDB_CONDPLUSBT_1); 
+	m_Btma_Up2.SizeToContent();
+	m_Btma_Dn2.LoadBitmaps(IDB_CONDMINUSBT,IDB_CONDMINUSBT_1); 
+	m_Btma_Dn2.SizeToContent();
+
+	m_Bt_Save.SizeToContent();
+	m_Bt_Close.SizeToContent();
+	m_BtXrayAuto.SizeToContent();
+}
+
+void CSetupMenu_0::LoadValue(void)
+{
+	m_SetupXraykv = g_Xray_kv;
+	m_SetupXrayma = g_Xray_ma;
+	m_SetupXraykv2 = g_Xray_kv2;
+	m_SetupXrayma2 = g_Xray_ma2;
+	SetDlgItemInt(IDC_SETUPXRAYKV, m_SetupXraykv, true);
+	SetDlgItemInt(IDC_SETUPXRAYMA, m_SetupXrayma, true);
+	SetDlgItemInt(IDC_SETUPXRAYKV2, m_SetupXraykv2, true);
+	SetDlgItemInt(IDC_SETUPXRAYMA2, m_SetupXrayma2, true);
+}
+
+
+BOOL CSetupMenu_0::PreTranslateMessage(MSG* pMsg)
+{
+	// TODO: 여기에 특수화된 코드를 추가 및/또는 기본 클래스를 호출합니다.
+	if(pMsg->wParam == VK_ESCAPE)
+		return FALSE; 
+	
+	if(pMsg->wParam == VK_RETURN)
+		return FALSE;
+
+	if(pMsg->hwnd == m_Btkv_Up.m_hWnd)
+	{			
+		if(pMsg->message==WM_LBUTTONDOWN || pMsg->message==WM_LBUTTONDBLCLK)
+		{			
+			SetTimer(1, 80, NULL);
+			SendMessage(WM_TIMER,1);
+		}
+		else if(pMsg->message==WM_LBUTTONUP)
+		{			
+			KillTimer(1);
+		}
+	}
+	else if(pMsg->hwnd == m_Btkv_Dn.m_hWnd)
+	{			
+		if(pMsg->message==WM_LBUTTONDOWN || pMsg->message==WM_LBUTTONDBLCLK)
+		{			
+			SetTimer(2, 80, NULL);
+			SendMessage(WM_TIMER,2);
+		}
+		else if(pMsg->message==WM_LBUTTONUP)
+		{			
+			KillTimer(2);
+		}
+	}
+	else if(pMsg->hwnd == m_Btma_Up.m_hWnd)
+	{			
+		if(pMsg->message==WM_LBUTTONDOWN || pMsg->message==WM_LBUTTONDBLCLK)
+		{			
+			SetTimer(3, 80, NULL);
+			SendMessage(WM_TIMER,3);
+		}
+		else if(pMsg->message==WM_LBUTTONUP)
+		{			
+			KillTimer(3);
+		}
+	}
+	else if(pMsg->hwnd == m_Btma_Dn.m_hWnd)
+	{			
+		if(pMsg->message==WM_LBUTTONDOWN || pMsg->message==WM_LBUTTONDBLCLK)
+		{			
+			SetTimer(4, 80, NULL);
+			SendMessage(WM_TIMER,4);
+		}
+		else if(pMsg->message==WM_LBUTTONUP)
+		{			
+			KillTimer(4);
+		}
+	}
+	else if(pMsg->hwnd == m_Btkv_Up2.m_hWnd) //kds20090527
+	{			
+		if(pMsg->message==WM_LBUTTONDOWN || pMsg->message==WM_LBUTTONDBLCLK)
+		{			
+			SetTimer(5, 80, NULL);
+			SendMessage(WM_TIMER,5);
+		}
+		else if(pMsg->message==WM_LBUTTONUP)
+		{			
+			KillTimer(5);
+		}
+	}
+	else if(pMsg->hwnd == m_Btkv_Dn2.m_hWnd) //kds20090527
+	{			
+		if(pMsg->message==WM_LBUTTONDOWN || pMsg->message==WM_LBUTTONDBLCLK)
+		{			
+			SetTimer(6, 80, NULL);
+			SendMessage(WM_TIMER,6);
+		}
+		else if(pMsg->message==WM_LBUTTONUP)
+		{			
+			KillTimer(6);
+		}
+	}
+	else if(pMsg->hwnd == m_Btma_Up2.m_hWnd) //kds20090527
+	{			
+		if(pMsg->message==WM_LBUTTONDOWN || pMsg->message==WM_LBUTTONDBLCLK)
+		{			
+			SetTimer(7, 80, NULL);
+			SendMessage(WM_TIMER,7);
+		}
+		else if(pMsg->message==WM_LBUTTONUP)
+		{			
+			KillTimer(7);
+		}
+	}
+	else if(pMsg->hwnd == m_Btma_Dn2.m_hWnd) //kds20090527
+	{			
+		if(pMsg->message==WM_LBUTTONDOWN || pMsg->message==WM_LBUTTONDBLCLK)
+		{			
+			SetTimer(8, 80, NULL);
+			SendMessage(WM_TIMER,8);
+		}
+		else if(pMsg->message==WM_LBUTTONUP)
+		{			
+			KillTimer(8);
+		}
+	}
+		
+	if(FromHandle(pMsg->hwnd)->GetDlgCtrlID() == IDC_SETUPXRAYKV)
+	{			
+		if(pMsg->message==WM_LBUTTONDOWN || pMsg->message==WM_LBUTTONDBLCLK)
+		{			
+			CNumPadBack dlg;
+			dlg.m_Max=NSE_XRAY_KV;
+			dlg.m_Min=30;
+			int result = dlg.DoModal();
+			if(result == IDOK)
+			{
+				m_SetupXraykv=_wtoi(dlg.m_Value);
+				GetDlgItem(IDC_SETUPXRAYKV)->SetWindowText(dlg.m_Value);
+			}
+		}
+	}
+
+	if(FromHandle(pMsg->hwnd)->GetDlgCtrlID() == IDC_SETUPXRAYMA)
+	{			
+		if(pMsg->message==WM_LBUTTONDOWN || pMsg->message==WM_LBUTTONDBLCLK)
+		{			
+			CNumPadBack dlg;
+			dlg.m_Max=NSE_XRAY_MA;
+			if(NSE_XRAY_KIND==2)
+				dlg.m_Min=500;
+			else
+				dlg.m_Min=1000;
+			int result = dlg.DoModal();
+			if(result == IDOK)
+			{
+				m_SetupXrayma=_wtoi(dlg.m_Value);
+				GetDlgItem(IDC_SETUPXRAYMA)->SetWindowText(dlg.m_Value);
+			}
+		}
+	}
+
+	if(FromHandle(pMsg->hwnd)->GetDlgCtrlID() == IDC_SETUPXRAYKV2)
+	{			
+		if(pMsg->message==WM_LBUTTONDOWN || pMsg->message==WM_LBUTTONDBLCLK)
+		{			
+			CNumPadBack dlg;
+			dlg.m_Max=50;
+			dlg.m_Min=0;
+			int result = dlg.DoModal();
+			if(result == IDOK)
+			{
+				m_SetupXraykv2=_wtoi(dlg.m_Value);
+				GetDlgItem(IDC_SETUPXRAYKV2)->SetWindowText(dlg.m_Value);
+			}
+		}
+	}
+
+	if(FromHandle(pMsg->hwnd)->GetDlgCtrlID() == IDC_SETUPXRAYMA2)
+	{			
+		if(pMsg->message==WM_LBUTTONDOWN || pMsg->message==WM_LBUTTONDBLCLK)
+		{			
+			CNumPadBack dlg;
+			dlg.m_Max=1000;
+			dlg.m_Min=0;
+			int result = dlg.DoModal();
+			if(result == IDOK)
+			{
+				m_SetupXrayma2=_wtoi(dlg.m_Value);
+				GetDlgItem(IDC_SETUPXRAYMA2)->SetWindowText(dlg.m_Value);
+			}
+		}
+	}
+
+	return CDialogEx::PreTranslateMessage(pMsg);
+}
+
+void CSetupMenu_0::OnPaint()
+{
+	CPaintDC dc(this); // device context for painting
+    CDC MemDC; 
+	MemDC.CreateCompatibleDC(&dc);
+	MemDC.SelectObject(&m_bmpMainBG);
+    dc.BitBlt(0, 0, m_nMainWidth, m_nMainHeight, &MemDC, 0, 0, SRCCOPY);
+	MemDC.DeleteDC();
+}
+
+
+void CSetupMenu_0::OnTimer(UINT_PTR nIDEvent)
+{
+	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
+	switch(nIDEvent)
+	{
+		case 1:
+			if(m_SetupXraykv<NSE_XRAY_KV)
+			{
+				m_SetupXraykv++;
+				UpdateData(false);
+			}	
+			break;
+		case 2:
+			if(m_SetupXraykv>30)
+			{
+				m_SetupXraykv--;
+				UpdateData(false);
+			}	
+			break;
+		case 3:
+			if(m_SetupXrayma<NSE_XRAY_MA)
+			{
+				m_SetupXrayma += 100;
+				UpdateData(false);
+			}	
+			break;
+		case 4:
+			if(NSE_XRAY_KIND==2)
+			{
+				if(m_SetupXrayma>500)
+				{
+					m_SetupXrayma -= 100;;
+					UpdateData(false);
+				}	
+			}
+			else
+			{
+				if(m_SetupXrayma>1000)
+				{
+					m_SetupXrayma -= 100;;
+					UpdateData(false);
+				}	
+			}
+			break;
+		case 5:
+			if(m_SetupXraykv2<50)
+			{
+				m_SetupXraykv2+=5;
+				UpdateData(false);
+			}	
+			break;
+		case 6: 
+			if(m_SetupXraykv2>=5)
+			{
+				m_SetupXraykv2-=5;
+				UpdateData(false);
+			}	
+			break;
+		case 7:
+			if(m_SetupXrayma2<1000)
+			{
+				m_SetupXrayma2 += 100;
+				UpdateData(false);
+			}	
+			break;
+		case 8:
+			if(m_SetupXrayma2>=100)
+			{
+				m_SetupXrayma2 -= 100;;
+				UpdateData(false);
+			}	
+			break;
+	}
+
+	CDialogEx::OnTimer(nIDEvent);
+}
+
+
+void CSetupMenu_0::OnBnClickedBtSave()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	UpdateData(true);
+
+	int m_iMax_Power = m_SetupXraykv*m_SetupXrayma;
+	if(m_iMax_Power > NSE_XRAY_POWER)
+	{
+		CMessageBoxDlg dlg;
+		dlg.m_Message=g_MessageArr[159];//(_T("X-Ray 출력을 초과 했습니다."));
+		dlg.DoModal();
+		return;
+	}
+
+	if(g_Xray_kv == m_SetupXraykv && g_Xray_ma == m_SetupXrayma && g_Xray_kv2 == m_SetupXraykv2 && g_Xray_ma2 == m_SetupXrayma2) 
+		return;
+	else
+	{
+		if(g_XrayState==1 || g_XrayState==2)
+		{
+			CMessageBoxDlg dlg;
+			dlg.m_Message=g_MessageArr[157];//"생산중에 변경할 수 없습니다.";
+			dlg.DoModal();
+			return;
+		}
+		g_Xray_kv = m_SetupXraykv;
+		g_Xray_ma = m_SetupXrayma;
+		g_Xray_kv2 = m_SetupXraykv2; 
+		g_Xray_ma2 = m_SetupXrayma2; 
+
+		OnWriteReport();
+		
+		Init_Mysql();
+
+		if (!g_Connecting)
+			AfxMessageBox(_T("실패"));
+		else
+		{
+			CString strQuery;
+			strQuery.Format(_T("Update intellisense_product SET ProductXraykv = %d, ProductXrayma = %d, ProductXraykv2 = %d, ProductXrayma2 = %d WHERE ProductName = '%s'"), g_Xray_kv, g_Xray_ma, g_Xray_kv2, g_Xray_ma2, g_ProductName);
+
+			if (mysql_query(&m_mysql, CStringA(strQuery))) {
+				CString error(mysql_error(&m_mysql));
+				AfxMessageBox(error);
+			}
+		}
+
+		Close_Mysql();
+	
+		//if(!m_pSet_p.Open_DB(g_StrDirPath[0]))		
+		//{
+		//	
+		//}
+		//else
+		//{
+		//	CString strQuery;
+		//	strQuery.Format(_T("Update Product SET ProductXraykv = %d, ProductXrayma = %d, ProductXraykv2 = %d, ProductXrayma2 = %d WHERE ProductName = '%s'"),
+		//		g_Xray_kv, g_Xray_ma, g_Xray_kv2, g_Xray_ma2, g_ProductName);
+		//	m_pSet_p.Update_DB(strQuery);
+
+		//	if(m_pSet_p.b_IsOpenedDB)
+		//		m_pSet_p.Close_DB();
+		//}
+	}
+}
+
+void CSetupMenu_0::OnWriteReport(void)
+{
+	CString strdate, strtime;
+	CTime time;
+	time = CTime::GetCurrentTime();
+	strdate.Format(_T("%04d-%02d-%02d"), time.GetYear(),time.GetMonth(),time.GetDay());		
+	strtime.Format(_T("%04d-%02d-%02d %02d:%02d:%02d"), time.GetYear(), time.GetMonth(),time.GetDay(), time.GetHour(), time.GetMinute(), time.GetSecond());
+	
+	CString strtext;
+	strtext.Format(_T("%s(%d(%d)kV %d%d)uA)%s)"), g_ProductName, g_Xray_kv, g_Xray_kv2, g_Xray_ma, g_Xray_ma2, g_MessageArr[160]);
+
+	bool g_bOpenDB=true;
+
+	Init_Mysql();
+
+	if (!g_Connecting)
+		AfxMessageBox(_T("실패"));
+	else
+	{
+		mysql_query(&m_mysql, "set names euckr");
+
+		CString strQuery;
+		strQuery.Format(_T("Insert INTO intellisense_db4(strDate, strErrorText, strErrorTime)") _T("VALUES('%s', '%s', '%s')"), strdate, strtext, strtime);
+
+		if (mysql_query(&m_mysql, CStringA(strQuery))) {
+			CString error(mysql_error(&m_mysql));
+			AfxMessageBox(error);
+		}
+	}
+
+	Close_Mysql();
+
+	//if(!m_pSet_4.Open_DB(g_StrDirPath[4]))		
+	//{	
+	//	g_bOpenDB=false;
+	//	//RecoveryDatabase(g_StrDirPath[4], g_StrDirPath_copy[4]);
+	//	if(m_pSet_4.Open_DB(g_StrDirPath[4]))		
+	//		g_bOpenDB=true;
+	//}
+
+	//if(g_bOpenDB)
+	//{
+	//	CString strQuery;
+	//	strQuery.Format(_T("Insert INTO Monoblock_Log(strDate, strErrorText, strErrorTime)") _T("VALUES('%s', '%s', '%s')"), strdate, strtext, strtime);
+	//	m_pSet_4.Insert_DB(strQuery);
+	//	if(m_pSet_4.b_IsOpenedDB)
+	//		m_pSet_4.Close_DB();
+	//}		
+}
+
+
+void CSetupMenu_0::OnBnClickedBtXrayautosetup()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	EndDialog(33);
+}

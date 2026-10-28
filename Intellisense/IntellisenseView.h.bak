@@ -1,0 +1,272 @@
+
+// IntellisenseView.h : CIntellisenseView 클래스의 인터페이스
+//
+
+#pragma once
+
+#include "resource.h"
+
+#include "CtrlPanelView.h"
+#include "dtcommanderf31.h"
+#include "dtdetector1.h"
+#include "dtdisplay1.h"
+#include "dtimage1.h"	
+#include "imageobject.h"
+#include "comidaqctrl2.h"
+#include "afxwin.h"
+
+#include "ComiEncoderMng.h"
+
+class CIntellisenseDoc;
+
+class CIntellisenseView : public CFormView
+{
+protected: // serialization에서만 만들어집니다.
+	CIntellisenseView();
+	DECLARE_DYNCREATE(CIntellisenseView)
+
+public:
+	enum{ IDD = IDD_INTELLISENSE_FORM };
+
+// 특성입니다.
+public:
+	CIntellisenseDoc* GetDocument() const;
+
+// 작업입니다.
+public:
+	int m_BPMCount[10];
+	int m_BPMState;
+
+	int g_OmitCondition3_Disp;
+	int g_MassCondition1_Disp;
+	int m_Histogram[256];
+	void OnComputeXray(int I_Count);
+	CBitmap m_bmpMaincond[6];
+	void RejectON();
+	void RejectON_NewIO();
+	bool b_StopPaint;
+	CEYH_ADO m_pSet_1;
+	CEYH_ADO m_pSet_6;
+	CEYH_ADO m_pSet_7;
+	CEYH_ADO m_pSet_10;
+	bool b_TestMode;
+	bool b_AniState;
+	SYSTEMTIME m_Rstm;
+	CTime m_Rtime;
+
+	void ChangeDetectorValue(void);
+	void OnDispCondActive(void);
+	void OnWriteLog(int Num);
+	void OnLoadValue(void);
+	int b_IsNormalization;
+	int	m_Count_Total;
+	int	m_Count_Soup;
+	int	m_Count_OK;
+	int	m_Count_NG;
+
+	int	m_Result_mode;
+	int m_OmitAve;
+	CBitmap m_bmpMainBG;
+	int m_nMainWidth; 
+    int m_nMainHeight;
+	void LoadBackground(void);
+
+// 재정의입니다.
+public:
+	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
+protected:
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 지원입니다.
+	virtual void OnInitialUpdate(); // 생성 후 처음 호출되었습니다.
+
+// 구현입니다.
+public:
+	virtual ~CIntellisenseView();
+#ifdef _DEBUG
+	virtual void AssertValid() const;
+	virtual void Dump(CDumpContext& dc) const;
+#endif
+
+private:
+	CBrush Brush;
+	CBrush m_bkbrush;
+	CBrush m_bkbrush1;
+	CBrush m_bkbrush2;
+	CBrush *pOldBrush;
+	CFont m_Font_Name;
+	CTime m_CurrentTime;
+
+
+// 생성된 메시지 맵 함수
+protected:
+	afx_msg void OnFilePrintPreview();
+	afx_msg void OnRButtonUp(UINT nFlags, CPoint point);
+	afx_msg void OnContextMenu(CWnd* pWnd, CPoint point);
+	afx_msg void FrameReadyDtimage1(long NumLines);
+	afx_msg void DTErrorDtimage1(long ErrorID, LPCTSTR ErrorInfo);
+	DECLARE_MESSAGE_MAP()
+
+public:
+	int m_IsProduct;
+	int m_ReportOmit;
+	int m_ReportNg;
+	int m_ReportOk;
+	int m_ReportTotal;
+	CString m_strdate;
+	int m_Height;
+	int m_FrameCount;
+	unsigned int **temp_Buf;
+	unsigned int **center;
+	unsigned int **m_BadImg;
+	unsigned int **m_BadImg6;
+
+	unsigned int ***m_BadImg_Save;
+	unsigned char ***g_Buffer_Resize;
+
+
+
+
+
+	short *stackx;
+	short *stacky;
+	unsigned char **m_Img_Buf;
+	unsigned char **g_Buffer_Label;
+	CPen pen;
+	CPen pen1;
+	CPen pen2;
+	CPen pen3;
+	CPen pen4;
+	CPen pen5;
+	CPen pen6;
+	void OnRecognition(int count);
+	bool Detect_Cond1(int I_Count);
+	bool Detect_Cond2(int I_Count);
+	bool Detect_Cond3(int I_Count);
+	bool Detect_Cond4(int I_Count);
+	bool Detect_Cond5(int I_Count);
+	bool Detect_Cond6(int I_Count);
+	bool Detect_Omit(int I_Count);
+	void Masking(int I_Count);
+	void MaskingClip();
+	void MaskingPaper();
+	void MaskingTalOx(void);
+	bool Labelling();
+	int push(short *stackx, short *stacky, short vx, short vy, int *top);
+	int pop(short *stackx, short *stacky, short *vx, short *vy, int *top);
+	void DrawAnimation();
+	void DrawAnimationClear();
+	void DrawResult();
+	void DrawResultProgress();
+	void ClearResultProgress();
+	void CleanCycleAlarm();
+	int GetNtPrivilege();
+	int GetOSVersionType();
+	void InitArray();
+	CString m_ConditionInfo[50];
+	CString m_ConditionInfo1[50];
+	CString m_ConditionInfo2[50];
+	void OnConditionsetup(void);
+	void OnCountresetbt(void);
+	int OnCheckNormalization();
+	bool b_ConveyorOn;
+	void CheckDiskSpaceDE();
+	void OnMenuStart(void);
+	void OnMenuReStart(void);
+	void OnMenuStop(void);
+	void PostMessageToCtrlView(UINT MessageID, WPARAM wparam, LPARAM lparam);
+	void Initial_Detector(void);
+	void MakeDirectory();
+	void MakeSubDirectory();
+	void MakeExternalDirectory();
+	CString m_ProductName;
+	void DrawXrayState(void);
+	CStatic m_PicXrayState;
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
+	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
+	CEdit m_Edit_Time;
+	CEdit m_Edit_Time3;
+	void DisplayTime(void);
+	CImageObject*	m_pImageObject;
+	CDTCommanderF3 m_Commander;
+	CDTDetector m_Detector;
+	CDTDisplay m_Display;
+	CDTImage m_DTImage;
+	DECLARE_EVENTSINK_MAP()
+	afx_msg void OnBnClickedMenuExit();
+
+public:
+	void ReleaseArray(void);
+	CBitmapButton m_Menu_ExitBt;
+
+	CStatic m_GrabImage;
+	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
+	afx_msg void OnPaint();
+	CStatic m_PicProgress;
+	CEdit m_OmitaveEdit;
+	afx_msg void OnLButtonDblClk(UINT nFlags, CPoint point);
+	CString m_ProductName1;
+	int m_CountCond1;
+	int m_CountCond2;
+	int m_CountCond3;
+	int m_CountCond4;
+	int m_CountCond5;
+	int m_CountCond6;
+	CStatic m_PicXrayAni;
+	CStatic m_PicResult;
+	void OnRecognition_Test(int count);
+	CStatic m_PicCond1;
+	CStatic m_PicCond2;
+	CStatic m_PicCond3;
+	CStatic m_PicCond4;
+	CStatic m_PicCond5;
+	CStatic m_PicProgress2;
+	afx_msg void OnBnClickedBtload();
+	CStatic m_PicCond6;
+	void DisplayEAperMin(void);
+	CEdit m_Edit_Eapermin;
+	bool Detect_Openbox(void);
+	void OnReSize(int I_Count);
+	void OnThreadRecoginition(void);
+	bool Dent_line(int I_count);
+	void OnSaveImg(int I_count);
+//	int m_Icount;
+//	CComidaqctrl2 m_ComiDaq1;
+	bool Detect_Cond22(int I_count);
+	bool Detect_Cond33(int I_count);
+	bool Detect_Cond44(int I_count);
+	bool Detect_Cond55(int I_count);
+	bool Detect_Cond66(int I_count);
+	bool Detect_Cond666(int I_count);
+	int m_InternalCount; //20190327
+	void Masking2(int I_Count);
+	void Encoder_State(int E_count); //엔코더 감지기능 20181119
+	CStatic m_Encoder_S;
+	void OnGetcount(void);
+
+	int m_Count_Total2;
+	int m_Count_OK2;
+	int m_Count_NG2;
+	int m_Count_Soup2;
+	bool b_CheckOverwrite;
+	int m_TempReportOk;
+	int m_TempReportNg;
+	int m_TempReportOmit;
+	int m_TempReportTotal;
+
+
+	void Load_Info(void);
+
+	ComiEncoderMng m_comi;
+};
+
+UINT ThreadAlarm(LPVOID lParam);
+UINT ThreadPaint(LPVOID lParam);
+UINT ThreadReject(LPVOID lParam);
+UINT ThreadInspection(LPVOID lParam);
+UINT ThreadRejectnew(LPVOID lParam);
+UINT ThreadSave(LPVOID lParam);
+
+#ifndef _DEBUG  // IntellisenseView.cpp의 디버그 버전
+inline CIntellisenseDoc* CIntellisenseView::GetDocument() const
+   { return reinterpret_cast<CIntellisenseDoc*>(m_pDocument); }
+#endif
+

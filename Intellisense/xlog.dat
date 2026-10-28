@@ -1,0 +1,543 @@
+Time: 2025-09-19 13:43:12 ms:512 Level: LOG INFO     Message: [CT,R,0]
+Time: 2025-09-19 13:43:12 ms:524 Level: LOG INFO     Message: [0,03]
+Time: 2025-09-19 13:43:12 ms:524 Level: LOG INFO     Message: [TP,R,0]
+Time: 2025-09-19 13:43:12 ms:535 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:12 ms:535 Level: LOG INFO     Message: [PN,R,0]
+Time: 2025-09-19 13:43:12 ms:546 Level: LOG INFO     Message: [0,0200]
+Time: 2025-09-19 13:43:12 ms:546 Level: LOG INFO     Message: [PD,R,0]
+Time: 2025-09-19 13:43:12 ms:557 Level: LOG INFO     Message: [0,10]
+Time: 2025-09-19 13:43:12 ms:557 Level: LOG INFO     Message: [OM,R,0]
+Time: 2025-09-19 13:43:12 ms:568 Level: LOG INFO     Message: [0,02]
+Time: 2025-09-19 13:43:12 ms:569 Level: LOG INFO     Message: [CT,R,0]
+Time: 2025-09-19 13:43:12 ms:580 Level: LOG INFO     Message: [0,03]
+Time: 2025-09-19 13:43:12 ms:581 Level: LOG INFO     Message: [DP,R,0]
+Time: 2025-09-19 13:43:12 ms:591 Level: LOG INFO     Message: [0,08]
+Time: 2025-09-19 13:43:12 ms:591 Level: LOG INFO     Message: [CN,R,0]
+Time: 2025-09-19 13:43:12 ms:602 Level: LOG INFO     Message: [0,0200000000]
+Time: 2025-09-19 13:43:12 ms:602 Level: LOG INFO     Message: [EM,R,0]
+Time: 2025-09-19 13:43:12 ms:613 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:12 ms:613 Level: LOG INFO     Message: [GT,R,0]
+Time: 2025-09-19 13:43:12 ms:625 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:12 ms:625 Level: LOG INFO     Message: [SF,W,0,0]
+Time: 2025-09-19 13:43:12 ms:627 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:12 ms:631 Level: LOG INFO     Message: [TP,W,0,2]
+Time: 2025-09-19 13:43:12 ms:633 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:12 ms:653 Level: LOG INFO     Message: [GT,R,0]
+Time: 2025-09-19 13:43:12 ms:664 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:12 ms:664 Level: LOG INFO     Message: [CT,R,0]
+Time: 2025-09-19 13:43:12 ms:676 Level: LOG INFO     Message: [0,03]
+Time: 2025-09-19 13:43:12 ms:676 Level: LOG INFO     Message: [OM,R,0]
+Time: 2025-09-19 13:43:12 ms:687 Level: LOG INFO     Message: [0,02]
+Time: 2025-09-19 13:43:12 ms:687 Level: LOG INFO     Message: [PD,R,0]
+Time: 2025-09-19 13:43:12 ms:698 Level: LOG INFO     Message: [0,10]
+Time: 2025-09-19 13:43:12 ms:698 Level: LOG INFO     Message: [DA,R,0]
+Time: 2025-09-19 13:43:12 ms:709 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:12 ms:709 Level: LOG INFO     Message: [EM,R,0]
+Time: 2025-09-19 13:43:12 ms:720 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:12 ms:720 Level: LOG INFO     Message: [DP,R,0]
+Time: 2025-09-19 13:43:12 ms:731 Level: LOG INFO     Message: [0,08]
+Time: 2025-09-19 13:43:12 ms:731 Level: LOG INFO     Message: [CN,R,0]
+Time: 2025-09-19 13:43:12 ms:742 Level: LOG INFO     Message: [0,0200000000]
+Time: 2025-09-19 13:43:12 ms:742 Level: LOG INFO     Message: [LM,R,0]
+Time: 2025-09-19 13:43:12 ms:753 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:12 ms:756 Level: LOG INFO     Message: [EL,R,0]
+Time: 2025-09-19 13:43:12 ms:767 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:19 ms:372 Level: LOG INFO     Message: [PS,R,0]
+Time: 2025-09-19 13:43:19 ms:384 Level: LOG INFO     Message: [0,04]
+Time: 2025-09-19 13:43:19 ms:385 Level: LOG INFO     Message: [ST,W,0,320]
+Time: 2025-09-19 13:43:19 ms:387 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:34 ms:104 Level: LOG INFO     Message: [EL,W,0,0]
+Time: 2025-09-19 13:43:34 ms:107 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:34 ms:310 Level: LOG INFO     Message: [OM,W,0,0]
+Time: 2025-09-19 13:43:34 ms:316 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:34 ms:519 Level: LOG INFO     Message: [TP,W,0,0]
+Time: 2025-09-19 13:43:34 ms:523 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:34 ms:523 Level: LOG INFO     Message: [IN,S,0]
+Time: 2025-09-19 13:43:35 ms:851 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:35 ms:851 Level: LOG INFO     Message: [TP,W,0,2]
+Time: 2025-09-19 13:43:35 ms:854 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:38 ms:168 Level: LOG INFO     Message: [PS,R,0]
+Time: 2025-09-19 13:43:38 ms:182 Level: LOG INFO     Message: [0,04]
+Time: 2025-09-19 13:43:38 ms:183 Level: LOG INFO     Message: [ST,W,0,320]
+Time: 2025-09-19 13:43:38 ms:187 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:38 ms:187 Level: LOG INFO     Message: [OM,W,0,2]
+Time: 2025-09-19 13:43:38 ms:193 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:38 ms:193 Level: LOG INFO     Message: [EL,W,0,1]
+Time: 2025-09-19 13:43:38 ms:197 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:38 ms:197 Level: LOG INFO     Message: [LM,W,0,0]
+Time: 2025-09-19 13:43:38 ms:201 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:38 ms:407 Level: LOG INFO     Message: [TP,W,0,0]
+Time: 2025-09-19 13:43:38 ms:411 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:38 ms:411 Level: LOG INFO     Message: [IN,S,0]
+Time: 2025-09-19 13:43:39 ms:733 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:39 ms:747 Level: LOG INFO     Message: [TP,W,0,2]
+Time: 2025-09-19 13:43:39 ms:751 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:40 ms:468 Level: LOG INFO     Message: [EG,R,0]
+Time: 2025-09-19 13:43:40 ms:481 Level: LOG INFO     Message: [0,01]
+Time: 2025-09-19 13:43:40 ms:481 Level: LOG INFO     Message: [BS,R,0]
+Time: 2025-09-19 13:43:40 ms:495 Level: LOG INFO     Message: [0,0050]
+Time: 2025-09-19 13:43:40 ms:495 Level: LOG INFO     Message: [EB,R,0]
+Time: 2025-09-19 13:43:40 ms:508 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:40 ms:509 Level: LOG INFO     Message: [EL,R,0]
+Time: 2025-09-19 13:43:40 ms:521 Level: LOG INFO     Message: [0,01]
+Time: 2025-09-19 13:43:40 ms:522 Level: LOG INFO     Message: [LM,R,0]
+Time: 2025-09-19 13:43:40 ms:536 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:40 ms:536 Level: LOG INFO     Message: [TD,R,0]
+Time: 2025-09-19 13:43:40 ms:549 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:40 ms:550 Level: LOG INFO     Message: [RD,R,0]
+Time: 2025-09-19 13:43:40 ms:561 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:40 ms:562 Level: LOG INFO     Message: [EF,R,0]
+Time: 2025-09-19 13:43:40 ms:575 Level: LOG INFO     Message: [0,0000]
+Time: 2025-09-19 13:43:40 ms:575 Level: LOG INFO     Message: [FM,R,0]
+Time: 2025-09-19 13:43:40 ms:588 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:40 ms:588 Level: LOG INFO     Message: [FD,R,0]
+Time: 2025-09-19 13:43:40 ms:600 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:40 ms:600 Level: LOG INFO     Message: [AF,R,0]
+Time: 2025-09-19 13:43:40 ms:613 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:40 ms:613 Level: LOG INFO     Message: [SU,R,0]
+Time: 2025-09-19 13:43:40 ms:625 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-19 13:43:40 ms:667 Level: LOG INFO     Message: [SF,W,0,0]
+Time: 2025-09-19 13:43:40 ms:673 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:40 ms:676 Level: LOG INFO     Message: [SF,W,0,1]
+Time: 2025-09-19 13:43:40 ms:682 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:50 ms:127 Level: LOG ERROR    Message: XImg parse stop abnornmally
+Time: 2025-09-19 13:43:53 ms:141 Level: LOG ERROR    Message: XImg engine stop abnormally
+Time: 2025-09-19 13:43:53 ms:693 Level: LOG INFO     Message: [EL,W,0,0]
+Time: 2025-09-19 13:43:53 ms:697 Level: LOG INFO     Message: [0]
+Time: 2025-09-19 13:43:53 ms:908 Level: LOG INFO     Message: [OM,W,0,0]
+Time: 2025-09-19 13:44:01 ms:674 Level: LOG ERROR    Message: XCmd engine receive error code
+Time: 2025-09-19 13:44:01 ms:675 Level: LOG INFO     Message: [6]
+Time: 2025-09-19 15:14:22 ms:294 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-09-19 15:22:00 ms:649 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-09-22 15:52:46 ms:929 Level: LOG INFO     Message: [CT,R,0]
+Time: 2025-09-22 15:52:46 ms:943 Level: LOG INFO     Message: [0,03]
+Time: 2025-09-22 15:52:46 ms:943 Level: LOG INFO     Message: [TP,R,0]
+Time: 2025-09-22 15:52:46 ms:956 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:52:46 ms:956 Level: LOG INFO     Message: [PN,R,0]
+Time: 2025-09-22 15:52:46 ms:968 Level: LOG INFO     Message: [0,0200]
+Time: 2025-09-22 15:52:46 ms:968 Level: LOG INFO     Message: [PD,R,0]
+Time: 2025-09-22 15:52:46 ms:980 Level: LOG INFO     Message: [0,10]
+Time: 2025-09-22 15:52:46 ms:980 Level: LOG INFO     Message: [OM,R,0]
+Time: 2025-09-22 15:52:46 ms:992 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:52:46 ms:992 Level: LOG INFO     Message: [CT,R,0]
+Time: 2025-09-22 15:52:47 ms:005 Level: LOG INFO     Message: [0,03]
+Time: 2025-09-22 15:52:47 ms:005 Level: LOG INFO     Message: [DP,R,0]
+Time: 2025-09-22 15:52:47 ms:017 Level: LOG INFO     Message: [0,08]
+Time: 2025-09-22 15:52:47 ms:017 Level: LOG INFO     Message: [CN,R,0]
+Time: 2025-09-22 15:52:47 ms:029 Level: LOG INFO     Message: [0,0200000000]
+Time: 2025-09-22 15:52:47 ms:029 Level: LOG INFO     Message: [EM,R,0]
+Time: 2025-09-22 15:52:47 ms:041 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:52:47 ms:041 Level: LOG INFO     Message: [GT,R,0]
+Time: 2025-09-22 15:52:47 ms:053 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:52:47 ms:053 Level: LOG INFO     Message: [SF,W,0,0]
+Time: 2025-09-22 15:52:47 ms:056 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:52:47 ms:060 Level: LOG INFO     Message: [TP,W,0,2]
+Time: 2025-09-22 15:52:47 ms:063 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:52:47 ms:080 Level: LOG INFO     Message: [GT,R,0]
+Time: 2025-09-22 15:52:47 ms:093 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:52:47 ms:093 Level: LOG INFO     Message: [CT,R,0]
+Time: 2025-09-22 15:52:47 ms:105 Level: LOG INFO     Message: [0,03]
+Time: 2025-09-22 15:52:47 ms:105 Level: LOG INFO     Message: [OM,R,0]
+Time: 2025-09-22 15:52:47 ms:117 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:52:47 ms:117 Level: LOG INFO     Message: [PD,R,0]
+Time: 2025-09-22 15:52:47 ms:129 Level: LOG INFO     Message: [0,10]
+Time: 2025-09-22 15:52:47 ms:130 Level: LOG INFO     Message: [DA,R,0]
+Time: 2025-09-22 15:52:47 ms:142 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:52:47 ms:142 Level: LOG INFO     Message: [EM,R,0]
+Time: 2025-09-22 15:52:47 ms:154 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:52:47 ms:154 Level: LOG INFO     Message: [DP,R,0]
+Time: 2025-09-22 15:52:47 ms:166 Level: LOG INFO     Message: [0,08]
+Time: 2025-09-22 15:52:47 ms:166 Level: LOG INFO     Message: [CN,R,0]
+Time: 2025-09-22 15:52:47 ms:178 Level: LOG INFO     Message: [0,0200000000]
+Time: 2025-09-22 15:52:47 ms:178 Level: LOG INFO     Message: [LM,R,0]
+Time: 2025-09-22 15:52:47 ms:191 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:52:47 ms:210 Level: LOG INFO     Message: [EL,R,0]
+Time: 2025-09-22 15:52:47 ms:223 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:52:50 ms:425 Level: LOG INFO     Message: [PS,R,0]
+Time: 2025-09-22 15:52:50 ms:436 Level: LOG INFO     Message: [0,04]
+Time: 2025-09-22 15:52:50 ms:436 Level: LOG INFO     Message: [ST,W,0,320]
+Time: 2025-09-22 15:52:50 ms:438 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:53:05 ms:435 Level: LOG INFO     Message: [EL,W,0,0]
+Time: 2025-09-22 15:53:05 ms:438 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:53:05 ms:646 Level: LOG INFO     Message: [OM,W,0,0]
+Time: 2025-09-22 15:53:05 ms:649 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:53:05 ms:861 Level: LOG INFO     Message: [TP,W,0,0]
+Time: 2025-09-22 15:53:05 ms:864 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:53:05 ms:864 Level: LOG INFO     Message: [IN,S,0]
+Time: 2025-09-22 15:53:07 ms:247 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:53:07 ms:263 Level: LOG INFO     Message: [TP,W,0,2]
+Time: 2025-09-22 15:53:07 ms:266 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:53:09 ms:590 Level: LOG INFO     Message: [PS,R,0]
+Time: 2025-09-22 15:53:09 ms:603 Level: LOG INFO     Message: [0,04]
+Time: 2025-09-22 15:53:09 ms:603 Level: LOG INFO     Message: [ST,W,0,320]
+Time: 2025-09-22 15:53:09 ms:606 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:53:09 ms:818 Level: LOG INFO     Message: [OM,W,0,0]
+Time: 2025-09-22 15:53:09 ms:822 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:53:10 ms:032 Level: LOG INFO     Message: [EL,W,0,1]
+Time: 2025-09-22 15:53:10 ms:036 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:53:10 ms:247 Level: LOG INFO     Message: [LM,W,0,0]
+Time: 2025-09-22 15:53:10 ms:251 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:53:10 ms:462 Level: LOG INFO     Message: [TP,W,0,0]
+Time: 2025-09-22 15:53:10 ms:466 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:53:10 ms:466 Level: LOG INFO     Message: [IN,S,0]
+Time: 2025-09-22 15:53:11 ms:834 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:53:11 ms:838 Level: LOG INFO     Message: [TP,W,0,2]
+Time: 2025-09-22 15:53:11 ms:840 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:53:12 ms:729 Level: LOG INFO     Message: [EG,R,0]
+Time: 2025-09-22 15:53:12 ms:740 Level: LOG INFO     Message: [0,01]
+Time: 2025-09-22 15:53:12 ms:740 Level: LOG INFO     Message: [BS,R,0]
+Time: 2025-09-22 15:53:12 ms:751 Level: LOG INFO     Message: [0,0050]
+Time: 2025-09-22 15:53:12 ms:751 Level: LOG INFO     Message: [EB,R,0]
+Time: 2025-09-22 15:53:12 ms:762 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:53:12 ms:763 Level: LOG INFO     Message: [EL,R,0]
+Time: 2025-09-22 15:53:12 ms:774 Level: LOG INFO     Message: [0,01]
+Time: 2025-09-22 15:53:12 ms:774 Level: LOG INFO     Message: [LM,R,0]
+Time: 2025-09-22 15:53:12 ms:785 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:53:12 ms:785 Level: LOG INFO     Message: [TD,R,0]
+Time: 2025-09-22 15:53:12 ms:796 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:53:12 ms:796 Level: LOG INFO     Message: [RD,R,0]
+Time: 2025-09-22 15:53:12 ms:807 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:53:12 ms:807 Level: LOG INFO     Message: [EF,R,0]
+Time: 2025-09-22 15:53:12 ms:818 Level: LOG INFO     Message: [0,0000]
+Time: 2025-09-22 15:53:12 ms:818 Level: LOG INFO     Message: [FM,R,0]
+Time: 2025-09-22 15:53:12 ms:829 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:53:12 ms:829 Level: LOG INFO     Message: [FD,R,0]
+Time: 2025-09-22 15:53:12 ms:840 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:53:12 ms:841 Level: LOG INFO     Message: [AF,R,0]
+Time: 2025-09-22 15:53:12 ms:852 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:53:12 ms:852 Level: LOG INFO     Message: [SU,R,0]
+Time: 2025-09-22 15:53:12 ms:863 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:53:12 ms:895 Level: LOG INFO     Message: [SF,W,0,0]
+Time: 2025-09-22 15:53:12 ms:898 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:53:12 ms:904 Level: LOG INFO     Message: [SF,W,0,1]
+Time: 2025-09-22 15:53:12 ms:907 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:54:37 ms:085 Level: LOG INFO     Message: [CT,R,0]
+Time: 2025-09-22 15:54:37 ms:096 Level: LOG INFO     Message: [0,03]
+Time: 2025-09-22 15:54:37 ms:097 Level: LOG INFO     Message: [TP,R,0]
+Time: 2025-09-22 15:54:37 ms:107 Level: LOG INFO     Message: [0,02]
+Time: 2025-09-22 15:54:37 ms:107 Level: LOG INFO     Message: [PN,R,0]
+Time: 2025-09-22 15:54:37 ms:117 Level: LOG INFO     Message: [0,0200]
+Time: 2025-09-22 15:54:37 ms:117 Level: LOG INFO     Message: [PD,R,0]
+Time: 2025-09-22 15:54:37 ms:128 Level: LOG INFO     Message: [0,10]
+Time: 2025-09-22 15:54:37 ms:128 Level: LOG INFO     Message: [OM,R,0]
+Time: 2025-09-22 15:54:37 ms:139 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:54:37 ms:139 Level: LOG INFO     Message: [CT,R,0]
+Time: 2025-09-22 15:54:37 ms:150 Level: LOG INFO     Message: [0,03]
+Time: 2025-09-22 15:54:37 ms:150 Level: LOG INFO     Message: [DP,R,0]
+Time: 2025-09-22 15:54:37 ms:161 Level: LOG INFO     Message: [0,08]
+Time: 2025-09-22 15:54:37 ms:161 Level: LOG INFO     Message: [CN,R,0]
+Time: 2025-09-22 15:54:37 ms:172 Level: LOG INFO     Message: [0,0200000000]
+Time: 2025-09-22 15:54:37 ms:172 Level: LOG INFO     Message: [EM,R,0]
+Time: 2025-09-22 15:54:37 ms:183 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:54:37 ms:183 Level: LOG INFO     Message: [GT,R,0]
+Time: 2025-09-22 15:54:37 ms:193 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:54:37 ms:193 Level: LOG INFO     Message: [SF,W,0,0]
+Time: 2025-09-22 15:54:37 ms:196 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:54:37 ms:200 Level: LOG INFO     Message: [TP,W,0,2]
+Time: 2025-09-22 15:54:37 ms:202 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:54:37 ms:220 Level: LOG INFO     Message: [GT,R,0]
+Time: 2025-09-22 15:54:37 ms:231 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:54:37 ms:231 Level: LOG INFO     Message: [CT,R,0]
+Time: 2025-09-22 15:54:37 ms:242 Level: LOG INFO     Message: [0,03]
+Time: 2025-09-22 15:54:37 ms:242 Level: LOG INFO     Message: [OM,R,0]
+Time: 2025-09-22 15:54:37 ms:253 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:54:37 ms:253 Level: LOG INFO     Message: [PD,R,0]
+Time: 2025-09-22 15:54:37 ms:264 Level: LOG INFO     Message: [0,10]
+Time: 2025-09-22 15:54:37 ms:264 Level: LOG INFO     Message: [DA,R,0]
+Time: 2025-09-22 15:54:37 ms:275 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:54:37 ms:275 Level: LOG INFO     Message: [EM,R,0]
+Time: 2025-09-22 15:54:37 ms:286 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:54:37 ms:286 Level: LOG INFO     Message: [DP,R,0]
+Time: 2025-09-22 15:54:37 ms:298 Level: LOG INFO     Message: [0,08]
+Time: 2025-09-22 15:54:37 ms:298 Level: LOG INFO     Message: [CN,R,0]
+Time: 2025-09-22 15:54:37 ms:309 Level: LOG INFO     Message: [0,0200000000]
+Time: 2025-09-22 15:54:37 ms:309 Level: LOG INFO     Message: [LM,R,0]
+Time: 2025-09-22 15:54:37 ms:320 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:54:37 ms:321 Level: LOG INFO     Message: [EL,R,0]
+Time: 2025-09-22 15:54:37 ms:332 Level: LOG INFO     Message: [0,01]
+Time: 2025-09-22 15:54:40 ms:728 Level: LOG INFO     Message: [PS,R,0]
+Time: 2025-09-22 15:54:40 ms:739 Level: LOG INFO     Message: [0,04]
+Time: 2025-09-22 15:54:40 ms:739 Level: LOG INFO     Message: [ST,W,0,320]
+Time: 2025-09-22 15:54:40 ms:741 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:55:03 ms:117 Level: LOG INFO     Message: [EL,W,0,0]
+Time: 2025-09-22 15:55:03 ms:119 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:55:03 ms:326 Level: LOG INFO     Message: [OM,W,0,0]
+Time: 2025-09-22 15:55:03 ms:330 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:55:03 ms:541 Level: LOG INFO     Message: [TP,W,0,0]
+Time: 2025-09-22 15:55:03 ms:545 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:55:03 ms:545 Level: LOG INFO     Message: [IN,S,0]
+Time: 2025-09-22 15:55:04 ms:904 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:55:04 ms:904 Level: LOG INFO     Message: [TP,W,0,2]
+Time: 2025-09-22 15:55:04 ms:907 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:55:07 ms:216 Level: LOG INFO     Message: [PS,R,0]
+Time: 2025-09-22 15:55:07 ms:228 Level: LOG INFO     Message: [0,04]
+Time: 2025-09-22 15:55:07 ms:228 Level: LOG INFO     Message: [ST,W,0,320]
+Time: 2025-09-22 15:55:07 ms:231 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:55:07 ms:435 Level: LOG INFO     Message: [OM,W,0,0]
+Time: 2025-09-22 15:55:07 ms:439 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:55:07 ms:651 Level: LOG INFO     Message: [EL,W,0,1]
+Time: 2025-09-22 15:55:07 ms:654 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:55:07 ms:865 Level: LOG INFO     Message: [LM,W,0,0]
+Time: 2025-09-22 15:55:07 ms:868 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:55:08 ms:079 Level: LOG INFO     Message: [TP,W,0,0]
+Time: 2025-09-22 15:55:08 ms:082 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:55:08 ms:082 Level: LOG INFO     Message: [IN,S,0]
+Time: 2025-09-22 15:55:09 ms:439 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:55:09 ms:439 Level: LOG INFO     Message: [TP,W,0,2]
+Time: 2025-09-22 15:55:09 ms:442 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:55:09 ms:588 Level: LOG INFO     Message: [EG,R,0]
+Time: 2025-09-22 15:55:09 ms:601 Level: LOG INFO     Message: [0,01]
+Time: 2025-09-22 15:55:09 ms:601 Level: LOG INFO     Message: [BS,R,0]
+Time: 2025-09-22 15:55:09 ms:613 Level: LOG INFO     Message: [0,0050]
+Time: 2025-09-22 15:55:09 ms:613 Level: LOG INFO     Message: [EB,R,0]
+Time: 2025-09-22 15:55:09 ms:625 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:55:09 ms:625 Level: LOG INFO     Message: [EL,R,0]
+Time: 2025-09-22 15:55:09 ms:637 Level: LOG INFO     Message: [0,01]
+Time: 2025-09-22 15:55:09 ms:637 Level: LOG INFO     Message: [LM,R,0]
+Time: 2025-09-22 15:55:09 ms:649 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:55:09 ms:649 Level: LOG INFO     Message: [TD,R,0]
+Time: 2025-09-22 15:55:09 ms:661 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:55:09 ms:661 Level: LOG INFO     Message: [RD,R,0]
+Time: 2025-09-22 15:55:09 ms:673 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:55:09 ms:673 Level: LOG INFO     Message: [EF,R,0]
+Time: 2025-09-22 15:55:09 ms:685 Level: LOG INFO     Message: [0,0000]
+Time: 2025-09-22 15:55:09 ms:685 Level: LOG INFO     Message: [FM,R,0]
+Time: 2025-09-22 15:55:09 ms:697 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:55:09 ms:697 Level: LOG INFO     Message: [FD,R,0]
+Time: 2025-09-22 15:55:09 ms:709 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:55:09 ms:709 Level: LOG INFO     Message: [AF,R,0]
+Time: 2025-09-22 15:55:09 ms:721 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:55:09 ms:721 Level: LOG INFO     Message: [SU,R,0]
+Time: 2025-09-22 15:55:09 ms:733 Level: LOG INFO     Message: [0,00]
+Time: 2025-09-22 15:55:09 ms:744 Level: LOG INFO     Message: [SF,W,0,0]
+Time: 2025-09-22 15:55:09 ms:750 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:55:09 ms:762 Level: LOG INFO     Message: [SF,W,0,1]
+Time: 2025-09-22 15:55:09 ms:766 Level: LOG INFO     Message: [0]
+Time: 2025-09-22 15:56:47 ms:974 Level: LOG WARNING  Message: Lost 1265 lines,cur 51544, miss 50279
+Time: 2025-09-22 15:56:47 ms:974 Level: LOG WARNING  Message: Lost 5757 lines,cur 57302, miss 51545
+Time: 2025-09-22 15:56:47 ms:974 Level: LOG WARNING  Message: Lost 3435 lines,cur 60738, miss 57303
+Time: 2025-09-22 15:56:47 ms:975 Level: LOG WARNING  Message: Lost 36489 lines,cur 31693, miss 60739
+Time: 2025-09-22 15:56:47 ms:975 Level: LOG WARNING  Message: Lost 5966 lines,cur 37674, miss 31708
+Time: 2025-09-22 15:56:47 ms:975 Level: LOG WARNING  Message: Lost 10138 lines,cur 47813, miss 37675
+Time: 2025-09-22 15:56:47 ms:975 Level: LOG WARNING  Message: Lost 18213 lines,cur 492, miss 47814
+Time: 2025-09-22 15:56:47 ms:979 Level: LOG WARNING  Message: Lost 4423 lines,cur 5126, miss 703
+Time: 2025-09-22 15:56:47 ms:979 Level: LOG WARNING  Message: Lost 3766 lines,cur 8900, miss 5134
+Time: 2025-09-22 15:56:47 ms:980 Level: LOG WARNING  Message: Lost 1881 lines,cur 10824, miss 8943
+Time: 2025-09-22 15:56:47 ms:980 Level: LOG WARNING  Message: Lost 1557 lines,cur 12409, miss 10852
+Time: 2025-09-22 15:56:47 ms:981 Level: LOG WARNING  Message: Lost 4321 lines,cur 16767, miss 12446
+Time: 2025-09-22 15:56:47 ms:982 Level: LOG WARNING  Message: Lost 10014 lines,cur 26782, miss 16768
+Time: 2025-09-22 15:56:47 ms:982 Level: LOG WARNING  Message: Lost 23134 lines,cur 49917, miss 26783
+Time: 2025-09-22 15:56:47 ms:982 Level: LOG WARNING  Message: Lost 2293 lines,cur 52240, miss 49947
+Time: 2025-09-22 15:56:47 ms:984 Level: LOG WARNING  Message: Lost 9060 lines,cur 61360, miss 52300
+Time: 2025-10-26 14:12:31 ms:823 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 14:13:43 ms:227 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 14:18:31 ms:024 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 14:20:07 ms:167 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 14:22:14 ms:338 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 14:36:00 ms:167 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 14:39:52 ms:228 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 14:41:13 ms:316 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 14:43:04 ms:386 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 14:45:30 ms:388 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 14:47:19 ms:850 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 14:49:03 ms:377 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 14:49:43 ms:461 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 14:51:28 ms:964 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 14:53:56 ms:262 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 14:57:52 ms:096 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 15:00:02 ms:897 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 15:01:35 ms:545 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 15:04:18 ms:659 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 15:20:00 ms:060 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 15:25:25 ms:729 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 15:26:40 ms:723 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 15:40:41 ms:027 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 15:51:00 ms:641 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 15:53:16 ms:757 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 15:58:51 ms:500 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:00:54 ms:431 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:13:09 ms:964 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:19:04 ms:117 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:21:20 ms:038 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:22:06 ms:713 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:24:32 ms:199 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:28:05 ms:273 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:33:07 ms:375 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:34:24 ms:687 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:38:15 ms:588 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:41:17 ms:774 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:42:34 ms:794 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:43:06 ms:647 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:43:59 ms:076 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:45:51 ms:516 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:51:08 ms:320 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 16:59:43 ms:625 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 17:00:33 ms:119 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 17:01:51 ms:168 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 17:09:35 ms:881 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 17:12:04 ms:686 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 17:13:40 ms:343 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 17:15:48 ms:317 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 17:39:01 ms:890 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 17:47:18 ms:841 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-26 17:48:38 ms:678 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 15:50:27 ms:246 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 15:52:29 ms:921 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 15:57:44 ms:729 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 16:00:20 ms:126 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 16:02:37 ms:079 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 16:05:28 ms:089 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 16:06:28 ms:192 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 16:10:06 ms:736 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 16:11:36 ms:642 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 16:13:39 ms:442 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 16:20:12 ms:085 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 16:24:04 ms:983 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 16:31:19 ms:273 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 16:40:15 ms:795 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 17:08:39 ms:876 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 17:14:08 ms:657 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 17:18:06 ms:701 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 17:36:15 ms:902 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 17:47:10 ms:789 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 17:48:48 ms:558 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 18:25:38 ms:719 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 18:28:09 ms:801 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 18:31:39 ms:933 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 18:32:41 ms:377 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-27 18:33:55 ms:808 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-28 10:16:55 ms:078 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-28 10:20:36 ms:263 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-28 10:26:16 ms:993 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-28 10:28:36 ms:197 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-28 10:33:59 ms:685 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-28 10:35:15 ms:575 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-28 10:36:22 ms:037 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-28 10:39:39 ms:378 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-28 10:41:19 ms:866 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-28 10:44:35 ms:362 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-28 10:46:26 ms:227 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-28 10:48:59 ms:086 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-28 10:51:00 ms:025 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-28 11:03:34 ms:936 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-28 11:09:18 ms:226 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-28 11:10:30 ms:268 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2025-10-29 17:24:34 ms:880 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-30 15:31:45 ms:429 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-30 15:43:53 ms:046 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-31 09:57:40 ms:675 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-31 10:00:31 ms:137 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-31 10:01:13 ms:311 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-31 10:01:58 ms:990 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-31 10:03:01 ms:618 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-10-31 10:05:00 ms:456 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2025-11-19 11:29:01 ms:894 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-01-02 10:44:58 ms:394 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-01-02 10:46:49 ms:008 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-01-02 10:53:39 ms:316 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-01-26 11:46:20 ms:181 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-02-02 08:50:54 ms:506 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-02 08:52:23 ms:978 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-02 09:22:33 ms:823 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-02 09:32:49 ms:842 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-04 15:04:45 ms:906 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-02-04 15:06:44 ms:530 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-02-04 15:10:49 ms:976 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-02-04 15:12:09 ms:380 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-02-04 15:16:22 ms:406 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-02-04 15:25:41 ms:703 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-02-04 15:34:29 ms:314 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-02-04 15:40:11 ms:814 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-02-04 18:42:20 ms:868 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-02-04 19:04:37 ms:444 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-02-05 13:07:07 ms:907 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-02-09 14:34:55 ms:438 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 14:42:11 ms:789 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 14:45:51 ms:298 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 14:46:54 ms:483 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 14:48:29 ms:111 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 15:20:50 ms:873 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 15:23:54 ms:279 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 15:29:37 ms:305 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 15:31:28 ms:577 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 15:35:20 ms:318 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 15:37:23 ms:559 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 15:42:20 ms:285 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 15:44:12 ms:693 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 15:44:56 ms:379 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 15:53:05 ms:229 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 15:58:51 ms:420 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 15:59:25 ms:026 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 16:41:23 ms:056 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 16:58:58 ms:512 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 17:02:35 ms:555 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 22:37:11 ms:482 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 22:38:42 ms:148 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 22:41:24 ms:018 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 22:50:13 ms:245 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 22:56:40 ms:312 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-09 23:17:26 ms:937 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-10 10:38:05 ms:029 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-10 11:16:19 ms:442 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-10 12:08:16 ms:972 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-10 12:09:46 ms:527 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-10 12:10:46 ms:709 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-10 12:11:17 ms:002 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-10 12:11:51 ms:128 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-10 12:13:00 ms:465 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-10 13:10:50 ms:255 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-10 13:20:02 ms:115 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-10 14:27:45 ms:287 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-10 14:50:52 ms:012 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-25 18:40:50 ms:530 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-02-25 18:41:21 ms:713 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-02-26 00:27:51 ms:574 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-26 10:45:52 ms:581 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-26 10:48:22 ms:748 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-26 10:59:35 ms:841 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-26 11:00:45 ms:448 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-26 11:01:52 ms:763 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-26 11:03:16 ms:437 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-26 11:17:34 ms:542 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-26 13:04:06 ms:167 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-26 13:04:56 ms:057 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-26 13:05:33 ms:599 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-02-26 15:55:32 ms:326 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-03-16 09:48:27 ms:423 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-03-16 11:02:48 ms:474 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-03-25 11:53:03 ms:829 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-03-25 13:43:31 ms:119 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-03-25 18:28:21 ms:647 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-03-25 18:40:46 ms:722 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-03-26 14:17:02 ms:904 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-03-27 15:23:15 ms:723 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-03-27 15:25:23 ms:483 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-03-27 15:25:55 ms:463 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-03-31 13:39:15 ms:721 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-03-31 19:12:40 ms:705 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-04-01 11:21:53 ms:434 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-02 15:26:00 ms:171 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-02 15:46:40 ms:524 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-02 15:47:38 ms:343 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-03 14:59:45 ms:612 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-13 22:55:44 ms:371 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-14 00:33:07 ms:353 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-14 00:34:10 ms:243 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-14 00:36:38 ms:712 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-14 00:39:16 ms:264 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-14 00:40:49 ms:902 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-14 11:00:27 ms:522 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-14 11:31:43 ms:185 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-14 11:38:31 ms:495 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-14 11:41:56 ms:856 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-14 11:45:11 ms:121 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-14 11:46:18 ms:762 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-14 11:48:59 ms:325 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-04-14 11:50:55 ms:122 Level: LOG ERROR    Message: XSystem socket fail to send command
+Time: 2026-07-07 18:20:18 ms:035 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-08-13 09:01:47 ms:313 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-08-13 09:25:12 ms:257 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-08-13 09:26:03 ms:287 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-08-13 09:26:43 ms:112 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-09-30 14:04:50 ms:715 Level: LOG ERROR    Message: XSystem socket receive timeout
+Time: 2026-10-07 17:32:29 ms:011 Level: LOG ERROR    Message: XSystem socket fail to send command

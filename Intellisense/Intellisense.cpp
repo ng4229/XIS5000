@@ -1,0 +1,2059 @@
+﻿
+// Intellisense.cpp : 응용 프로그램에 대한 클래스 동작을 정의합니다.
+//
+
+#include "stdafx.h"
+#include "afxwinappex.h"
+#include "afxdialogex.h"
+#include "Intellisense.h"
+#include "MainFrm.h"
+
+#include "ChildFrm.h"
+#include "IntellisenseDoc.h"
+#include "IntellisenseView.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#endif
+
+
+
+// CIntellisenseApp
+
+BEGIN_MESSAGE_MAP(CIntellisenseApp, CWinAppEx)
+	ON_COMMAND(ID_APP_ABOUT, &CIntellisenseApp::OnAppAbout)
+	// 표준 파일을 기초로 하는 문서 명령입니다.
+	ON_COMMAND(ID_FILE_NEW, &CWinAppEx::OnFileNew)
+	ON_COMMAND(ID_FILE_OPEN, &CWinAppEx::OnFileOpen)
+END_MESSAGE_MAP()
+
+
+// CIntellisenseApp 생성
+
+CIntellisenseApp::CIntellisenseApp()
+{
+	m_bHiColorIcons = TRUE;
+
+	// TODO: 아래 응용 프로그램 ID 문자열을 고유 ID 문자열로 바꾸십시오(권장).
+	// 문자열에 대한 서식: CompanyName.ProductName.SubProduct.VersionInformation
+	SetAppID(_T("Intellisense.AppID.NoVersion"));
+
+	// TODO: 여기에 생성 코드를 추가합니다.
+	// InitInstance에 모든 중요한 초기화 작업을 배치합니다.
+}
+
+// 유일한 CIntellisenseApp 개체입니다.
+
+CIntellisenseApp theApp;
+
+
+// CIntellisenseApp 초기화
+
+
+BOOL CIntellisenseApp::InitInstance()
+{
+
+	CWinAppEx::InitInstance();
+
+	HWND DoubleCheck = FindWindow(NULL, _T("Intellisense"));
+	if(DoubleCheck){
+		return FALSE;
+	}
+
+	// OLE 라이브러리를 초기화합니다.
+	if (!AfxOleInit())
+	{
+		AfxMessageBox(IDP_OLE_INIT_FAILED);
+		return FALSE;
+	}
+
+	CStdioFile fileString;
+	CString Language=_T("0");
+	if(fileString.Open(_T("D:\\Database\\Language.ini"), 
+		CStdioFile::modeRead | CStdioFile::shareDenyNone))
+	{
+		fileString.ReadString(Language);
+		fileString.Close();
+	}
+	g_NationalCode=_wtoi(Language);
+
+	CString DllPath, MessageNo;
+	CRegKey reg;
+	reg.Open(HKEY_CURRENT_USER, _T("Control Panel\\International"));
+	reg.SetValue(_T("AM"), _T("s1159"));
+	reg.SetValue(_T("PM"), _T("s2359"));
+	reg.SetValue(_T("₩"), _T("sCurrency"));
+	reg.SetValue(_T("-"), _T("sDate"));
+	reg.SetValue(_T("yyyy-MM-dd"), _T("sLongDate"));
+	reg.SetValue(_T("yyyy-MM-dd"), _T("sShortDate"));
+	reg.SetValue(_T("tt h:mm:ss"), _T("sTimeFormat"));
+	reg.SetValue(_T("tt h:mm"), _T("sShortTime"));
+	if(g_NationalCode==0) //1042
+	{
+		DllPath.Format(_T("D:\\Database\\Korean.ini"));
+		reg.SetValue(_T("00000412"), _T("Locale"));
+		reg.SetValue(_T("ko-KR"), _T("LocaleName"));
+		reg.SetValue(_T("대한민국"), _T("sCountry"));
+		reg.SetValue(_T("KOR"), _T("sLanguage"));
+		reg.SetValue(_T("yyyy'년' M'월'"), _T("sYearMonth"));
+		reg.SetValue(_T("82"), _T("iCountry"));
+		reg.SetValue(_T("0"), _T("iCurrDigits"));
+		reg.SetValue(_T("2"), _T("iDate"));
+		reg.SetValue(_T("1"), _T("iLZero"));
+		reg.SetValue(_T("0"), _T("iMeasure"));
+		reg.SetValue(_T("1"), _T("iNegCurr"));
+		reg.SetValue(_T("9"), _T("iPaperSize"));
+		reg.SetValue(_T("0"), _T("iTime"));
+		reg.SetValue(_T("1"), _T("iTimePrefix"));
+	}
+	else if(g_NationalCode==1)
+	{
+		DllPath.Format(_T("D:\\Database\\English.ini"));
+		reg.SetValue(_T("00000409"), _T("Locale"));
+		reg.SetValue(_T("en-US"), _T("LocaleName"));
+		reg.SetValue(_T("미국"), _T("sCountry"));
+		reg.SetValue(_T("ENU"), _T("sLanguage"));
+		reg.SetValue(_T("MMMM, yyyy"), _T("sYearMonth"));
+		reg.SetValue(_T("1"), _T("iCountry"));
+		reg.SetValue(_T("2"), _T("iCurrDigits"));
+		reg.SetValue(_T("0"), _T("iDate"));
+		reg.SetValue(_T("1"), _T("iLZero"));
+		reg.SetValue(_T("1"), _T("iMeasure"));
+		reg.SetValue(_T("0"), _T("iNegCurr"));
+		reg.SetValue(_T("1"), _T("iPaperSize"));
+		reg.SetValue(_T("0"), _T("iTime"));
+		reg.SetValue(_T("0"), _T("iTimePrefix"));
+	}
+	else if(g_NationalCode==2)
+	{
+		DllPath.Format(_T("D:\\Database\\Chinese.ini")); 
+		reg.SetValue(_T("00000804"), _T("Locale"));
+		reg.SetValue(_T("zh-CN"), _T("LocaleName"));
+		reg.SetValue(_T("중국"), _T("sCountry"));
+		reg.SetValue(_T("CHS"), _T("sLanguage"));
+		reg.SetValue(_T("yyyy'年'M'月"), _T("sYearMonth"));
+		reg.SetValue(_T("86"), _T("iCountry"));
+		reg.SetValue(_T("2"), _T("iCurrDigits"));
+		reg.SetValue(_T("2"), _T("iDate"));
+		reg.SetValue(_T("0"), _T("iLZero"));
+		reg.SetValue(_T("0"), _T("iMeasure"));
+		reg.SetValue(_T("2"), _T("iNegCurr"));
+		reg.SetValue(_T("9"), _T("iPaperSize"));
+		reg.SetValue(_T("1"), _T("iTime"));
+		reg.SetValue(_T("0"), _T("iTimePrefix"));
+	}
+	else if(g_NationalCode==3)
+	{
+		DllPath.Format(_T("D:\\Database\\Spanish.ini")); 
+	
+		reg.SetValue(_T("0000080A"), _T("Locale"));
+		reg.SetValue(_T("es-MX"), _T("LocaleName"));
+		reg.SetValue(_T("멕시코"), _T("sCountry"));
+		reg.SetValue(_T("ESM"), _T("sLanguage"));
+		reg.SetValue(_T("MMMM, yyyy"), _T("sYearMonth"));
+		reg.SetValue(_T("52"), _T("iCountry"));
+		reg.SetValue(_T("2"), _T("iCurrDigits"));
+		reg.SetValue(_T("1"), _T("iDate"));
+		reg.SetValue(_T("1"), _T("iLZero"));
+		reg.SetValue(_T("0"), _T("iMeasure"));
+		reg.SetValue(_T("1"), _T("iNegCurr"));
+		reg.SetValue(_T("1"), _T("iPaperSize"));
+		reg.SetValue(_T("0"), _T("iTime"));
+		reg.SetValue(_T("0"), _T("iTimePrefix"));
+	}
+	else
+	{   
+		g_NationalCode=0;
+		DllPath.Format(_T("D:\\Database\\Korean.ini"));
+
+		reg.SetValue(_T("00000412"), _T("Locale"));
+		reg.SetValue(_T("ko-KR"), _T("LocaleName"));
+		reg.SetValue(_T("대한민국"), _T("sCountry"));
+		reg.SetValue(_T("KOR"), _T("sLanguage"));
+		reg.SetValue(_T("yyyy'년' M'월'"), _T("sYearMonth"));
+		reg.SetValue(_T("82"), _T("iCountry"));
+		reg.SetValue(_T("0"), _T("iCurrDigits"));
+		reg.SetValue(_T("2"), _T("iDate"));
+		reg.SetValue(_T("1"), _T("iLZero"));
+		reg.SetValue(_T("0"), _T("iMeasure"));
+		reg.SetValue(_T("1"), _T("iNegCurr"));
+		reg.SetValue(_T("9"), _T("iPaperSize"));
+		reg.SetValue(_T("0"), _T("iTime"));
+		reg.SetValue(_T("1"), _T("iTimePrefix"));
+	}
+	reg.Close();
+
+	TCHAR buf[MAX_PATH] = {0,};
+	for(int i=1; i<=240;i++)
+	{
+		MessageNo.Format(_T("msg%d"), i);
+		GetPrivateProfileStringW(_T("Message"), MessageNo, _T(""), buf, MAX_PATH, DllPath);
+		g_MessageArr[i]=buf;
+	}			
+
+	CString g_Model, temp;
+	CString strSQL;
+	
+
+	if (!m_pSet_info.Open_DB(_T("D:\\Database\\InfoMachine.mdb")))
+	{
+		AfxMessageBox(_T("DB open error."));
+		return 0;
+	}
+	strSQL.Format(_T("SELECT TOP 1 * FROM InfoMachine"));
+	if (m_pSet_info.Select_DB(strSQL))
+	{
+		if (m_pSet_info.IsEOF())
+		{
+			if (m_pSet_info.b_IsOpenedDB)
+				m_pSet_info.Close_DB();
+
+			SetDefaultValue();
+			AfxMessageBox(_T("InfoMachine.mdb Open Failed."));
+
+			return FALSE;
+		}
+		else
+		{
+			CString csTemp;
+			int nTemp;
+
+			m_pSet_info.ChangeRsChar(_T("Model"), g_Model);
+			//ModelInfoInitial(g_Model);
+			if (g_Model != "")
+			{
+				//g_KindModel=NSE_INTELLISENSE_MODEL; //1: XIS-1000, 2: XIS-2000, 3: XIS-3000, 4: XIS-4000
+				if(g_Model=="XIS-500")
+				{
+					g_KindModel=1;
+					NSE_INTEROCK_EX_LEFT=97;    //확장좌
+					NSE_INTEROCK_EX_RIGHT=98;    //확장우
+					NSE_INTEROCK_MONITOR=7;     //모니터
+					NSE_INTEROCK_BACK=39;        //후문   //정상=67
+				}
+				else if(g_Model=="XIS-1000")
+				{
+					g_KindModel=1;
+					NSE_INTEROCK_EX_LEFT=97;    //확장좌
+					NSE_INTEROCK_EX_RIGHT=98;    //확장우
+					NSE_INTEROCK_MONITOR=99;    //모니터
+					NSE_INTEROCK_BACK=7;         //후문
+				}
+				else if(g_Model=="XIS-2000")
+				{
+					g_KindModel=2;
+					NSE_INTEROCK_EX_LEFT=7;    //확장좌
+					NSE_INTEROCK_EX_RIGHT=15;    //확장우
+					NSE_INTEROCK_MONITOR=31;    //모니터
+					NSE_INTEROCK_BACK=63;         //후문
+				}
+				else if(g_Model=="XIS-3000")
+				{
+					g_KindModel=3;
+					NSE_INTEROCK_EX_LEFT=97;    //확장좌
+					NSE_INTEROCK_EX_RIGHT=98;    //확장우
+					NSE_INTEROCK_MONITOR=7;    //모니터
+					NSE_INTEROCK_BACK=15;         //후문(39)
+				}
+				else if(g_Model=="XIS-3500")
+				{
+					g_KindModel=3;
+					NSE_INTEROCK_EX_LEFT=97;    //확장좌
+					NSE_INTEROCK_EX_RIGHT=98;    //확장우
+					NSE_INTEROCK_MONITOR=7;    //모니터
+					NSE_INTEROCK_BACK=15;         //후문(39)
+				}
+				else if(g_Model=="XIS-4000")
+				{
+					g_KindModel=4;
+					NSE_INTEROCK_EX_LEFT=7;    //확장좌
+					NSE_INTEROCK_EX_RIGHT=15;    //확장우
+					NSE_INTEROCK_MONITOR=31;    //모니터
+					NSE_INTEROCK_BACK=63;         //후문
+				}
+				else if(g_Model=="XIS-5000_B" || g_Model == "XIS-5000_A" || g_Model == "XIS-5000")
+				{
+					g_KindModel=2;
+					NSE_INTEROCK_EX_LEFT=3;    //확장좌
+					NSE_INTEROCK_EX_RIGHT=11;    //확장우
+					NSE_INTEROCK_MONITOR=31;    //모니터
+					NSE_INTEROCK_BACK=27;         //후문
+						
+					/*
+					NSE_INTEROCK_EX_LEFT=7;    //확장좌
+					NSE_INTEROCK_EX_RIGHT=15;    //확장우
+					NSE_INTEROCK_MONITOR=31;    //모니터
+					NSE_INTEROCK_BACK=63;         //후문
+					*/
+				}
+			}
+
+			// X-ray
+			m_pSet_info.ChangeRsInt(_T("Xray_type"), NSE_XRAY_KIND);
+			m_pSet_info.ChangeRsChar(_T("Xray_name"), csTemp);
+
+			if (csTemp == "X3542" || csTemp == "VJ410")
+			{
+				NSE_XRAY_KV = 150;
+				NSE_XRAY_MA = 7500;
+				NSE_XRAY_POWER = 450000;
+			}
+			else if (temp == "VJ500W")
+			{
+				NSE_XRAY_KV = 100;
+				NSE_XRAY_MA = 11000;
+				NSE_XRAY_POWER = 500000;
+			}
+			else if (csTemp == "60W")
+			{
+				NSE_XRAY_KV = 60;
+				NSE_XRAY_MA = 1000;
+				NSE_XRAY_POWER = 60000;
+			}
+			else if (csTemp == "100W")
+			{
+				NSE_XRAY_KV = 80;
+				NSE_XRAY_MA = 1250;
+				NSE_XRAY_POWER = 100000;
+			}
+			else if (csTemp == "150W")
+			{
+				NSE_XRAY_KV = 50;
+				NSE_XRAY_MA = 3000;
+				NSE_XRAY_POWER = 150000;
+			}
+			else if (csTemp == "270W")	//260810 270W 추가 (대성 후드텍)
+			{
+				NSE_XRAY_KV = 90;
+				NSE_XRAY_MA = 3000;
+				NSE_XRAY_POWER = 270000;
+			}
+			else if (csTemp == "300W")
+			{
+				NSE_XRAY_KV = 80;
+				NSE_XRAY_MA = 7000;
+				NSE_XRAY_POWER = 300000;
+			}
+			else if (csTemp == "300W-G")  //국산화 발생장치 G 모델 추가 20171115
+			{
+				NSE_XRAY_KV = 120;		//	100 - 임시로 락 해제
+				NSE_XRAY_MA = 4000;		//	3000 - 임시로 락 해제
+				NSE_XRAY_POWER = 500000;
+			}
+			else if (csTemp == "450W")  //국산화 발생장치 450W 추가 20240930
+			{
+				NSE_XRAY_KV = 150;
+				NSE_XRAY_MA = 7500;
+				NSE_XRAY_POWER = 450000;
+			}
+			else
+			{
+				NSE_XRAY_KV = 80;
+				NSE_XRAY_MA = 5000;
+				NSE_XRAY_POWER = 210000;
+			}
+		//	g_XrayName = csTemp;
+
+			// Detector
+			m_pSet_info.ChangeRsInt(_T("Detector_Kind"), NSE_DT_KIND);
+			m_pSet_info.ChangeRsChar(_T("Detector_Name"), csTemp);
+		//	g_DetectName = csTemp;
+
+			m_pSet_info.ChangeRsInt(_T("Detector_Width"), nTemp);
+			NSE_DETECTOR_WIDTH = nTemp;
+			NSE_VAR_SIZE = nTemp;
+			m_pSet_info.ChangeRsInt(_T("Detector_Height"), NSE_WIDTH_SIZE);
+			m_pSet_info.ChangeRsInt(_T("Detector_ProductType"), NSE_DT_ISBULK);
+			m_pSet_info.ChangeRsInt(_T("Detector_TriggerSize"), NSE_TRIGER_HEIGHT);
+			m_pSet_info.ChangeRsInt(_T("Detector_TriggerFrameSize"), NSE_TRIGER_FRAME_SIZE);
+
+			m_pSet_info.ChangeRsInt(_T("Detector_Rotation"), nTemp);
+			switch (nTemp)
+			{
+			case 3:
+				NSE_ROTATION_UPDOWN = true;
+				NSE_ROTATION_LEFTRIGHT = true;
+				break;
+			case 2:
+				NSE_ROTATION_UPDOWN = true;
+				NSE_ROTATION_LEFTRIGHT = false;
+				break;
+			case 1:
+				NSE_ROTATION_UPDOWN = false;
+				NSE_ROTATION_LEFTRIGHT = true;
+				break;
+			default:
+				NSE_ROTATION_UPDOWN = false;
+				NSE_ROTATION_LEFTRIGHT = false;
+				break;
+			}
+
+			// IO card
+			m_pSet_info.ChangeRsInt(_T("IO_IOCard"), nTemp);
+			if (nTemp == 0)
+			{
+				NSE_IO_OUPUT_PORT = 1;//PCI-1730
+			}
+			else if (nTemp == 1)
+			{
+				NSE_IO_OUPUT_PORT = 0;//PCI-1761
+			}
+			else if (nTemp == 2)
+			{
+				NSE_IO_OUPUT_PORT = 2;//New IO
+			}
+
+			if (NSE_IO_OUPUT_PORT == 2) {//new io일 경우 문열림 감지 관련 변경
+				if (g_Model == "XIS-100") //LIC20150506
+				{
+					NSE_INTEROCK_MONITOR = 7;     //미사용
+					NSE_INTEROCK_BACK = 15;
+					NSE_INTEROCK_EX_LEFT = 32;  //미사용  
+					NSE_INTEROCK_EX_RIGHT = 32; //미사용
+				}
+				else if (g_Model == "XIS-500" || g_Model == "XIS-500_C" || g_Model == "XIS-500_I" || g_Model == "XIS-500_T" || g_Model == "XIS-500_W")
+				{
+					NSE_INTEROCK_MONITOR = 7;
+					NSE_INTEROCK_BACK = 15;
+					NSE_INTEROCK_EX_LEFT = 32;  //미사용  
+					NSE_INTEROCK_EX_RIGHT = 32; //미사용
+				}
+				else if (g_Model == "XIS-1000")
+				{
+					NSE_INTEROCK_MONITOR = 7;
+					NSE_INTEROCK_BACK = 15;
+					NSE_INTEROCK_EX_LEFT = 32;  //미사용  
+					NSE_INTEROCK_EX_RIGHT = 32; //미사용
+				}
+				else if (g_Model == "XIS-2000")
+				{
+					NSE_INTEROCK_MONITOR = 7;
+					NSE_INTEROCK_BACK = 15;
+					NSE_INTEROCK_EX_LEFT = 32;  //미사용  
+					NSE_INTEROCK_EX_RIGHT = 32; //미사용
+				}
+				else if (g_Model == "XIS-3000")
+				{
+					NSE_INTEROCK_MONITOR = 7;
+					NSE_INTEROCK_BACK = 15;
+					NSE_INTEROCK_EX_LEFT = 32;  //미사용  
+					NSE_INTEROCK_EX_RIGHT = 32; //미사용
+				}
+				else if ((g_Model == "XIS-3500" || g_Model == "XIS-3500_C" || g_Model == "XIS-3500_T"))
+				{
+					NSE_INTEROCK_MONITOR = 7;
+					NSE_INTEROCK_BACK = 15;
+					NSE_INTEROCK_EX_LEFT = 32;  //미사용  
+					NSE_INTEROCK_EX_RIGHT = 32; //미사용
+				}
+				else if (g_Model == "XIS-4000" || g_Model == "XIS-4000_M" || g_Model == "XIS-4000_D")
+				{
+					NSE_INTEROCK_MONITOR = 7;
+					NSE_INTEROCK_BACK = 15;
+					NSE_INTEROCK_EX_LEFT = 31;
+					NSE_INTEROCK_EX_RIGHT = 63;
+				}
+				else if (g_Model == "XIS-5000")//미확정
+				{
+					NSE_INTEROCK_MONITOR = 7;
+					NSE_INTEROCK_BACK = 15;
+					NSE_INTEROCK_EX_LEFT = 32;  //미사용  
+					NSE_INTEROCK_EX_RIGHT = 32; //미사용
+				}
+			}
+
+			// IO card port
+			int IO_conv;
+			m_pSet_info.ChangeRsInt(_T("IO_Conveyor"), IO_conv);
+			int IO_yellow;
+			m_pSet_info.ChangeRsInt(_T("IO_LampYellow"), IO_yellow);
+			int IO_green;
+			m_pSet_info.ChangeRsInt(_T("IO_LampGreen"), IO_green);
+			int IO_sound;
+			m_pSet_info.ChangeRsInt(_T("IO_Buzzer"), IO_sound);
+			int IO_reject1;
+			m_pSet_info.ChangeRsInt(_T("IO_Reject1"), IO_reject1);
+			int IO_reject2;
+			m_pSet_info.ChangeRsInt(_T("IO_Reject2"), IO_reject2);
+			int IO_Xlamp;
+			m_pSet_info.ChangeRsInt(_T("IO_XrayLamp"), IO_Xlamp);
+
+			NSE_CONVERYOR_MASKING = 255;
+
+			NSE_CONVERYOR_ON = 0;
+			if (IO_Xlamp != 0)
+				NSE_CONVERYOR_ON += int(pow(2, IO_Xlamp - 1));
+			if (IO_conv != 0)
+				NSE_CONVERYOR_ON += int(pow(2, IO_conv - 1));
+			if (IO_yellow != 0)
+				NSE_CONVERYOR_ON += int(pow(2, IO_yellow - 1));
+			if (IO_green != 0)
+				NSE_CONVERYOR_ON += int(pow(2, IO_green - 1));
+
+			NSE_CONVERYOR_OFF = 0;
+
+
+			NSE_REJECT_MASKING = 0;
+			if (IO_sound != 0)
+				NSE_REJECT_MASKING += int(pow(2, IO_sound - 1));
+			if (IO_reject1 != 0)
+				NSE_REJECT_MASKING += int(pow(2, IO_reject1 - 1));
+			if (IO_reject2 != 0)
+				NSE_REJECT_MASKING += int(pow(2, IO_reject2 - 1));
+			if (IO_yellow != 0)
+				NSE_REJECT_MASKING += int(pow(2, IO_yellow - 1));
+
+			NSE_YELLO_ON = int(pow(2, IO_yellow - 1));
+			NSE_GREEN_ON = int(pow(2, IO_green - 1));
+
+			NSE_REJECT_ON = 0;
+			if (IO_sound != 0)
+				NSE_REJECT_ON += int(pow(2, IO_sound - 1));
+			if (IO_reject1 != 0)
+				NSE_REJECT_ON += int(pow(2, IO_reject1 - 1));
+			if (IO_reject2 != 0)
+				NSE_REJECT_ON += int(pow(2, IO_reject2 - 1));
+
+			NSE_REJECT_OFF = 0;
+			if (IO_yellow != 0)
+				NSE_REJECT_OFF += int(pow(2, IO_yellow - 1));
+
+			/*g_mapIOPort[IDX_CONVEYOR] = IO_conv - 1;
+			g_mapIOPort[IDX_YELLOW] = IO_yellow - 1;
+			g_mapIOPort[IDX_GREEN] = IO_green - 1;
+			g_mapIOPort[IDX_BUZZER] = IO_sound - 1;
+			g_mapIOPort[IDX_REJECT1] = IO_reject1 - 1;
+			g_mapIOPort[IDX_REJECT2] = IO_reject2 - 1;
+			g_mapIOPort[IDX_XRAY_LAMP] = IO_Xlamp - 1;*/
+
+			m_pSet_info.ChangeRsInt(_T("IO_HandSensorLU"), g_HandsensorLU);
+			m_pSet_info.ChangeRsInt(_T("IO_HandSensorLD"), g_HandsensorLD);
+			m_pSet_info.ChangeRsInt(_T("IO_HandSensorRU"), g_HandsensorRU);
+			m_pSet_info.ChangeRsInt(_T("IO_HandSensorRD"), g_HandsensorRD);
+
+			m_pSet_info.ChangeRsInt(_T("IO_HandSensorTime"), nTemp);
+			//m_pSet_info.ChangeRsInt(_T("m_Model_Select"), nTemp);
+
+			m_pSet_info.ChangeRsInt(_T("IO_RejectType"), g_RejectType); //리텍트 타입 엔코더, 타임
+			m_pSet_info.ChangeRsInt(_T("IO_InterlockAlram"), g_AlamUse);
+
+			m_pSet_info.ChangeRsInt(_T("Trigger_ModelSelect"), g_Model_Select);// a:0 b;1
+
+			// Default
+			m_pSet_info.ChangeRsInt(_T("Default_Xray_Kv"), NSE_BASIC_KV);
+			m_pSet_info.ChangeRsInt(_T("Default_Xray_Kv2"), NSE_BASIC_KV2);
+			m_pSet_info.ChangeRsInt(_T("Default_Xray_ma"), NSE_BASIC_MA);
+			m_pSet_info.ChangeRsInt(_T("Default_Xray_ma2"), NSE_BASIC_MA2);
+			m_pSet_info.ChangeRsInt(_T("Default_ScanSpeed"), NSE_BASIC_SPEED);
+
+			m_pSet_info.ChangeRsInt(_T("Default_ConveyorSpeed"), NSE_BASIC_CONVSPEED);
+			m_pSet_info.ChangeRsInt(_T("Default_ConveyorFactor"), NSE_BASIC_CONVFACTOR);
+
+			m_pSet_info.ChangeRsInt(_T("Default_RejectDelayTime"), NSE_BASIC_DELAY);
+			m_pSet_info.ChangeRsInt(_T("Default_RejectKeepTime"), NSE_BASIC_KEEP);
+
+			m_pSet_info.ChangeRsInt(_T("Default_SmartView"), nTemp);
+			if (nTemp == 0)
+				b_UseSmartView = true;
+			else
+				b_UseSmartView = false;
+
+
+
+			g_ConveyorSpeed = NSE_BASIC_CONVSPEED;
+			g_ConveyorFac = NSE_BASIC_CONVFACTOR;
+
+		//	m_pSet_info.ChangeRsInt(_T("Default_DataTechnology"), g_DTUse);
+		//	g_DTUse = 0;
+
+			// option
+			m_pSet_info.ChangeRsInt(_T("Option_BoundaryMasking"), g_Masking1);
+			m_pSet_info.ChangeRsInt(_T("Option_ClipMasking"), g_Masking2);
+			m_pSet_info.ChangeRsInt(_T("Option_DeoxidizerMasking"), g_Masking3);
+			m_pSet_info.ChangeRsInt(_T("Option_PaperSheetMasking"), g_Masking4);
+			m_pSet_info.ChangeRsInt(_T("Option_Missing"), g_Special1);
+			m_pSet_info.ChangeRsInt(_T("Option_WrongPacking"), g_Special2);
+			m_pSet_info.ChangeRsInt(_T("Option_Quantity"), g_Special3);
+			m_pSet_info.ChangeRsInt(_T("Option_Condition"), g_Special4);
+			m_pSet_info.ChangeRsInt(_T("Option_ExternalHard"), g_ExHardUse);
+		//	m_pSet_info.ChangeRsInt(_T("Option_AutoSensitivity"), g_SenKind);
+			m_pSet_info.ChangeRsInt(_T("Option_AirCondInterlock"), nTemp);
+		//	g_AirUse = nTemp;
+			m_pSet_info.ChangeRsInt(_T("Option_RejectVideo"), nTemp);
+		//	g_RVuse = nTemp;
+			m_pSet_info.ChangeRsInt(_T("Option_TestMode"), nTemp);
+		//	g_bUseTestMode = nTemp;
+		//	m_pSet_info.ChangeRsInt(_T("Option_Communication"), g_ModbusFlag);
+			m_pSet_info.ChangeRsInt(_T("Option_TopDown"), nTemp);
+			m_pSet_info.ChangeRsInt(_T("Option_Side1"), nTemp);
+			m_pSet_info.ChangeRsInt(_T("Option_Side2"), nTemp);
+			m_pSet_info.ChangeRsInt(_T("Option_XrayKey"), nTemp);
+		//	g_XrayKey = nTemp;
+		//	m_pSet_info.ChangeRsInt(_T("Option_Foolproof"), g_Foolproof);
+		}
+	}
+	else
+	{
+		SetDefaultValue();
+		AfxMessageBox(_T("InfoMachine.mdb Open Failed."));
+	}
+	
+
+	
+	//if(fileString.Open(_T("D:\\Database\\InfoMachine.dat"),
+	//	CStdioFile::modeRead | CStdioFile::modeNoTruncate | CStdioFile::shareDenyNone))
+	//{
+	//	fileString.SeekToBegin();
+	//	fileString.ReadString(g_Model);	
+	//	g_Model_Kind = g_Model;
+	//	if(g_Model!="")
+	//	{
+	//		//g_KindModel=NSE_INTELLISENSE_MODEL; //1: XIS-1000, 2: XIS-2000, 3: XIS-3000, 4: XIS-4000
+	//		if(g_Model=="XIS-500")
+	//		{
+	//			g_KindModel=1;
+	//			NSE_INTEROCK_EX_LEFT=97;    //확장좌
+	//			NSE_INTEROCK_EX_RIGHT=98;    //확장우
+	//			NSE_INTEROCK_MONITOR=7;     //모니터
+	//			NSE_INTEROCK_BACK=39;        //후문   //정상=67
+	//		}
+	//		else if(g_Model=="XIS-1000")
+	//		{
+	//			g_KindModel=1;
+	//			NSE_INTEROCK_EX_LEFT=97;    //확장좌
+	//			NSE_INTEROCK_EX_RIGHT=98;    //확장우
+	//			NSE_INTEROCK_MONITOR=99;    //모니터
+	//			NSE_INTEROCK_BACK=7;         //후문
+	//		}
+	//		else if(g_Model=="XIS-2000")
+	//		{
+	//			g_KindModel=2;
+	//			NSE_INTEROCK_EX_LEFT=7;    //확장좌
+	//			NSE_INTEROCK_EX_RIGHT=15;    //확장우
+	//			NSE_INTEROCK_MONITOR=31;    //모니터
+	//			NSE_INTEROCK_BACK=63;         //후문
+	//		}
+	//		else if(g_Model=="XIS-3000")
+	//		{
+	//			g_KindModel=3;
+	//			NSE_INTEROCK_EX_LEFT=97;    //확장좌
+	//			NSE_INTEROCK_EX_RIGHT=98;    //확장우
+	//			NSE_INTEROCK_MONITOR=7;    //모니터
+	//			NSE_INTEROCK_BACK=15;         //후문(39)
+	//		}
+	//		else if(g_Model=="XIS-3500")
+	//		{
+	//			g_KindModel=3;
+	//			NSE_INTEROCK_EX_LEFT=97;    //확장좌
+	//			NSE_INTEROCK_EX_RIGHT=98;    //확장우
+	//			NSE_INTEROCK_MONITOR=7;    //모니터
+	//			NSE_INTEROCK_BACK=15;         //후문(39)
+	//		}
+	//		else if(g_Model=="XIS-4000")
+	//		{
+	//			g_KindModel=4;
+	//			NSE_INTEROCK_EX_LEFT=7;    //확장좌
+	//			NSE_INTEROCK_EX_RIGHT=15;    //확장우
+	//			NSE_INTEROCK_MONITOR=31;    //모니터
+	//			NSE_INTEROCK_BACK=63;         //후문
+	//		}
+	//		else if(g_Model=="XIS-5000_B" || g_Model == "XIS-5000_A" || g_Model == "XIS-5000")
+	//		{
+	//			g_KindModel=2;
+	//			NSE_INTEROCK_EX_LEFT=3;    //확장좌
+	//			NSE_INTEROCK_EX_RIGHT=11;    //확장우
+	//			NSE_INTEROCK_MONITOR=31;    //모니터
+	//			NSE_INTEROCK_BACK=27;         //후문
+	//		
+	//			/*
+	//			NSE_INTEROCK_EX_LEFT=7;    //확장좌
+	//			NSE_INTEROCK_EX_RIGHT=15;    //확장우
+	//			NSE_INTEROCK_MONITOR=31;    //모니터
+	//			NSE_INTEROCK_BACK=63;         //후문
+	//			*/
+	//		}
+	//	}
+
+	//
+
+	//	fileString.ReadString(temp);
+	//	
+
+	//	if(temp=="0") //Spellman
+	//		NSE_XRAY_KIND=0;
+	//	else if(temp=="1")//vj
+	//		NSE_XRAY_KIND=1;
+	//	else if(temp=="2")//spellman 100w
+	//		NSE_XRAY_KIND=2;
+	//	else if(temp=="3")//r-tec 
+	//		NSE_XRAY_KIND=3;
+
+
+	//	fileString.ReadString(temp);
+	//	if(temp=="X3542" || temp=="VJ410")
+	//	{
+	//		NSE_XRAY_KV=100;      
+	//		NSE_XRAY_MA=7500;      
+	//		NSE_XRAY_POWER=450000; 
+	//						
+	//	}
+	//	else if(temp=="100W")
+	//	{
+	//		NSE_XRAY_KV=80;
+	//		NSE_XRAY_MA=1200;
+	//		NSE_XRAY_POWER=100000;
+	//	}
+	//	else if(temp=="300W")
+	//	{
+	//		NSE_XRAY_KV=80;
+	//		NSE_XRAY_MA=7000;
+	//		NSE_XRAY_POWER=300000;
+	//	}
+	//	else if(temp=="300W-G")  //국산화 발생장치 G 모델 추가 20171115
+	//	{
+	//		NSE_XRAY_KV=100;
+	//		NSE_XRAY_MA=3000;
+	//		NSE_XRAY_POWER=300000;
+	//	}						//국산화 발생장치 G 모델 추가 20171115
+	//	else
+	//	{
+	//		NSE_XRAY_KV=80;      
+	//		NSE_XRAY_MA=5000;      
+	//		NSE_XRAY_POWER=210000; 
+	//	}
+
+	//	fileString.ReadString(temp);	
+	//	if(temp=="0") //DT
+	//		NSE_DT_KIND=0;
+	//	else //AQU
+	//		NSE_DT_KIND=1;
+
+	//	fileString.ReadString(temp);
+	//	if(temp=="F3-256") //size
+	//	{
+	//		//size check 640
+	//	}
+
+	//	fileString.ReadString(temp);
+	//	NSE_DETECTOR_WIDTH=_wtoi(temp);
+	//	NSE_VAR_SIZE=_wtoi(temp);
+
+	//	fileString.ReadString(temp);
+	//	NSE_WIDTH_SIZE=_wtoi(temp);
+
+	//	fileString.ReadString(temp);//벌크 or 카톤 ? 
+	//	NSE_DT_ISBULK=_wtoi(temp); //0 카톤 1 벌크 
+
+	//	fileString.ReadString(temp);
+	//	NSE_TRIGER_HEIGHT=_wtoi(temp);
+
+	//	fileString.ReadString(temp);
+	//	NSE_TRIGER_FRAME_SIZE=_wtoi(temp);
+
+	//	fileString.ReadString(temp);
+	//	switch(_wtoi(temp))
+	//	{
+	//	case 3 :
+	//		NSE_ROTATION_UPDOWN=true;
+	//		NSE_ROTATION_LEFTRIGHT=true;
+	//		break;
+	//	case 2 :
+	//		NSE_ROTATION_UPDOWN=true;
+	//		NSE_ROTATION_LEFTRIGHT=false;
+	//		break;
+	//	case 1 :
+	//		NSE_ROTATION_UPDOWN=false;
+	//		NSE_ROTATION_LEFTRIGHT=true;
+	//		break;
+	//	default :
+	//		NSE_ROTATION_UPDOWN=false;
+	//		NSE_ROTATION_LEFTRIGHT=false;
+	//		break;
+	//	}
+	//	
+	//	fileString.ReadString(temp);
+	//	//kds20140415>>>>>>>>>>>>>>
+	//	if(temp=="0") 
+	//	{
+	//		NSE_IO_OUPUT_PORT=1;//PCI-1730
+	//	}
+	//	else if(temp=="1")
+	//	{
+	//		NSE_IO_OUPUT_PORT=0;//PCI-1761
+	//	}
+	//	else if(temp=="2")
+	//	{
+	//		NSE_IO_OUPUT_PORT=2;//New IO
+	//	}
+	//	//NSE_IO_OUPUT_PORT = 2;//임시
+
+	//	if(NSE_IO_OUPUT_PORT==2){//new io일 경우 문열림 감지 관련 변경
+	//		if(g_Model=="XIS-500")
+	//		{   
+	//			NSE_INTEROCK_MONITOR=7;     
+	//			NSE_INTEROCK_BACK=15;
+	//			NSE_INTEROCK_EX_LEFT=32;  //미사용  
+	//			NSE_INTEROCK_EX_RIGHT=32; //미사용
+	//		}
+	//		else if(g_Model=="XIS-1000")
+	//		{
+	//			NSE_INTEROCK_MONITOR=7;     
+	//			NSE_INTEROCK_BACK=15;
+	//			NSE_INTEROCK_EX_LEFT=32;  //미사용  
+	//			NSE_INTEROCK_EX_RIGHT=32; //미사용
+	//		}
+	//		else if(g_Model=="XIS-2000")
+	//		{
+	//			NSE_INTEROCK_MONITOR=7;     
+	//			NSE_INTEROCK_BACK=15;
+	//			NSE_INTEROCK_EX_LEFT=32;  //미사용  
+	//			NSE_INTEROCK_EX_RIGHT=32; //미사용
+	//		}
+	//		else if(g_Model=="XIS-3000")
+	//		{
+	//			NSE_INTEROCK_MONITOR=7;     
+	//			NSE_INTEROCK_BACK=15;
+	//			NSE_INTEROCK_EX_LEFT=32;  //미사용  
+	//			NSE_INTEROCK_EX_RIGHT=32; //미사용
+	//		}
+	//		else if(g_Model=="XIS-3500")
+	//		{
+	//			NSE_INTEROCK_MONITOR=7;     
+	//			NSE_INTEROCK_BACK=15;
+	//			NSE_INTEROCK_EX_LEFT=32;  //미사용  
+	//			NSE_INTEROCK_EX_RIGHT=32; //미사용
+	//		}
+	//		else if(g_Model=="XIS-4000")
+	//		{
+	//			NSE_INTEROCK_MONITOR=7;     
+	//			NSE_INTEROCK_BACK=15;
+	//			NSE_INTEROCK_EX_LEFT=31;  
+	//			NSE_INTEROCK_EX_RIGHT=63; 
+	//		}
+	//		else if(g_Model=="XIS-5000_A" || g_Model == "XIS-5000_B")//미확정
+	//		{
+	//			NSE_INTEROCK_MONITOR=7;     
+	//			NSE_INTEROCK_BACK=15;
+	//			NSE_INTEROCK_EX_LEFT=32;  //미사용  
+	//			NSE_INTEROCK_EX_RIGHT=33; //미사용
+	//		}
+	//	}
+	//	//<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+	//	fileString.ReadString(temp);
+	//
+	//	int IO_conv=_wtoi(temp);
+	//	fileString.ReadString(temp);
+	//	int IO_yell=_wtoi(temp);
+	//	fileString.ReadString(temp);
+	//	int IO_gree=_wtoi(temp);
+	//	fileString.ReadString(temp);
+	//	int IO_soun=_wtoi(temp);
+	//	fileString.ReadString(temp);
+	//	int IO_rej1=_wtoi(temp);
+	//	fileString.ReadString(temp);
+	//	int IO_rej2=_wtoi(temp);
+	//	fileString.ReadString(temp);
+	//	int IO_Xlamp=_wtoi(temp);
+
+	//	NSE_CONVERYOR_MASKING=255;
+
+	//	NSE_CONVERYOR_ON=0;
+	//	if(IO_Xlamp!=0)
+	//		NSE_CONVERYOR_ON+=int(pow(2, IO_Xlamp-1));
+	//	if(IO_conv!=0)
+	//		NSE_CONVERYOR_ON+=int(pow(2, IO_conv-1));
+	//	if(IO_yell!=0)
+	//		NSE_CONVERYOR_ON+=int(pow(2, IO_yell-1));
+	//	if(IO_gree!=0)
+	//		NSE_CONVERYOR_ON+=int(pow(2, IO_gree-1));
+	//
+	//	NSE_CONVERYOR_OFF=0;
+
+
+	//	NSE_REJECT_MASKING=0;
+	//	if(IO_soun!=0)
+	//		NSE_REJECT_MASKING+=int(pow(2, IO_soun-1));
+	//	if(IO_rej1!=0)
+	//		NSE_REJECT_MASKING+=int(pow(2, IO_rej1-1));
+	//	if(IO_rej2!=0)
+	//		NSE_REJECT_MASKING+=int(pow(2, IO_rej2-1));
+	//	if(IO_yell!=0)
+	//		NSE_REJECT_MASKING+=int(pow(2, IO_yell-1));
+
+	//	NSE_YELLO_ON = int(pow(2,IO_yell-1));
+	//	NSE_GREEN_ON = int(pow(2,IO_gree-1));
+
+	//	NSE_REJECT_ON=0;
+	//	if(IO_soun!=0)
+	//		NSE_REJECT_ON+=int(pow(2, IO_soun-1));
+	//	if(IO_rej1!=0)
+	//		NSE_REJECT_ON+=int(pow(2, IO_rej1-1));
+	//	if(IO_rej2!=0)
+	//		NSE_REJECT_ON+=int(pow(2, IO_rej2-1));
+	//
+	//	NSE_REJECT_OFF=0;
+	//	if(IO_yell!=0)
+	//		NSE_REJECT_OFF+=int(pow(2, IO_yell-1));
+
+	//	fileString.ReadString(temp);
+	//	NSE_BASIC_KV=_wtoi(temp);  
+	//	fileString.ReadString(temp);
+	//	NSE_BASIC_KV2=_wtoi(temp);  
+	//	fileString.ReadString(temp);
+	//	NSE_BASIC_MA=_wtoi(temp);  
+	//	fileString.ReadString(temp);
+	//	NSE_BASIC_MA2=_wtoi(temp);  
+	//	fileString.ReadString(temp);
+	//	NSE_BASIC_SPEED=_wtoi(temp);   
+	//	fileString.ReadString(temp);
+	//	NSE_BASIC_DELAY=_wtoi(temp);   
+	//	fileString.ReadString(temp);
+	//	NSE_BASIC_KEEP=_wtoi(temp); 
+	//	
+	//	//20140218
+	//	fileString.ReadString(temp);
+	//	if(temp=="0")
+	//		b_UseSmartView=true;
+	//	else 
+	//		b_UseSmartView=false;
+
+	//	fileString.ReadString(temp);
+	//	NSE_BASIC_CONVSPEED=_wtoi(temp);   
+
+	//	fileString.ReadString(temp);
+	//	NSE_BASIC_CONVFACTOR=_wtoi(temp);  
+	//	//20141117
+	//	g_ConveyorSpeed=NSE_BASIC_CONVSPEED;
+	//	g_ConveyorFac=NSE_BASIC_CONVFACTOR;
+
+	//	//20150120
+	//	fileString.ReadString(temp);
+	//	g_HandsensorLU=_wtoi(temp);
+	//	fileString.ReadString(temp);
+	//	g_HandsensorLD=_wtoi(temp);
+	//	fileString.ReadString(temp);
+	//	g_HandsensorRU=_wtoi(temp);
+	//	fileString.ReadString(temp);
+	//	g_HandsensorRD=_wtoi(temp);
+	//	fileString.ReadString(temp);
+	//	g_HandCycle=_wtoi(temp);
+
+	//	fileString.ReadString(temp);
+	//	if(temp == _T("1"))
+	//		g_Model_Select = 1;
+	//	else
+	//		g_Model_Select = 0;
+
+	//	//1일때 Time, 0일때 엔코더
+	//	fileString.ReadString(temp);
+	//	if(temp == _T("1"))
+	//		g_RejectType = 1;
+	//	else
+	//		g_RejectType = 0;
+
+	//
+
+	//	fileString.ReadString(temp);
+	//
+	//	fileString.ReadString(temp);
+	//	g_AlamUse = _wtoi(temp);
+
+	//		//메뉴선택 기능 추가 20171102
+	//	fileString.ReadString(temp);
+	//	g_Masking1=_wtoi(temp);
+
+	//	fileString.ReadString(temp);
+	//	g_Masking2=_wtoi(temp);
+
+	//	fileString.ReadString(temp);
+	//	g_Masking3=_wtoi(temp);
+
+	//	fileString.ReadString(temp);
+	//	g_Masking4=_wtoi(temp);
+
+
+	//	fileString.ReadString(temp);
+	//	g_Special1=_wtoi(temp);
+
+	//	fileString.ReadString(temp);
+	//	g_Special2=_wtoi(temp);
+
+	//	fileString.ReadString(temp);
+
+	//	g_Special3=_wtoi(temp);
+	//	//메뉴선택 기능 추가 20171102
+	//			
+	//	// 전체저장 기능 선택저장 개선 20171226
+	//	fileString.ReadString(temp);
+	//	g_ExHardUse=_wtoi(temp);
+	//	// 전체저장 기능 선택저장 개선 20171226
+	//
+
+
+	//}
+	//else
+	//{
+	//	g_KindModel=1;
+	//	NSE_INTEROCK_EX_LEFT=97;    //확장좌
+	//	NSE_INTEROCK_EX_RIGHT=98;    //확장우
+	//	NSE_INTEROCK_MONITOR=15;     //모니터
+	//	NSE_INTEROCK_BACK=47;        //후문   //정상=67
+	//	
+	//	NSE_XRAY_KIND=0;	
+
+	//	NSE_XRAY_KV=80;      
+	//	NSE_XRAY_MA=5000;      
+	//	NSE_XRAY_POWER=210000; 
+
+	//	NSE_DT_KIND=0;
+	//	NSE_DETECTOR_WIDTH=640;
+	//	NSE_VAR_SIZE=640;
+	//	NSE_WIDTH_SIZE=640;
+
+	//	NSE_DT_ISBULK=0; //0 카톤 1 벌크 
+
+	//	NSE_TRIGER_HEIGHT=64;
+	//	NSE_TRIGER_FRAME_SIZE=10;
+
+	//	NSE_ROTATION_UPDOWN=false;
+	//	NSE_ROTATION_LEFTRIGHT=false;		
+	//	NSE_IO_OUPUT_PORT=0;
+	//	NSE_CONVERYOR_MASKING=255;
+	//	NSE_CONVERYOR_ON=153;
+	//	NSE_CONVERYOR_OFF=0;
+	//	NSE_REJECT_MASKING=46;
+	//	NSE_REJECT_ON=38;
+	//	NSE_REJECT_OFF=8;
+
+	//	NSE_BASIC_KV=60;  
+	//	NSE_BASIC_MA=2000;   
+	//	NSE_BASIC_KV2=0;  
+	//	NSE_BASIC_MA2=0;   
+	//	NSE_BASIC_SPEED=100;   
+	//	NSE_BASIC_DELAY=500;   
+	//	NSE_BASIC_KEEP=250; 
+	//	NSE_BASIC_CONVSPEED=45;   	
+	//	NSE_BASIC_CONVFACTOR=100;
+
+	//	//20140218
+	//	b_UseSmartView=false;
+
+	//	//20141117
+	//	g_ConveyorSpeed=40;
+	//	g_ConveyorFac=2855;
+
+	//	//20150120
+	//	g_HandsensorLU=0;
+	//	g_HandsensorLD=0;
+	//	g_HandsensorRU=0;
+	//	g_HandsensorRD=0;
+	//	g_HandCycle=0;
+	//	
+	//	AfxMessageBox(g_MessageArr[132]);//_T("기기 관련 정보 파일을 찾을 수 없어 정상적으로 동작하지 않을 수 있습니다. 등록 후 다시 시작해 주십시요. (E5003)"));
+	//}
+	//fileString.Close();
+
+	AfxEnableControlContainer();
+
+	EnableTaskbarInteraction(FALSE);
+
+	// RichEdit 컨트롤을 사용하려면  AfxInitRichEdit2()가 있어야 합니다.	
+	// AfxInitRichEdit2();
+
+	// 표준 초기화
+	// 이들 기능을 사용하지 않고 최종 실행 파일의 크기를 줄이려면
+	// 아래에서 필요 없는 특정 초기화
+	// 루틴을 제거해야 합니다.
+	// 해당 설정이 저장된 레지스트리 키를 변경하십시오.
+	// TODO: 이 문자열을 회사 또는 조직의 이름과 같은
+	// 적절한 내용으로 수정해야 합니다.
+	SetRegistryKey(_T("Intellisense"));
+	LoadStdProfileSettings(0);  // MRU를 포함하여 표준 INI 파일 옵션을 로드합니다.
+
+
+	InitContextMenuManager();
+
+	InitKeyboardManager();
+
+	InitTooltipManager();
+	CMFCToolTipInfo ttParams;
+	ttParams.m_bVislManagerTheme = TRUE;
+	theApp.GetTooltipManager()->SetTooltipParams(AFX_TOOLTIP_TYPE_ALL,
+		RUNTIME_CLASS(CMFCToolTipCtrl), &ttParams);
+
+	// 응용 프로그램의 문서 템플릿을 등록합니다. 문서 템플릿은
+	//  문서, 프레임 창 및 뷰 사이의 연결 역할을 합니다.
+	CMultiDocTemplate* pDocTemplate;
+	pDocTemplate = new CMultiDocTemplate(NULL,
+		RUNTIME_CLASS(CIntellisenseDoc),
+		RUNTIME_CLASS(CChildFrame), // 사용자 지정 MDI 자식 프레임입니다.
+		RUNTIME_CLASS(CIntellisenseView));
+	if (!pDocTemplate)
+		return FALSE;
+	pDocTemplate->m_hMenuShared=NULL; 
+	AddDocTemplate(pDocTemplate);
+
+	// 주 MDI 프레임 창을 만듭니다.
+	CMainFrame* pMainFrame = new CMainFrame;
+	if (!pMainFrame || !pMainFrame->LoadFrame(IDR_MAINFRAME))
+	{
+		delete pMainFrame;
+		return FALSE;
+	}
+	
+	m_pMainWnd = pMainFrame;
+	// 접미사가 있을 경우에만 DragAcceptFiles를 호출합니다.
+	//  MDI 응용 프로그램에서는 m_pMainWnd를 설정한 후 바로 이러한 호출이 발생해야 합니다.
+	// 표준 셸 명령, DDE, 파일 열기에 대한 명령줄을 구문 분석합니다.
+	
+	CCommandLineInfo cmdInfo;
+	ParseCommandLine(cmdInfo);
+
+	// 명령줄에 지정된 명령을 디스패치합니다.
+	// 응용 프로그램이 /RegServer, /Register, /Unregserver 또는 /Unregister로 시작된 경우 FALSE를 반환합니다.
+	if (!ProcessShellCommand(cmdInfo))
+		return FALSE;
+	// 주 창이 초기화되었으므로 이를 표시하고 업데이트합니다.
+	pMainFrame->SetMenu(NULL);
+	pMainFrame->ShowWindow(m_nCmdShow);
+	pMainFrame->UpdateWindow();
+	return TRUE;
+}
+
+int CIntellisenseApp::ExitInstance()
+{
+	//TODO: 추가한 추가 리소스를 처리합니다.
+	AfxOleTerm(FALSE);
+
+	return CWinAppEx::ExitInstance();
+}
+
+// CIntellisenseApp 메시지 처리기
+
+
+// 응용 프로그램 정보에 사용되는 CAboutDlg 대화 상자입니다.
+
+class CAboutDlg : public CDialogEx
+{
+public:
+	CAboutDlg();
+
+// 대화 상자 데이터입니다.
+	enum { IDD = IDD_ABOUTBOX };
+
+protected:
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 지원입니다.
+
+// 구현입니다.
+protected:
+	DECLARE_MESSAGE_MAP()
+public:
+
+};
+
+CAboutDlg::CAboutDlg() : CDialogEx(CAboutDlg::IDD)
+{
+}
+
+void CAboutDlg::DoDataExchange(CDataExchange* pDX)
+{
+	CDialogEx::DoDataExchange(pDX);
+}
+
+BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
+//	ON_WM_PAINT()
+//	ON_WM_TIMER()
+END_MESSAGE_MAP()
+
+// 대화 상자를 실행하기 위한 응용 프로그램 명령입니다.
+void CIntellisenseApp::OnAppAbout()
+{
+	CAboutDlg aboutDlg;
+	aboutDlg.DoModal();
+}
+
+// CIntellisenseApp 사용자 지정 로드/저장 메서드
+
+void CIntellisenseApp::PreLoadState()
+{
+	BOOL bNameValid;
+	CString strName;
+	bNameValid = strName.LoadString(IDS_EDIT_MENU);
+	ASSERT(bNameValid);
+	GetContextMenuManager()->AddMenu(strName, IDR_POPUP_EDIT);
+}
+
+void CIntellisenseApp::LoadCustomState()
+{
+}
+
+void CIntellisenseApp::SaveCustomState()
+{
+}
+
+
+void CIntellisenseApp::SetDefaultValue()
+{
+	g_KindModel = 1;
+	NSE_INTEROCK_EX_LEFT = 97;    //확장좌
+	NSE_INTEROCK_EX_RIGHT = 98;    //확장우
+	NSE_INTEROCK_MONITOR = 15;     //모니터
+	NSE_INTEROCK_BACK = 47;        //후문   //정상=67
+
+	NSE_XRAY_KIND = 0;
+
+	NSE_XRAY_KV = 80;
+	NSE_XRAY_MA = 5000;
+	NSE_XRAY_POWER = 210000;
+
+	NSE_DT_KIND = 0;
+	NSE_DETECTOR_WIDTH = 640;
+	NSE_VAR_SIZE = 640;
+	NSE_WIDTH_SIZE = 640;
+
+	NSE_DT_ISBULK = 0; //0 카톤 1 벌크 
+
+	NSE_TRIGER_HEIGHT = 64;
+	NSE_TRIGER_FRAME_SIZE = 10;
+
+	NSE_ROTATION_UPDOWN = false;
+	NSE_ROTATION_LEFTRIGHT = false;
+	NSE_IO_OUPUT_PORT = 0;
+	NSE_CONVERYOR_MASKING = 255;
+	NSE_CONVERYOR_ON = 153;
+	NSE_CONVERYOR_OFF = 0;
+	NSE_REJECT_MASKING = 46;
+	NSE_REJECT_ON = 38;
+	NSE_REJECT_OFF = 8;
+
+	NSE_BASIC_KV = 60;
+	NSE_BASIC_MA = 2000;
+	NSE_BASIC_KV2 = 0;
+	NSE_BASIC_MA2 = 0;
+	NSE_BASIC_SPEED = 100;
+	NSE_BASIC_DELAY = 500;
+	NSE_BASIC_KEEP = 250;
+	NSE_BASIC_CONVSPEED = 45;
+	NSE_BASIC_CONVFACTOR = 100;
+
+	//20140218
+	b_UseSmartView = false;
+
+	//20141117
+	g_ConveyorSpeed = 40;
+	g_ConveyorFac = 2178;
+
+	//20150120
+	g_HandsensorLU = 0;
+	g_HandsensorLD = 0;
+	g_HandsensorRU = 0;
+	g_HandsensorRD = 0;
+	g_HandCycle = 0;
+
+	AfxMessageBox(g_MessageArr[132]);//_T("기기 관련 정보 파일을 찾을 수 없어 정상적으로 동작하지 않을 수 있습니다. 등록 후 다시 시작해 주십시요. (E5003)"));
+	// TODO: 여기에 구현 코드 추가.
+}
+
+
+void CIntellisenseApp::ModelInfoInital(CString g_Model)
+{
+	//g_Model_Kind = g_Model;
+	//if (g_Model != "")
+	//{
+	//	//g_KindModel=NSE_INTELLISENSE_MODEL; //1: XIS-1000, 2: XIS-2000, 3: XIS-3000, 4: XIS-4000
+	//	//20201201
+	//	g_IDB_INTEROCK_KEY = IDB_INTEROCK_KEY;
+
+	//	if (g_Model == "XIS-100")
+	//	{
+	//		g_KindModel = 1;
+	//		//20201201
+	//		if (g_NationalCode == 0) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX;
+	//		}
+	//		else if (g_NationalCode == 1) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_ENG;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_ENG;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_ENG;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_ENG;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_ENG;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_ENG;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_ENG;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_ENG;
+	//		}
+	//		else if (g_NationalCode == 2)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_CHI;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_CHI;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_CHI;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_CHI;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_CHI;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_CHI;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_CHI;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_CHI;
+	//		}
+	//		else if (g_NationalCode == 3) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_RUS;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_RUS;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_RUS;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_RUS;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_RUS;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_RUS;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_RUS;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_RUS;
+	//		}
+	//		else if (g_NationalCode == 4)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_UKR;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_UKR;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_UKR;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_UKR;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_UKR;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_UKR;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_UKR;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_UKR;
+	//		}
+	//		else if (g_NationalCode == 5)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_SPN;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_SPN;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_SPN;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_SPN;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_SPN;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_SPN;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_ENG;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_ENG;
+	//		}
+	//		else if (g_NationalCode == 6)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_POL;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_POL;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_POL;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_POL;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_POL;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_POL;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_ENG;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_ENG;
+	//		}
+	//		else if (g_NationalCode == 7)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_TIW;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_TIW;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_TIW;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_TIW;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_TIW;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_TIW;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_ENG;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_ENG;
+	//		}
+	//		else if (g_NationalCode == 8)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_FRA;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_FRA;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_FRA;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_FRA;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_FRA;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_FRA;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_FRA;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_FRA;
+	//		}
+	//	}
+
+	//	if (g_Model == "XIS-500" || g_Model == "XIS-500_C" || g_Model == "XIS-500_I" || g_Model == "XIS-500_T" || g_Model == "XIS-500_W")
+	//	{
+	//		g_KindModel = 1;
+	//		NSE_INTEROCK_EX_LEFT = 97;    //확장좌
+	//		NSE_INTEROCK_EX_RIGHT = 98;    //확장우
+	//		NSE_INTEROCK_MONITOR = 7;     //모니터
+	//		NSE_INTEROCK_BACK = 39;        //후문   //정상=67
+
+	//		//20201201
+	//		if (g_NationalCode == 0) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX;
+	//		}
+	//		else if (g_NationalCode == 1) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_ENG;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_ENG;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_ENG;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_ENG;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_ENG;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_ENG;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_ENG;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_ENG;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_ENG;
+	//		}
+	//		else if (g_NationalCode == 2)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_CHI;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_CHI;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_CHI;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_CHI;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_CHI;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_CHI;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_CHI;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_CHI;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_CHI;
+	//		}
+	//		else if (g_NationalCode == 3) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_RUS;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_RUS;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_RUS;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_RUS;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_RUS;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_RUS;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_RUS;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_RUS;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_RUS;
+	//		}
+	//		else if (g_NationalCode == 4)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_UKR;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_UKR;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_UKR;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_UKR;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_UKR;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_UKR;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_UKR;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_UKR;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_UKR;
+	//		}
+	//		else if (g_NationalCode == 5)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_SPN;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_SPN;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_SPN;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_SPN;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_SPN;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_SPN;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_SPN;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_SPN;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_SPN;
+	//		}
+	//		else if (g_NationalCode == 6)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_POL;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_POL;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_POL;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_POL;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_POL;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_POL;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_POL;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_POL;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_POL;
+	//		}
+	//		else if (g_NationalCode == 7)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_TIW;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_TIW;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_TIW;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_TIW;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_TIW;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_TIW;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_TIW;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_TIW;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_TIW;
+	//		}
+	//		else if (g_NationalCode == 8)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_FRA;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_FRA;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_FRA;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_FRA;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_FRA;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_FRA;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_FRA;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_FRA;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_FRA;
+	//		}
+	//	}
+	//	else if (g_Model == "XIS-1000")
+	//	{
+	//		g_KindModel = 1;
+	//		NSE_INTEROCK_EX_LEFT = 97;    //확장좌
+	//		NSE_INTEROCK_EX_RIGHT = 98;    //확장우
+	//		NSE_INTEROCK_MONITOR = 99;    //모니터
+	//		NSE_INTEROCK_BACK = 7;         //후문
+	//		//20201201
+	//		if (g_NationalCode == 0) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX;
+	//		}
+	//		else if (g_NationalCode == 1) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_ENG;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_ENG;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_ENG;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_ENG;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_ENG;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_ENG;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_ENG;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_ENG;
+	//		}
+	//		else if (g_NationalCode == 2)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_CHI;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_CHI;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_CHI;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_CHI;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_CHI;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_CHI;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_CHI;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_CHI;
+	//		}
+	//		else if (g_NationalCode == 3) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_RUS;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_RUS;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_RUS;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_RUS;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_RUS;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_RUS;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_RUS;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_RUS;
+	//		}
+	//		else if (g_NationalCode == 4)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_UKR;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_UKR;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_UKR;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_UKR;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_UKR;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_UKR;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_UKR;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_UKR;
+	//		}
+	//		else if (g_NationalCode == 5)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_SPN;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_SPN;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_SPN;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_SPN;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_SPN;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_SPN;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_SPN;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_SPN;
+	//		}
+	//		else if (g_NationalCode == 6)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_POL;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_POL;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_POL;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_POL;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_POL;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_POL;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_POL;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_POL;
+	//		}
+	//		else if (g_NationalCode == 7)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_TIW;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_TIW;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_TIW;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_TIW;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_TIW;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_TIW;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_TIW;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_TIW;
+	//		}
+	//		else if (g_NationalCode == 8)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_100_FRA;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_100_FRA;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_100_FRA;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_100_FRA;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_100_FRA;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_100_FRA;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_FRA;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_FRA;
+	//		}
+	//	}
+	//	else if (g_Model == "XIS-2000")
+	//	{
+	//		g_KindModel = 2;
+	//		NSE_INTEROCK_EX_LEFT = 7;    //확장좌
+	//		NSE_INTEROCK_EX_RIGHT = 15;    //확장우
+	//		NSE_INTEROCK_MONITOR = 31;    //모니터
+	//		NSE_INTEROCK_BACK = 63;         //후문
+	//		//20201201
+	//		if (g_NationalCode == 0) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX;
+	//		}
+	//		else if (g_NationalCode == 1) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_ENG;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_ENG;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_ENG;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_ENG;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_ENG;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_ENG;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_ENG;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_ENG;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_ENG;
+	//		}
+	//		else if (g_NationalCode == 2)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_CHI;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_CHI;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_CHI;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_CHI;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_CHI;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_CHI;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_CHI;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_CHI;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_CHI;
+	//		}
+	//		else if (g_NationalCode == 3) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_RUS;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_RUS;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_RUS;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_RUS;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_RUS;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_RUS;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_RUS;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_RUS;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_RUS;
+	//		}
+	//		else if (g_NationalCode == 4)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_UKR;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_UKR;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_UKR;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_UKR;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_UKR;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_UKR;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_UKR;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_UKR;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_UKR;
+	//		}
+	//		else if (g_NationalCode == 5)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_SPN;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_SPN;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_SPN;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_SPN;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_SPN;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_SPN;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_SPN;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_SPN;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_SPN;
+	//		}
+	//		else if (g_NationalCode == 6)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_POL;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_POL;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_POL;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_POL;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_POL;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_POL;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_POL;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_POL;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_POL;
+	//		}
+	//		else if (g_NationalCode == 7)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_TIW;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_TIW;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_TIW;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_TIW;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_TIW;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_TIW;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_TIW;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_TIW;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_TIW;
+	//		}
+	//		else if (g_NationalCode == 8)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_500_FRA;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_500_FRA;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_500_FRA;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_500_FRA;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_500_FRA;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_500_FRA;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_500_FRA;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_FRA;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_FRA;
+	//		}
+	//	}
+	//	else if (g_Model == "XIS-3000")
+	//	{
+	//		g_KindModel = 3;
+	//		NSE_INTEROCK_EX_LEFT = 97;    //확장좌
+	//		NSE_INTEROCK_EX_RIGHT = 98;    //확장우
+	//		NSE_INTEROCK_MONITOR = 7;    //모니터
+	//		NSE_INTEROCK_BACK = 15;         //후문(39)
+	//		//20201201
+	//		if (g_NationalCode == 0) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3000;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3000;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3000;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3000;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3000;
+	//		}
+	//		else if (g_NationalCode == 1) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3000_ENG;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3000_ENG;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3000_ENG;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3000_ENG;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_ENG;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_ENG;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3000_ENG;
+	//		}
+	//		else if (g_NationalCode == 2)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3000_CHI;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3000_CHI;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3000_CHI;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3000_CHI;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_CHI;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_CHI;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3000_CHI;
+	//		}
+	//		else if (g_NationalCode == 3) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3000_RUS;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3000_RUS;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3000_RUS;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3000_RUS;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_RUS;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_RUS;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3000_RUS;
+	//		}
+	//		else if (g_NationalCode == 4)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3000_UKR;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3000_UKR;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3000_UKR;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3000_UKR;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_UKR;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_UKR;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3000_UKR;
+	//		}
+	//		else if (g_NationalCode == 5)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3000_SPN;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3000_SPN;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3000_SPN;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3000_SPN;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_SPN;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_SPN;	// 스페인없음
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3000_SPN;
+	//		}
+	//		else if (g_NationalCode == 6)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3000_POL;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3000_POL;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3000_POL;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3000_POL;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_POL;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_POL;	//  폴란드없음
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3000_POL;
+	//		}
+	//		else if (g_NationalCode == 7)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3000_TIW;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3000_TIW;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3000_TIW;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3000_TIW;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_TIW;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_TIW;	// 타이완 없음
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3000_TIW;
+	//		}
+	//		else if (g_NationalCode == 8)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3000_FRA;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3000_FRA;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3000_FRA;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3000_FRA;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_FRA;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_FRA;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3000_FRA;
+	//		}
+	//	}
+	//	else if ((g_Model == "XIS-3500" || g_Model == "XIS-3500_C" || g_Model == "XIS-3500_T"))
+	//	{
+	//		g_KindModel = 3;
+	//		NSE_INTEROCK_EX_LEFT = 97;    //확장좌
+	//		NSE_INTEROCK_EX_RIGHT = 98;    //확장우
+	//		NSE_INTEROCK_MONITOR = 7;    //모니터
+	//		NSE_INTEROCK_BACK = 15;         //후문(39)
+	//		//20201201
+	//		if (g_NationalCode == 0) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3500;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3500;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3500;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3500;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3500;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_3500;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_3500;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX;
+	//		}
+	//		else if (g_NationalCode == 1) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3500_ENG;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3500_ENG;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3500_ENG;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3500_ENG;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3500_ENG;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_3500_ENG;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_3500_ENG;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_ENG;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_ENG;
+	//		}
+	//		else if (g_NationalCode == 2)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3500_CHI;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3500_CHI;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3500_CHI;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3500_CHI;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3500_CHI;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_3500_CHI;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_3500_CHI;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_CHI;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_CHI;
+	//		}
+	//		else if (g_NationalCode == 3) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3500_RUS;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3500_RUS;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3500_RUS;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3500_RUS;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3500_RUS;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_3500_RUS;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_3500_RUS;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_CHI;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_CHI;
+	//		}
+	//		else if (g_NationalCode == 4)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3500_UKR;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3500_UKR;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3500_UKR;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3500_UKR;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3500_UKR;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_3500_UKR;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_3500_UKR;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_UKR;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_UKR;
+	//		}
+	//		else if (g_NationalCode == 5)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3500_SPN;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3500_SPN;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3500_SPN;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3500_SPN;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3500_SPN;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_3500_SPN;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_3500_SPN;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_SPN;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_SPN;
+	//		}
+	//		else if (g_NationalCode == 6)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3500_POL;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3500_POL;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3500_POL;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3500_POL;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3500_POL;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_3500_POL;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_3500_POL;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_POL;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_POL;
+	//		}
+	//		else if (g_NationalCode == 7)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3500_TIW;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3500_TIW;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3500_TIW;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3500_TIW;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3500_TIW;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_3500_TIW;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_3500_TIW;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_TIW;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_TIW;
+	//		}
+	//		else if (g_NationalCode == 8)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_3500_FRA;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_3500_FRA;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_3500_FRA;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_3500_FRA;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_3500_FRA;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_3500_FRA;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_3500_FRA;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_FRA;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_FRA;
+	//		}
+	//	}
+	//	else if (g_Model == "XIS-4000" || g_Model == "XIS-4000_M" || g_Model == "XIS-4000_D")
+	//	{
+	//		g_KindModel = 4;
+	//		NSE_INTEROCK_EX_LEFT = 7;    //확장좌
+	//		NSE_INTEROCK_EX_RIGHT = 15;    //확장우
+	//		NSE_INTEROCK_MONITOR = 31;    //모니터
+	//		NSE_INTEROCK_BACK = 63;         //후문3f
+
+	//		if (g_NationalCode == 0) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_4000;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_4000;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_4000;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_4000;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_4000;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_4000;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_4000;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX;
+	//		}
+	//		else if (g_NationalCode == 1) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_4000_ENG;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_4000_ENG;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_4000_ENG;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_4000_ENG;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_4000_ENG;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_4000_ENG;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_4000_ENG;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_ENG;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_ENG;
+	//		}
+	//		else if (g_NationalCode == 2)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_4000_CHI;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_4000_CHI;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_4000_CHI;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_4000_CHI;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_4000_CHI;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_4000_CHI;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_4000_CHI;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_CHI;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_CHI;
+	//		}
+	//		else if (g_NationalCode == 3) //1042
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_4000_RUS;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_4000_RUS;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_4000_RUS;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_4000_RUS;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_4000_RUS;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_4000_RUS;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_4000_RUS;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_RUS;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_RUS;
+	//		}
+	//		else if (g_NationalCode == 4)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_4000_UKR;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_4000_UKR;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_4000_UKR;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_4000_UKR;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_4000_UKR;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_4000_UKR;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_4000_UKR;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_UKR;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_UKR;
+	//		}
+	//		else if (g_NationalCode == 5)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_4000_SPN;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_4000_SPN;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_4000_SPN;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_4000_SPN;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_4000_SPN;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_4000_SPN;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_4000_SPN;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_SPN;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_SPN;
+	//		}
+	//		else if (g_NationalCode == 6)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_4000_POL;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_4000_POL;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_4000_POL;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_4000_POL;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_4000_POL;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_4000_POL;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_4000_POL;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_POL;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_POL;
+	//		}
+	//		else if (g_NationalCode == 7)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_4000_TIW;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_4000_TIW;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_4000_TIW;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_4000_TIW;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_4000_TIW;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_4000_TIW;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_4000_TIW;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_TIW;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_TIW;
+	//		}
+	//		else if (g_NationalCode == 8)
+	//		{
+	//			g_IDB_INTERLOCK_OK = IDB_INTERLOCK_OK_4000_FRA;
+	//			g_IDB_INTEROCK_FRONT = IDB_INTERLOCK_FRONT_4000_FRA;
+	//			g_IDB_INTEROCK_EMER = IDB_INTERLOCK_EMER_4000_FRA;
+	//			g_IDB_INTEROCK_MONITOR = IDB_INTERLOCK_MONITOR_4000_FRA;
+	//			g_IDB_INTEROCK_BACK = IDB_INTERLOCK_BACK_4000_FRA;
+	//			g_IDB_INTEROCK_RIGHT_HAND = IDB_INTERLOCK_RIGHT_HAND_4000_FRA;
+	//			g_IDB_INTEROCK_LEFT_HAND = IDB_INTERLOCK_LEFT_HAND_4000_FRA;
+	//			g_IDB_INTEROCK_LEFT_EX = IDB_INTEROCK_LEFT_EX_FRA;
+	//			g_IDB_INTEROCK_RIGHT_EX = IDB_INTEROCK_RIGHT_EX_FRA;
+	//		}
+	//	}
+	//	else if (g_Model == "XIS-5000")
+	//	{
+	//		g_KindModel = 2;
+	//		NSE_INTEROCK_EX_LEFT = 7;    //확장좌
+	//		NSE_INTEROCK_EX_RIGHT = 15;    //확장우
+	//		NSE_INTEROCK_MONITOR = 31;    //모니터
+	//		NSE_INTEROCK_BACK = 63;         //후문
+	//	}
+	//}
+	// TODO: 여기에 구현 코드 추가.
+}

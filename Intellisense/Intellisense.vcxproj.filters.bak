@@ -1,0 +1,2372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일\KOR">
+      <UniqueIdentifier>{7da93336-8d9c-4002-81b3-f86aac8da66d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\ENG">
+      <UniqueIdentifier>{f004e3c9-21dc-4188-b9c3-a9db25803cd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\CHI">
+      <UniqueIdentifier>{fab6929f-a56b-4fbc-9ae4-a22db9942779}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\Intellisense.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\IntellisenseDoc.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Intellisense.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Admin0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Admin1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Admin1_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Admin2.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Admin2_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Admin3.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Admin4.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Admin4_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Admin5.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Admin5_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Admin6_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Admin7.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Admin7_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Admin8_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Admin9_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\AdminReInput.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\AdminReInput_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgAdmin.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgAutoSetup.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgAutoSetupChild.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgAutoSetupChild_4.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgChangeProductname.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgConditionOmitSetup_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgConditionSetup_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgConditionSetup_2.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgConditionSetup_3.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgConditionSetup_5.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgConditionSetup_6.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgConditionSetup_Tal.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgProgress.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgSetupAuto.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgSetupAutoXray.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgSetupMenu.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgSetupMenu_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgSpaceDlg.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Bt_close.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Bt_help.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtConveyOn.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtConveyOn_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Add.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Add_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Choose.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Choose_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Exit_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_111.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_13.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_21.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_22.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_23.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_43.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_43_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_51.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Next.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\ConddnBt.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\ConddnBt_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\ConditionGrid.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\ConditionTabMenu1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\ConditionTabMenu1_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\ConditionTabMenu2.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\CondminusBt_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\CondupBt.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\CondupBt_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Detector_Result_NG.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\XrayAni_Clear.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Interock_Left.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Interock_Left_ex.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Interock_Right.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Interock_Right_ex.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Interock_Right_hand.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MainCondition2.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MainCondition3.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MainCondition4.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MainCondition5.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MainCondition6.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MainCtrlScreen.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MainScreen.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MenuExitBt.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MenuSetupBt_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MenuStartBt_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MenuStopBt.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MenuStopBt_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MenuViewerBt.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad4_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad5.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad5_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad6.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad7.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad8_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad9.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad9_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPadReset_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Result_Ready.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Result_Soup.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\SetupMenuIcon.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\SubScreen_3.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\SubScreen_4.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\SubScreen_5.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Toolbar256.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="UserImages.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Xray_OFF.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\XrayAni.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\Admin0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Admin1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Admin1_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Admin2.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Admin2_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Admin3.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Admin4.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Admin4_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Admin5.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Admin5_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Admin6_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Admin7.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Admin7_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Admin8_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Admin9_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\AdminReInput.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\AdminReInput_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgAdmin.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgAutoSetup.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgAutoSetupChild.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgAutoSetupChild_4.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgChangeProductname.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgConditionOmitSetup_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgConditionSetup_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgConditionSetup_2.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgConditionSetup_3.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgConditionSetup_6.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgConditionSetup_Tal.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgProgress.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgSetupAuto.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgSetupAutoXray.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgSetupMenu.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgSetupMenu_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgSpaceDlg.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\Bt_close_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Bt_help.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtConveyOn.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtConveyOn_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSelectProduct_Add.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSelectProduct_Add_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSelectProduct_Choose.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSelectProduct_Choose_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSelectProduct_Exit_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_111.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_13.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_21.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_22.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_23.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_31.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_43.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_43_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_51.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_Close.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_Next.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\ConddnBt.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\ConddnBt_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\ConditionGrid.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\ConditionTabMenu1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\ConditionTabMenu1_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\ConditionTabMenu2.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\CondminusBt_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\CondupBt.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\CondupBt_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\Detector_Result_OK.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Interock_Left.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Interock_Left_ex.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Interock_Right.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Interock_Right_ex.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Interock_Right_hand.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MainCondition2.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MainCondition3.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MainCondition4.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MainCondition5.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MainCondition6.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MainCtrlScreen.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MainScreen.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MenuExitBt.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MenuSetupBt_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MenuStartBt_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MenuStopBt.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MenuStopBt_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MenuViewerBt.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad4_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad5.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad5_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad6.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad7.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad8_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad9.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad9_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPadReset_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Result_Ready.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Result_Soup.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\SubScreen_3.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\SubScreen_4.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\SubScreen_5.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Toolbar.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Toolbar256.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Xray_OFF.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\XrayAni.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\XrayAni_Clear.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Admin0_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\Admin0_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\Admin6.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\Admin6.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\Admin8.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\Admin8.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\Admin9.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\Admin9.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\BgConditionOmitSetup.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\BgConditionOmitSetup.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\BgConditionSetup.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\BgConditionSetup.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\BgConditionSetup_4.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\BgConditionSetup_4.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\BgMessageBox.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\BgMessageBox.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\BgNumpad.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\BgNumpad.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\BgNumpad_Back1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\BgNumpad_Back1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\BgSelectProduct.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgProductcopy.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\BgSelectProduct.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgProductcopy.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\BgSetupMenu_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgSetupMenu_2.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgSetupMenu_3.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BgSetupMenu_4.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\BgSetupMenu_4.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgSetupMenu_3.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgSetupMenu_2.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BgSetupMenu_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\BtSelectProduct_Del.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSelectProduct_Exit.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSelectProduct_Del_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Del_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Del.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Exit.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\BtSelectProduct_Revise_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSelectProduct_Revise.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSelectProduct_Ok_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSelectProduct_Ok.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Revise_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Revise.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Ok_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Ok.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_11.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_12.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_32.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_31.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_32.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_11.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_12.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_33.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_41.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_41.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_33.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_Save_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_Save.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_Next_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtSetupMenu_Close_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Save_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Save.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Next_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\ConditionTabMenu3_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\ConditionTabMenu3.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\ConditionTabMenu2_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtWindow.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\ConditionTabMenu3_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\ConditionTabMenu3.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\ConditionTabMenu2_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtWindow.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\CondplusBt_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\CondplusBt.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\CondminusBt.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\CondminusBt.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\CondplusBt.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\CondplusBt_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\Interock_Frontdoor.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Interock_Backdoor.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Help.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\Interock_Frontdoor.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Interock_Backdoor.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Help.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\Interock_Left_hand.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Interock_Monitor.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MainBtCountReset_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MainBtCountReset.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MenuViewerBt_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MenuSetupBt.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MenuStartBt.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\MenuStartBt.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MenuSetupBt.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MenuViewerBt_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\NumPad4.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad3_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad3.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad2_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad2.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad1_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad0_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\NumPad4.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad3_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad3.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad2_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad2.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad1_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\NumPad6_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad7_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPad8.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\NumPad6_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad7_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad8.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\NumPadReset.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPadOk_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPadOk.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPadCancel_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\NumPadCancel.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\NumPadCancel.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPadCancel_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPadOk.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPadOk_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPadReset.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\Result_OK.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Result_NG.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\OmitPorgress_OK.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\OmitPorgress_NG.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\OmitPorgress.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\OmitPorgress.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\OmitPorgress_NG.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\OmitPorgress_OK.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Result_NG.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Result_OK.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\Xray_Prepare.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\Xray_ON.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\SubScreen_2.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\SettingScreen.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\SettingScreen.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\SubScreen_2.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Xray_ON.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Xray_Prepare.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\MenuExitBt_0.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\MenuExitBt_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\Admin3_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\Admin3_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\MainCondition1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\MainCondition1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Interock_Left_hand.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\Interock_Monitor.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MainBtCountReset.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MainBtCountReset_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\NumPad0_0.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\BgConditionOmitSetup_2.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\BgConditionOmitSetup_2.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\BtXrayAutoSetup.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\BtXrayAutoSetup_1.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\BtXrayAutoSetup.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtXrayAutoSetup_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_CHI\AdminReInput.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\Help.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\AdminReInput_1.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgAdmin.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgAutoSetup.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgChangeProductname.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgConditionOmitSetup.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgConditionOmitSetup_1.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgConditionOmitSetup_2.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgConditionSetup.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgConditionSetup_2.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgConditionSetup_3.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgConditionSetup_6.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgConditionSetup_Tal.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgMessageBox.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgProductcopy.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgProgress.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgSelectProduct.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgSetupAuto.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgSetupAutoXray.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgSetupMenu.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgSetupMenu_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgSetupMenu_1.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgSetupMenu_2.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgSetupMenu_3.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgSetupMenu_4.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BgSpaceDlg.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSelectProduct_Add.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSelectProduct_Add_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSelectProduct_Choose.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSelectProduct_Choose_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSelectProduct_Del.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSelectProduct_Del_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSelectProduct_Exit.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSelectProduct_Exit_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSelectProduct_Ok.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSelectProduct_Ok_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSelectProduct_Revise.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSelectProduct_Revise_1.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_11.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_111.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_12.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_13.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_21.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_22.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_23.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_31.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_32.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_33.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_41.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_43.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_43_1.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_51.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_Close.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_Close_1.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_Next.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_Next_1.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_Save.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtSetupMenu_Save_1.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtXrayAutoSetup.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtXrayAutoSetup_1.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\ConditionTabMenu1.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\ConditionTabMenu1_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\ConditionTabMenu2.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\ConditionTabMenu2_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\ConditionTabMenu3.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\ConditionTabMenu3_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\Interock_Backdoor.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\Xray_Prepare.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\Interock_Frontdoor.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\Interock_Left.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\Interock_Left_ex.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\Interock_Left_hand.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\Interock_Monitor.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\Interock_Right.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\Interock_Right_ex.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\Interock_Right_hand.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MainBtCountReset.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MainBtCountReset_1.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MainCondition1.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MainCondition2.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MainCondition3.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MainCondition4.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MainCondition5.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MainCondition6.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MainCtrlScreen.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MainScreen.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MenuSetupBt.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MenuSetupBt_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MenuStartBt.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MenuStartBt_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MenuStopBt.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MenuStopBt_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MenuViewerBt.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MenuViewerBt_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\NumPadCancel.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\NumPadCancel_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\NumPadOk.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\NumPadOk_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\NumPadReset.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\NumPadReset_0.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\SettingScreen.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\Xray_OFF.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\Xray_ON.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res\BgExit.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MainBtCountReset_2.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MenuSetupBt_2.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MenuStartBt_2.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MenuStopBt_2.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\MenuViewerBt_2.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtExitMenu1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtExitMenu3_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtExitMenu1_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtExitMenu2.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtExitMenu2_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\BtExitMenu3.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\OmitPorgress_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\XrayAni_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\OmitPorgress_NG_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res\OmitPorgress_OK_1.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_ENG\MainBtCountReset_2.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MenuViewerBt_2.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MenuSetupBt_2.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MenuStartBt_2.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_ENG\MenuStopBt_2.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res_CHI\MainBtCountReset_2.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MenuViewerBt_2.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MenuSetupBt_2.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MenuStartBt_2.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\MenuStopBt_2.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res\Interock_Emergency.bmp">
+      <Filter>리소스 파일\KOR</Filter>
+    </None>
+    <None Include="res_CHI\BtConveyOn.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\BtConveyOn_1.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_CHI\Interock_Emergency.bmp">
+      <Filter>리소스 파일\CHI</Filter>
+    </None>
+    <None Include="res_ENG\Interock_Emergency.bmp">
+      <Filter>리소스 파일\ENG</Filter>
+    </None>
+    <None Include="res\GraphGrid.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\btaddimage.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\btaddimage_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\btdelimage.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\btdelimage_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\NoImage.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\icon1.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Result_Soup_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Result_Soup_3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_ENG\Result_Soup_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_ENG\Result_Soup2_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_ENG\Result_Soup3_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_CHI\Result_Soup1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_CHI\Result_Soup2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_CHI\Result_Soup3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BgSetupMenu_31.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_CHI\BgSetupMenu_31.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_ENG\BgSetupMenu_31.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Encoder_ok.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Encoder_ng.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BgConditionSetup_2_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_ENG\BgConditionSetup_2_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_CHI\BgConditionSetup_2_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MainCtrlScreen.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\AdminReInput.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\AdminReInput_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgAdmin.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgAutoSetup.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgChangeProductname.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgConditionOmitSetup.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgConditionOmitSetup_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgConditionOmitSetup_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgConditionSetup.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgConditionSetup_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgConditionSetup_3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgConditionSetup_6.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgConditionSetup_Tal.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgMessageBox.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgProductcopy.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgProgress.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgSelectProduct.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgSetupAuto.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgSetupAutoXray.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgSetupMenu.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgSetupMenu_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgSetupMenu_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgSetupMenu_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgSetupMenu_3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgSetupMenu_4.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgSpaceDlg.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSelectProduct_Add.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSelectProduct_Add_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSelectProduct_Choose.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSelectProduct_Choose_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSelectProduct_Del.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSelectProduct_Del_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSelectProduct_Exit.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSelectProduct_Exit_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSelectProduct_Ok.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSelectProduct_Ok_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSelectProduct_Revise.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSelectProduct_Revise_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_11.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_12.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_13.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_21.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_22.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_23.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_31.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_32.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_33.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_41.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_43.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_43_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_51.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_111.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_Close.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_Close_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_Next.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_Next_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_Save.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtSetupMenu_Save_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\ConditionTabMenu1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\ConditionTabMenu1_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\ConditionTabMenu2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\ConditionTabMenu2_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\ConditionTabMenu3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\ConditionTabMenu3_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Help.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Interock_Backdoor.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Interock_Frontdoor.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Interock_Left.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Interock_Left_ex.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Interock_Left_hand.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Interock_Monitor.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Interock_Right.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Interock_Right_ex.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Interock_Right_hand.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MainBtCountReset.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MainBtCountReset_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MainCondition1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MainCondition2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MainCondition3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MainCondition4.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MainCondition5.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MainCondition6.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MainScreen.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MenuSetupBt.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MenuSetupBt_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MenuStartBt.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MenuStartBt_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MenuStopBt.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MenuStopBt_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MenuViewerBt.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MenuViewerBt_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\NumPadCancel.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\NumPadCancel_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\NumPadOk.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\NumPadOk_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\NumPadReset.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\NumPadReset_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\SettingScreen.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Xray_OFF.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Xray_ON.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Xray_Prepare.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtXrayAutoSetup.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtXrayAutoSetup_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MainBtCountReset_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MenuSetupBt_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MenuStartBt_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MenuStopBt_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\MenuViewerBt_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtConveyOn.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BtConveyOn_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Interock_Emergency.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Result_Soup.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Result_Soup2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\Result_Soup3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgSetupMenu_31.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res_SPN\BgConditionSetup_2_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Intellisense.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildFrm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="IntellisenseDoc.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="IntellisenseView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="EYH_ADO.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="FlatSplitterWnd.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CtrlPanelView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="InitailDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageBoxDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CModbusSerial.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratorComm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="NSEException.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="NSEHeader.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SerialComm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectProduct.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ModifyProductName.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupMenu.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupMenu_0.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupMenu_1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupMenu_2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupMenu_3.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupMenu_4.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AdminDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="NumPadBack.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="NumPad.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoSetup.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoSetup_0.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoSetup_1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoSetup_2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoSetup_3.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoSetup_4.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Product_Copy.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="InterockDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SpaceMsg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionSetup.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupAuto.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupAutoXray.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionTabCtrl.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionSetup_0.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionSetup_1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionSetup_2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionSetup_3.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionSetup_4.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionSetup_5.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionOmitSetup_0.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionOmitSetup_1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionOmitSetup_2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionMaskSetup_0.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionMaskSetup_1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ConditionMaskSetup_2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Maintenance.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CXImage\ximage.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ExitDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="comidaqctrl2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ComiEncoderMng.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ComidasCommon.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="comidaq.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ComiDaqComm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Comidas.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DTCommander.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DTConst.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DTDetector.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DTDisplay.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DTImage.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="EventManagerIF.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="HelperFunction.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcessing.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeConversion.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="imageobject.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Intellisense.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildFrm.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="IntellisenseDoc.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="IntellisenseView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="EYH_ADO.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="FlatSplitterWnd.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CtrlPanelView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="InitailDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageBoxDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CModbusSerial.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratorComm.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="NSEException.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SerialComm.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectProduct.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ModifyProductName.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupMenu.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupMenu_0.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupMenu_1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupMenu_2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupMenu_3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupMenu_4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="NumPadBack.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="NumPad.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoSetup.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoSetup_0.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoSetup_1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoSetup_2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoSetup_3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoSetup_4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Product_Copy.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="InterockDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SpaceMsg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionSetup.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupAuto.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupAutoXray.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionTabCtrl.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionSetup_0.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionSetup_1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionSetup_2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionSetup_3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionSetup_4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionSetup_5.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionOmitSetup_0.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionOmitSetup_1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionOmitSetup_2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionMaskSetup_0.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionMaskSetup_1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ConditionMaskSetup_2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Maintenance.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ExitDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="comidaqctrl2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ComiEncoderMng.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Comidas.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="comidaq.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="HelperFunction.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcessing.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Intellisense.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

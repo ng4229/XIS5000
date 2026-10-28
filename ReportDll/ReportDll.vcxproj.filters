@@ -1,0 +1,829 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ChartDirector">
+      <UniqueIdentifier>{6017d5af-8d14-43bb-923e-bdac73998ecb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="ReportDll.def">
+      <Filter>소스 파일</Filter>
+    </None>
+    <None Include="res\ReportDll.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtExcel.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtExcel_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSave.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSave_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Add.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Add_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Del.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Del_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\ReportBackground.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\SubBackground_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\SubBackground_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\SubBackground_4.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\SubBackground_5.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\SubBackground_6.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\SubBackgroundEng_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\SubBackgroundEng_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\SubBackgroundEng_4.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\SubBackgroundEng_5.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\SubBackgroundEng_6.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\HideButton.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSave_0_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSave_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Add_0_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Add_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Del_0_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Del_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSave_0_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSave_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Add_0_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Add_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Del_0_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSelectProduct_Del_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\ReportBackground_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\ReportBackground_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtExcel_1_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtExcel_1_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtExcel_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtExcel_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_1_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_1_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\SubBackgroundChi_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\SubBackgroundChi_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\SubBackgroundChi_4.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\SubBackgroundChi_5.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\SubBackgroundChi_6.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ReportDll.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ReportDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ReportTabCtrl.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPage1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPage2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPage3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPage4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPage5.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPage6.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="EYH_ADO.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\font.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\mschart.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcaxis.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcaxisgrid.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcaxisscale.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcaxistitle.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcbackdrop.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcbrush.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vccategoryscale.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vccolor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vccoor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcdatagrid.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcdatapoint.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcdatapointlabel.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcdatapoints.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcfill.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcfont.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcfootnote.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcframe.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcintersection.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vclabel.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vclabels.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vclcoor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vclegend.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vclight.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vclightsource.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vclightsources.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vclocation.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcmarker.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcpen.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcplot.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcplotbase.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcrect.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcseries.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcseriescollection.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcseriesmarker.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcseriesposition.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcshadow.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcstatline.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vctextlayout.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vctick.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vctitle.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcvaluescale.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcview3d.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcwall.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MSChart\vcweighting.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="InputDlg2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="InputDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="InputDlg1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ChartDirector\mfcdemo\mfcdemo\ChartViewer.cpp">
+      <Filter>ChartDirector</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPage7.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ReportDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ReportTabCtrl.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPage1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPage2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPage3.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPage4.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPage5.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPage6.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="EYH_ADO.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\font.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\mschart.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcaxis.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcaxisgrid.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcaxisscale.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcaxistitle.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcbackdrop.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcbrush.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vccategoryscale.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vccolor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vccoor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcdatagrid.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcdatapoint.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcdatapointlabel.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcdatapoints.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcfill.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcfont.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcfootnote.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcframe.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcintersection.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vclabel.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vclabels.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vclcoor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vclegend.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vclight.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vclightsource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vclightsources.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vclocation.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcmarker.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcpen.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcplot.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcplotbase.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcrect.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcseries.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcseriescollection.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcseriesmarker.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcseriesposition.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcshadow.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcstatline.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vctextlayout.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vctick.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vctitle.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcvaluescale.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcview3d.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcwall.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MSChart\vcweighting.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="InputDlg2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="InputDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="InputDlg1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ChartDirector\mfcdemo\mfcdemo\ChartViewer.h">
+      <Filter>ChartDirector</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPage7.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ReportDll.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\BtExcel_1_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtExcel_1_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtExcel_1_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtExcel_1_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtExcel_1_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtExcel_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtExcel_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtExcel_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtExcel_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtExcel_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSave_0_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSave_0_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSave_0_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSave_0_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSave_0_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSave_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSave_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSave_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSave_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSave_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Add_0_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Add_0_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Add_0_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Add_0_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Add_0_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Add_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Add_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Add_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Add_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Add_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Del_0_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Del_0_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Del_0_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Del_0_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Del_0_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Del_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Del_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Del_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Del_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSelectProduct_Del_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSetupMenu_Close_1_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSetupMenu_Close_1_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSetupMenu_Close_1_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSetupMenu_Close_1_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSetupMenu_Close_1_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSetupMenu_Close_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSetupMenu_Close_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSetupMenu_Close_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSetupMenu_Close_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\BtSetupMenu_Close_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\ReportBackground_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\ReportBackground_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\ReportBackground_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\ReportBackground_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\ReportBackground_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackground_7.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundChi_7.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundEng_7.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundPol_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundPol_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundPol_4.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundPol_5.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundPol_6.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundPol_7.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundRus_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundRus_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundRus_4.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundRus_5.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundRus_6.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundRus_7.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundSpn_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundSpn_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundSpn_4.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundSpn_5.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundSpn_6.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundSpn_7.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundTiw_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundTiw_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundTiw_4.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundTiw_5.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundTiw_6.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundTiw_7.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundUkr_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundUkr_2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundUkr_4.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundUkr_5.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundUkr_6.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\SubBackgroundUkr_7.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1664 @@
+Process : 0x1b48 : Thread : 0x266c : Time : 11-29 14:40:29 ms:873 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x1b48 : Thread : 0x266c : Time : 11-29 14:40:29 ms:966 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1b48 : Thread : 0x266c : Time : 11-29 14:40:30 ms:205 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x1b48 : Thread : 0x266c : Time : 11-29 14:40:30 ms:246 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1b48 : Thread : 0x266c : Time : 11-29 14:40:32 ms:980 : Level :     LOG INFO : Message : [SK,W,80000000]	
+Process : 0x1b48 : Thread : 0x266c : Time : 11-29 14:40:33 ms:021 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1b48 : Thread : 0x266c : Time : 11-29 14:40:33 ms:250 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x1b48 : Thread : 0x266c : Time : 11-29 14:40:33 ms:263 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1b48 : Thread : 0x266c : Time : 11-29 14:40:33 ms:480 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x1b48 : Thread : 0x266c : Time : 11-29 14:40:33 ms:496 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1b48 : Thread : 0x266c : Time : 11-29 14:40:33 ms:713 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x1b48 : Thread : 0x266c : Time : 11-29 14:40:33 ms:721 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x19a4 : Thread : 0x25dc : Time : 12-07 17:01:24 ms:137 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x19a4 : Thread : 0x25dc : Time : 12-07 17:01:24 ms:222 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x19a4 : Thread : 0x25dc : Time : 12-07 17:01:24 ms:435 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x19a4 : Thread : 0x25dc : Time : 12-07 17:01:24 ms:457 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x19a4 : Thread : 0x25dc : Time : 12-07 17:01:27 ms:143 : Level :     LOG INFO : Message : [SK,W,80000000]	
+Process : 0x19a4 : Thread : 0x25dc : Time : 12-07 17:01:27 ms:176 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x19a4 : Thread : 0x25dc : Time : 12-07 17:01:27 ms:392 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x19a4 : Thread : 0x25dc : Time : 12-07 17:01:27 ms:409 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x19a4 : Thread : 0x25dc : Time : 12-07 17:01:27 ms:625 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x19a4 : Thread : 0x25dc : Time : 12-07 17:01:27 ms:634 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x19a4 : Thread : 0x25dc : Time : 12-07 17:01:27 ms:867 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x19a4 : Thread : 0x25dc : Time : 12-07 17:01:27 ms:942 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0f00 : Thread : 0x1780 : Time : 12-07 17:02:30 ms:077 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x0f00 : Thread : 0x1780 : Time : 12-07 17:02:30 ms:121 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0f00 : Thread : 0x1780 : Time : 12-07 17:02:30 ms:336 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x0f00 : Thread : 0x1780 : Time : 12-07 17:02:30 ms:352 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0f00 : Thread : 0x1780 : Time : 12-07 17:02:33 ms:053 : Level :     LOG INFO : Message : [SK,W,80000000]	
+Process : 0x0f00 : Thread : 0x1780 : Time : 12-07 17:02:33 ms:102 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0f00 : Thread : 0x1780 : Time : 12-07 17:02:33 ms:319 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x0f00 : Thread : 0x1780 : Time : 12-07 17:02:33 ms:335 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0f00 : Thread : 0x1780 : Time : 12-07 17:02:33 ms:552 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x0f00 : Thread : 0x1780 : Time : 12-07 17:02:33 ms:569 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0f00 : Thread : 0x1780 : Time : 12-07 17:02:33 ms:808 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x0f00 : Thread : 0x1780 : Time : 12-07 17:02:33 ms:836 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x27c0 : Thread : 0x2454 : Time : 12-07 17:03:26 ms:914 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x27c0 : Thread : 0x2454 : Time : 12-07 17:03:26 ms:970 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x27c0 : Thread : 0x2454 : Time : 12-07 17:03:27 ms:195 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x27c0 : Thread : 0x2454 : Time : 12-07 17:03:27 ms:220 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x27c0 : Thread : 0x2454 : Time : 12-07 17:03:29 ms:916 : Level :     LOG INFO : Message : [SK,W,80000000]	
+Process : 0x27c0 : Thread : 0x2454 : Time : 12-07 17:03:29 ms:971 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x27c0 : Thread : 0x2454 : Time : 12-07 17:03:30 ms:196 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x27c0 : Thread : 0x2454 : Time : 12-07 17:03:30 ms:221 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x27c0 : Thread : 0x2454 : Time : 12-07 17:03:30 ms:471 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x27c0 : Thread : 0x2454 : Time : 12-07 17:03:30 ms:496 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x27c0 : Thread : 0x2454 : Time : 12-07 17:03:30 ms:728 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x27c0 : Thread : 0x2454 : Time : 12-07 17:03:30 ms:755 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x27ec : Thread : 0x1390 : Time : 12-07 17:30:09 ms:259 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x27ec : Thread : 0x1390 : Time : 12-07 17:30:09 ms:301 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x27ec : Thread : 0x1390 : Time : 12-07 17:30:09 ms:509 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x27ec : Thread : 0x1390 : Time : 12-07 17:30:09 ms:518 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x27ec : Thread : 0x1390 : Time : 12-07 17:30:12 ms:202 : Level :     LOG INFO : Message : [SK,W,80000000]	
+Process : 0x27ec : Thread : 0x1390 : Time : 12-07 17:30:12 ms:243 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x27ec : Thread : 0x1390 : Time : 12-07 17:30:12 ms:451 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x27ec : Thread : 0x1390 : Time : 12-07 17:30:12 ms:540 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x27ec : Thread : 0x1390 : Time : 12-07 17:30:12 ms:759 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x27ec : Thread : 0x1390 : Time : 12-07 17:30:12 ms:768 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x27ec : Thread : 0x1390 : Time : 12-07 17:30:12 ms:976 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x27ec : Thread : 0x1390 : Time : 12-07 17:30:12 ms:984 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0718 : Thread : 0x1540 : Time : 12-08 13:43:26 ms:701 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x0718 : Thread : 0x1540 : Time : 12-08 13:43:26 ms:729 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0718 : Thread : 0x1540 : Time : 12-08 13:43:26 ms:946 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x0718 : Thread : 0x1540 : Time : 12-08 13:43:26 ms:963 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0718 : Thread : 0x1540 : Time : 12-08 13:43:29 ms:663 : Level :     LOG INFO : Message : [SK,W,80000000]	
+Process : 0x0718 : Thread : 0x1540 : Time : 12-08 13:43:29 ms:719 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0718 : Thread : 0x1540 : Time : 12-08 13:43:29 ms:944 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x0718 : Thread : 0x1540 : Time : 12-08 13:43:29 ms:961 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0718 : Thread : 0x1540 : Time : 12-08 13:43:30 ms:196 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x0718 : Thread : 0x1540 : Time : 12-08 13:43:30 ms:219 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0718 : Thread : 0x1540 : Time : 12-08 13:43:30 ms:436 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x0718 : Thread : 0x1540 : Time : 12-08 13:43:30 ms:452 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x2868 : Thread : 0x28ec : Time : 12-08 13:44:25 ms:729 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x2868 : Thread : 0x28ec : Time : 12-08 13:44:25 ms:764 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x2868 : Thread : 0x28ec : Time : 12-08 13:44:25 ms:989 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x2868 : Thread : 0x28ec : Time : 12-08 13:44:26 ms:014 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x2868 : Thread : 0x28ec : Time : 12-08 13:44:28 ms:709 : Level :     LOG INFO : Message : [SK,W,80000000]	
+Process : 0x2868 : Thread : 0x28ec : Time : 12-08 13:44:28 ms:754 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x2868 : Thread : 0x28ec : Time : 12-08 13:44:28 ms:971 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x2868 : Thread : 0x28ec : Time : 12-08 13:44:29 ms:054 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x2868 : Thread : 0x28ec : Time : 12-08 13:44:29 ms:270 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x2868 : Thread : 0x28ec : Time : 12-08 13:44:29 ms:296 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x2868 : Thread : 0x28ec : Time : 12-08 13:44:29 ms:512 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x2868 : Thread : 0x28ec : Time : 12-08 13:44:29 ms:529 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x05e4 : Thread : 0x1c88 : Time : 12-08 13:46:34 ms:622 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x05e4 : Thread : 0x1c88 : Time : 12-08 13:46:34 ms:691 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x05e4 : Thread : 0x1c88 : Time : 12-08 13:46:34 ms:936 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x05e4 : Thread : 0x1c88 : Time : 12-08 13:46:34 ms:999 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x05e4 : Thread : 0x1c88 : Time : 12-08 13:46:37 ms:738 : Level :     LOG INFO : Message : [SK,W,80000000]	
+Process : 0x05e4 : Thread : 0x1c88 : Time : 12-08 13:46:37 ms:768 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x05e4 : Thread : 0x1c88 : Time : 12-08 13:46:37 ms:984 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x05e4 : Thread : 0x1c88 : Time : 12-08 13:46:38 ms:043 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x05e4 : Thread : 0x1c88 : Time : 12-08 13:46:38 ms:276 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x05e4 : Thread : 0x1c88 : Time : 12-08 13:46:38 ms:343 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x05e4 : Thread : 0x1c88 : Time : 12-08 13:46:38 ms:601 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x05e4 : Thread : 0x1c88 : Time : 12-08 13:46:38 ms:626 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x09a0 : Thread : 0xb00 : Time : 12-08 13:47:27 ms:235 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x09a0 : Thread : 0xb00 : Time : 12-08 13:47:27 ms:263 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x09a0 : Thread : 0xb00 : Time : 12-08 13:47:27 ms:471 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x09a0 : Thread : 0xb00 : Time : 12-08 13:47:27 ms:521 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x09a0 : Thread : 0xb00 : Time : 12-08 13:47:30 ms:232 : Level :     LOG INFO : Message : [SK,W,80000000]	
+Process : 0x09a0 : Thread : 0xb00 : Time : 12-08 13:47:30 ms:302 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x09a0 : Thread : 0xb00 : Time : 12-08 13:47:30 ms:541 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x09a0 : Thread : 0xb00 : Time : 12-08 13:47:30 ms:577 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x09a0 : Thread : 0xb00 : Time : 12-08 13:47:30 ms:786 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x09a0 : Thread : 0xb00 : Time : 12-08 13:47:30 ms:817 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x09a0 : Thread : 0xb00 : Time : 12-08 13:47:31 ms:027 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x09a0 : Thread : 0xb00 : Time : 12-08 13:47:31 ms:080 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1710 : Thread : 0xdf4 : Time : 12-13 16:05:33 ms:390 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x1710 : Thread : 0xdf4 : Time : 12-13 16:05:33 ms:452 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1710 : Thread : 0xdf4 : Time : 12-13 16:05:33 ms:686 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x1710 : Thread : 0xdf4 : Time : 12-13 16:05:33 ms:702 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1710 : Thread : 0xdf4 : Time : 12-13 16:05:36 ms:416 : Level :     LOG INFO : Message : [SK,W,80000000]	
+Process : 0x1710 : Thread : 0xdf4 : Time : 12-13 16:05:36 ms:447 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1710 : Thread : 0xdf4 : Time : 12-13 16:05:36 ms:666 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x1710 : Thread : 0xdf4 : Time : 12-13 16:05:36 ms:681 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1710 : Thread : 0xdf4 : Time : 12-13 16:05:36 ms:915 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x1710 : Thread : 0xdf4 : Time : 12-13 16:05:36 ms:931 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1710 : Thread : 0xdf4 : Time : 12-13 16:05:37 ms:165 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x1710 : Thread : 0xdf4 : Time : 12-13 16:05:37 ms:180 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x2340 : Thread : 0x958 : Time : 12-13 16:09:21 ms:609 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x2340 : Thread : 0x958 : Time : 12-13 16:09:21 ms:641 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x2340 : Thread : 0x958 : Time : 12-13 16:09:21 ms:875 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x2340 : Thread : 0x958 : Time : 12-13 16:09:21 ms:890 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x2340 : Thread : 0x958 : Time : 12-13 16:09:24 ms:605 : Level :     LOG INFO : Message : [SK,W,80000000]	
+Process : 0x2340 : Thread : 0x958 : Time : 12-13 16:09:24 ms:620 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x2340 : Thread : 0x958 : Time : 12-13 16:09:24 ms:854 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x2340 : Thread : 0x958 : Time : 12-13 16:09:24 ms:885 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x2340 : Thread : 0x958 : Time : 12-13 16:09:25 ms:104 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x2340 : Thread : 0x958 : Time : 12-13 16:09:25 ms:119 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x2340 : Thread : 0x958 : Time : 12-13 16:09:25 ms:353 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x2340 : Thread : 0x958 : Time : 12-13 16:09:25 ms:369 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1118 : Thread : 0x884 : Time : 12-13 16:11:37 ms:111 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x1118 : Thread : 0x884 : Time : 12-13 16:11:37 ms:220 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1118 : Thread : 0x884 : Time : 12-13 16:11:37 ms:486 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x1118 : Thread : 0x884 : Time : 12-13 16:11:37 ms:548 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1118 : Thread : 0x884 : Time : 12-13 16:11:40 ms:278 : Level :     LOG INFO : Message : [SK,W,80000000]	
+Process : 0x1118 : Thread : 0x884 : Time : 12-13 16:11:40 ms:340 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1118 : Thread : 0x884 : Time : 12-13 16:11:40 ms:590 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x1118 : Thread : 0x884 : Time : 12-13 16:11:40 ms:621 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1118 : Thread : 0x884 : Time : 12-13 16:11:40 ms:871 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x1118 : Thread : 0x884 : Time : 12-13 16:11:40 ms:918 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x1118 : Thread : 0x884 : Time : 12-13 16:11:41 ms:183 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x1118 : Thread : 0x884 : Time : 12-13 16:11:41 ms:245 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0738 : Thread : 0x2138 : Time : 12-13 16:12:28 ms:409 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x0738 : Thread : 0x2138 : Time : 12-13 16:12:28 ms:565 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0738 : Thread : 0x2138 : Time : 12-13 16:12:28 ms:861 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x0738 : Thread : 0x2138 : Time : 12-13 16:12:28 ms:939 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0738 : Thread : 0x2138 : Time : 12-13 16:12:31 ms:654 : Level :     LOG INFO : Message : [SK,W,80000000]	
+Process : 0x0738 : Thread : 0x2138 : Time : 12-13 16:12:31 ms:685 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0738 : Thread : 0x2138 : Time : 12-13 16:12:31 ms:950 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x0738 : Thread : 0x2138 : Time : 12-13 16:12:31 ms:997 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0738 : Thread : 0x2138 : Time : 12-13 16:12:32 ms:246 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x0738 : Thread : 0x2138 : Time : 12-13 16:12:32 ms:293 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x0738 : Thread : 0x2138 : Time : 12-13 16:12:32 ms:543 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x0738 : Thread : 0x2138 : Time : 12-13 16:12:32 ms:621 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x852c : Thread : 0x76bc : Time : 11-06 15:21:33 ms:985 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x852c : Thread : 0x76bc : Time : 11-06 15:21:34 ms:017 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x852c : Thread : 0x76bc : Time : 11-06 15:21:34 ms:218 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x852c : Thread : 0x76bc : Time : 11-06 15:21:34 ms:219 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x852c : Thread : 0x76bc : Time : 11-06 15:21:36 ms:892 : Level :     LOG INFO : Message : [SK,W,29a]	
+Process : 0x852c : Thread : 0x76bc : Time : 11-06 15:21:36 ms:897 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x852c : Thread : 0x76bc : Time : 11-06 15:21:37 ms:098 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x852c : Thread : 0x76bc : Time : 11-06 15:21:37 ms:099 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x852c : Thread : 0x76bc : Time : 11-06 15:21:37 ms:300 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x852c : Thread : 0x76bc : Time : 11-06 15:21:37 ms:301 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x852c : Thread : 0x76bc : Time : 11-06 15:21:37 ms:502 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x852c : Thread : 0x76bc : Time : 11-06 15:21:37 ms:503 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7c0c : Thread : 0x7620 : Time : 11-06 15:27:14 ms:759 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x7c0c : Thread : 0x7620 : Time : 11-06 15:27:14 ms:762 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7c0c : Thread : 0x7620 : Time : 11-06 15:27:14 ms:963 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x7c0c : Thread : 0x7620 : Time : 11-06 15:27:14 ms:964 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7c0c : Thread : 0x7620 : Time : 11-06 15:27:17 ms:646 : Level :     LOG INFO : Message : [SK,W,29a]	
+Process : 0x7c0c : Thread : 0x7620 : Time : 11-06 15:27:17 ms:648 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7c0c : Thread : 0x7620 : Time : 11-06 15:27:17 ms:849 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x7c0c : Thread : 0x7620 : Time : 11-06 15:27:17 ms:851 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7c0c : Thread : 0x7620 : Time : 11-06 15:27:18 ms:052 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x7c0c : Thread : 0x7620 : Time : 11-06 15:27:18 ms:054 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7c0c : Thread : 0x7620 : Time : 11-06 15:27:18 ms:255 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x7c0c : Thread : 0x7620 : Time : 11-06 15:27:18 ms:257 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0xe5ec : Thread : 0xc25c : Time : 11-06 15:29:23 ms:169 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0xe5ec : Thread : 0xc25c : Time : 11-06 15:29:23 ms:175 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0xe5ec : Thread : 0xc25c : Time : 11-06 15:29:23 ms:375 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0xe5ec : Thread : 0xc25c : Time : 11-06 15:29:23 ms:376 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0xe5ec : Thread : 0xc25c : Time : 11-06 15:29:26 ms:050 : Level :     LOG INFO : Message : [SK,W,29a]	
+Process : 0xe5ec : Thread : 0xc25c : Time : 11-06 15:29:26 ms:055 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0xe5ec : Thread : 0xc25c : Time : 11-06 15:29:26 ms:256 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0xe5ec : Thread : 0xc25c : Time : 11-06 15:29:26 ms:257 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0xe5ec : Thread : 0xc25c : Time : 11-06 15:29:26 ms:458 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0xe5ec : Thread : 0xc25c : Time : 11-06 15:29:26 ms:459 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0xe5ec : Thread : 0xc25c : Time : 11-06 15:29:26 ms:660 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0xe5ec : Thread : 0xc25c : Time : 11-06 15:29:26 ms:661 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:32 ms:817 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:32 ms:818 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:33 ms:023 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:33 ms:023 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:35 ms:753 : Level :     LOG INFO : Message : [SK,W,4bc]	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:35 ms:753 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:35 ms:955 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:35 ms:955 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:36 ms:165 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:36 ms:165 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:36 ms:374 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:36 ms:374 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:44 ms:199 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:44 ms:199 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:44 ms:407 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x50ec : Thread : 0x7ccc : Time : 10-26 17:02:44 ms:407 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:03 ms:044 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:03 ms:045 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:03 ms:257 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:03 ms:257 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:05 ms:956 : Level :     LOG INFO : Message : [SK,W,4bc]	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:05 ms:956 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:06 ms:159 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:06 ms:159 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:06 ms:369 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:06 ms:369 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:06 ms:578 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:06 ms:578 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:16 ms:169 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:16 ms:169 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:16 ms:378 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x7d18 : Thread : 0x6dc0 : Time : 10-26 17:04:16 ms:378 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:26 ms:420 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:26 ms:420 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:26 ms:632 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:26 ms:632 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:29 ms:332 : Level :     LOG INFO : Message : [SK,W,4bc]	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:29 ms:332 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:29 ms:534 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:29 ms:534 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:29 ms:744 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:29 ms:744 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:29 ms:953 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:29 ms:953 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:33 ms:888 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:33 ms:889 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:34 ms:097 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x8518 : Thread : 0x7ce0 : Time : 10-26 17:05:34 ms:097 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x30e8 : Thread : 0x5520 : Time : 10-26 17:06:07 ms:458 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x30e8 : Thread : 0x5520 : Time : 10-26 17:06:07 ms:459 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x30e8 : Thread : 0x5520 : Time : 10-26 17:06:07 ms:669 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x30e8 : Thread : 0x5520 : Time : 10-26 17:06:07 ms:669 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x30e8 : Thread : 0x5520 : Time : 10-26 17:06:10 ms:378 : Level :     LOG INFO : Message : [SK,W,4bc]	
+Process : 0x30e8 : Thread : 0x5520 : Time : 10-26 17:06:10 ms:378 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x30e8 : Thread : 0x5520 : Time : 10-26 17:06:10 ms:586 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x30e8 : Thread : 0x5520 : Time : 10-26 17:06:10 ms:586 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x30e8 : Thread : 0x5520 : Time : 10-26 17:06:10 ms:795 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x30e8 : Thread : 0x5520 : Time : 10-26 17:06:10 ms:795 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x30e8 : Thread : 0x5520 : Time : 10-26 17:06:11 ms:005 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x30e8 : Thread : 0x5520 : Time : 10-26 17:06:11 ms:005 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:16 ms:793 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:16 ms:793 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:17 ms:009 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:17 ms:009 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:19 ms:706 : Level :     LOG INFO : Message : [SK,W,4bc]	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:19 ms:706 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:19 ms:911 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:19 ms:911 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:20 ms:120 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:20 ms:120 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:20 ms:330 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:20 ms:330 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:25 ms:312 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:25 ms:312 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:25 ms:521 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x864c : Thread : 0x8474 : Time : 10-26 17:07:25 ms:521 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:38 ms:321 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:38 ms:322 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:38 ms:532 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:38 ms:532 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:41 ms:222 : Level :     LOG INFO : Message : [SK,W,4bc]	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:41 ms:222 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:41 ms:434 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:41 ms:434 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:41 ms:643 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:41 ms:643 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:41 ms:853 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:41 ms:853 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:44 ms:083 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:44 ms:083 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:44 ms:291 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x7b04 : Thread : 0x6cbc : Time : 10-26 17:09:44 ms:291 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:28 ms:275 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:28 ms:276 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:28 ms:490 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:28 ms:490 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:31 ms:316 : Level :     LOG INFO : Message : [SK,W,4bc]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:31 ms:316 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:31 ms:527 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:31 ms:527 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:31 ms:736 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:31 ms:736 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:31 ms:945 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:31 ms:945 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:57 ms:051 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:57 ms:052 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:57 ms:260 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:26:57 ms:260 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:07 ms:448 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:07 ms:448 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:07 ms:657 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:07 ms:657 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:10 ms:363 : Level :     LOG INFO : Message : [SK,W,4bc]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:10 ms:363 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:10 ms:574 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:10 ms:574 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:10 ms:784 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:10 ms:784 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:10 ms:993 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:10 ms:993 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:44 ms:894 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:44 ms:894 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:45 ms:102 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x7684 : Thread : 0x854 : Time : 11-04 13:27:45 ms:102 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:30:12 ms:625 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:30:12 ms:625 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:30:12 ms:840 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:30:12 ms:840 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:30:15 ms:535 : Level :     LOG INFO : Message : [SK,W,4bc]	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:30:15 ms:535 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:30:15 ms:743 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:30:15 ms:743 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:30:15 ms:952 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:30:15 ms:952 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:30:16 ms:162 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:30:16 ms:162 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:31:07 ms:446 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:31:07 ms:446 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:31:07 ms:655 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x4e28 : Thread : 0x72e0 : Time : 11-04 13:31:07 ms:655 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:08 ms:338 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:08 ms:338 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:08 ms:544 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:08 ms:544 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:11 ms:238 : Level :     LOG INFO : Message : [SK,W,4bc]	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:11 ms:238 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:11 ms:446 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:11 ms:446 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:11 ms:656 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:11 ms:656 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:11 ms:865 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:11 ms:865 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:20 ms:558 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:20 ms:558 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:20 ms:766 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x7c8c : Thread : 0x727c : Time : 11-04 13:34:20 ms:766 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:15 ms:091 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:15 ms:092 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:15 ms:301 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:15 ms:301 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:18 ms:004 : Level :     LOG INFO : Message : [SK,W,4bc]	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:18 ms:004 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:18 ms:218 : Level :     LOG INFO : Message : [SK,S]	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:18 ms:218 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:18 ms:427 : Level :     LOG INFO : Message : [SD,W,3]	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:18 ms:427 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:18 ms:637 : Level :     LOG INFO : Message : [EL,W,1]	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:18 ms:637 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:37 ms:233 : Level :     LOG INFO : Message : [EL,W,0]	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:37 ms:233 : Level :    LOG ERROR : Message : Command channel is not open	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:37 ms:442 : Level :     LOG INFO : Message : [SD,W,1]	
+Process : 0x3558 : Thread : 0x6c6c : Time : 11-04 17:03:37 ms:442 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 10-15 11:57:13 ms:013 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 10-15 14:42:55 ms:530 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 10-15 14:47:39 ms:802 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 10-15 14:51:41 ms:482 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 10-15 14:52:55 ms:143 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 10-21 15:02:36 ms:492 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 10-21 15:12:19 ms:789 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 10-21 15:14:56 ms:369 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 10-21 16:19:02 ms:821 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 11-25 10:39:05 ms:869 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 11-25 10:43:15 ms:547 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 11-25 10:48:56 ms:988 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 11-25 10:52:01 ms:467 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 11-25 10:52:33 ms:291 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 11-25 10:55:15 ms:605 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 11-25 11:01:00 ms:948 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-14 14:13:25 ms:570 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-14 14:14:26 ms:746 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-16 10:26:14 ms:418 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-16 10:26:58 ms:726 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 10-31 09:56:40 ms:758 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:47 ms:364 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:47 ms:811 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:47 ms:811 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:47 ms:814 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:48 ms:159 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:48 ms:161 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:48 ms:162 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:48 ms:508 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:48 ms:508 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:48 ms:511 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:48 ms:855 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:48 ms:856 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:48 ms:858 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:49 ms:205 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:49 ms:205 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:49 ms:208 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:49 ms:556 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:49 ms:556 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:49 ms:559 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:49 ms:906 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:49 ms:908 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:49 ms:909 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:50 ms:255 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:50 ms:255 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:50 ms:255 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:50 ms:603 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:50 ms:605 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:50 ms:606 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:50 ms:949 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:50 ms:951 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:50 ms:951 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:51 ms:312 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:51 ms:313 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:51 ms:315 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:51 ms:661 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:51 ms:661 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:51 ms:663 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:52 ms:008 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:52 ms:008 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:52 ms:010 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:52 ms:357 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:52 ms:359 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:52 ms:360 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:52 ms:737 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:52 ms:739 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:52 ms:740 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:53 ms:083 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:53 ms:085 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:53 ms:085 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:53 ms:431 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:53 ms:433 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:53 ms:434 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:53 ms:796 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:53 ms:796 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:53 ms:799 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:54 ms:158 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:54 ms:159 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:54 ms:161 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:54 ms:520 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:54 ms:520 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:54 ms:522 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:54 ms:866 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:54 ms:866 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:54 ms:868 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:55 ms:231 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:55 ms:231 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:55 ms:235 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:55 ms:611 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:55 ms:611 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:55 ms:613 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:55 ms:958 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:55 ms:967 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:55 ms:974 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:56 ms:337 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:56 ms:337 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:56 ms:340 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:56 ms:686 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:56 ms:686 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:56 ms:686 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:57 ms:050 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:57 ms:051 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:57 ms:053 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:57 ms:396 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:57 ms:396 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:57 ms:398 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:57 ms:744 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:57 ms:745 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:57 ms:747 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:58 ms:109 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:58 ms:111 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:58 ms:113 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:58 ms:457 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:58 ms:457 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:58 ms:457 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:58 ms:804 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:58 ms:805 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:58 ms:807 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:59 ms:151 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:59 ms:152 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:59 ms:154 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:59 ms:532 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:59 ms:532 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:59 ms:535 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:34:59 ms:895 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:34:59 ms:896 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:34:59 ms:899 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:35:00 ms:242 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:35:00 ms:242 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:35:00 ms:242 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:35:00 ms:589 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:35:00 ms:589 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:35:00 ms:591 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:35:00 ms:955 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:35:00 ms:956 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:35:00 ms:957 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:35:01 ms:333 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:35:01 ms:334 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:35:01 ms:334 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:35:01 ms:684 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:35:01 ms:686 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:35:01 ms:687 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:35:02 ms:054 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:35:02 ms:055 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:35:02 ms:056 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:35:02 ms:399 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:35:02 ms:401 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:35:02 ms:403 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:35:02 ms:762 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:35:02 ms:764 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:35:02 ms:764 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:35:03 ms:126 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:35:03 ms:127 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:35:03 ms:129 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:35:03 ms:505 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:35:03 ms:507 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:35:03 ms:507 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:35:03 ms:853 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:35:03 ms:854 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:35:03 ms:856 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:35:04 ms:216 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:35:04 ms:218 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:35:04 ms:220 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:35:04 ms:578 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:35:04 ms:578 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:35:04 ms:581 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:35:04 ms:926 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:35:04 ms:928 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:35:04 ms:930 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:35:05 ms:255 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:35:05 ms:257 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:35:05 ms:257 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:46:54 ms:813 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:46:55 ms:161 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:46:55 ms:233 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:46:55 ms:237 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:46:55 ms:601 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:46:55 ms:603 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:46:55 ms:603 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:46:55 ms:940 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:46:55 ms:940 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:46:55 ms:942 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:46:56 ms:304 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:46:56 ms:304 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:46:56 ms:307 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:46:56 ms:646 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:46:56 ms:646 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:46:56 ms:649 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:46:56 ms:996 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:46:56 ms:998 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:46:56 ms:999 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:46:57 ms:354 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:46:57 ms:354 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:46:57 ms:357 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:46:57 ms:688 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:46:57 ms:688 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:46:57 ms:690 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:46:58 ms:046 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:46:58 ms:047 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:46:58 ms:048 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:46:58 ms:393 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:46:58 ms:395 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:46:58 ms:396 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:46:58 ms:751 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:46:58 ms:752 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:46:58 ms:753 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:46:59 ms:101 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:46:59 ms:104 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:46:59 ms:105 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:46:59 ms:461 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:46:59 ms:461 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:46:59 ms:461 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:46:59 ms:796 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:46:59 ms:798 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:46:59 ms:799 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:47:00 ms:147 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:47:00 ms:147 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:47:00 ms:150 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:47:00 ms:520 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:47:00 ms:520 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:47:00 ms:523 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:47:00 ms:879 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:47:00 ms:879 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:47:00 ms:883 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 14:47:01 ms:233 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 14:47:01 ms:235 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 14:47:01 ms:238 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:26:58 ms:411 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:26:58 ms:769 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:26:58 ms:769 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:26:58 ms:769 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:26:59 ms:133 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:26:59 ms:133 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:26:59 ms:134 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:26:59 ms:495 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:26:59 ms:495 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:26:59 ms:498 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:26:59 ms:861 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:26:59 ms:861 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:26:59 ms:861 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:00 ms:210 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:00 ms:216 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:00 ms:216 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:00 ms:589 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:00 ms:589 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:00 ms:591 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:00 ms:954 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:00 ms:954 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:00 ms:956 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:01 ms:319 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:01 ms:319 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:01 ms:319 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:01 ms:682 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:01 ms:682 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:01 ms:682 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:02 ms:046 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:02 ms:046 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:02 ms:046 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:02 ms:395 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:02 ms:395 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:02 ms:395 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:02 ms:743 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:02 ms:743 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:02 ms:743 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:03 ms:123 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:03 ms:123 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:03 ms:123 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:03 ms:488 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:03 ms:488 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:03 ms:488 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:03 ms:838 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:03 ms:838 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:03 ms:838 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:04 ms:203 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:04 ms:203 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:04 ms:203 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:04 ms:537 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:04 ms:537 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:04 ms:537 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:04 ms:902 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:04 ms:902 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:04 ms:902 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:05 ms:280 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:05 ms:280 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:05 ms:280 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:05 ms:646 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:05 ms:647 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:05 ms:647 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:06 ms:043 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:06 ms:043 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:06 ms:043 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:06 ms:392 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:06 ms:420 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:06 ms:420 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:06 ms:804 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:06 ms:807 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:06 ms:807 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:07 ms:186 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:07 ms:186 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:07 ms:186 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:07 ms:584 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:07 ms:584 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:07 ms:584 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:07 ms:935 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:07 ms:935 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:07 ms:935 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:08 ms:330 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:08 ms:330 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:08 ms:330 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:08 ms:679 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:08 ms:679 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:08 ms:679 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:09 ms:059 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:09 ms:141 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:09 ms:146 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:09 ms:501 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:09 ms:504 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:09 ms:506 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:09 ms:881 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:09 ms:881 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:09 ms:881 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:10 ms:283 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:10 ms:283 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:10 ms:283 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:10 ms:631 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:10 ms:631 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:10 ms:631 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:11 ms:012 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:11 ms:012 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:11 ms:012 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:11 ms:358 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:11 ms:358 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:11 ms:358 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:11 ms:723 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:11 ms:723 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:11 ms:723 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:12 ms:096 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:12 ms:096 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:12 ms:096 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:27:12 ms:466 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:27:12 ms:466 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:27:12 ms:466 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:50:25 ms:866 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:50:26 ms:215 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:50:26 ms:215 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:50:26 ms:215 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:50:26 ms:565 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:50:26 ms:565 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:50:26 ms:565 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:50:26 ms:929 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:50:26 ms:933 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:50:26 ms:933 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:50:27 ms:308 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:50:27 ms:308 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:50:27 ms:309 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:50:27 ms:693 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:50:27 ms:693 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:50:27 ms:693 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:50:28 ms:093 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:50:28 ms:093 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:50:28 ms:093 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:50:28 ms:441 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:50:28 ms:441 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:50:28 ms:441 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 16:50:28 ms:836 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 16:50:28 ms:836 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 16:50:28 ms:836 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:28 ms:511 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:28 ms:866 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 17:28:28 ms:866 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 17:28:28 ms:868 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:29 ms:231 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 17:28:29 ms:232 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 17:28:29 ms:237 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:29 ms:610 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 17:28:29 ms:612 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 17:28:29 ms:614 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:29 ms:974 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 17:28:29 ms:974 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 17:28:29 ms:977 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:30 ms:322 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 17:28:30 ms:322 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 17:28:30 ms:325 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:30 ms:672 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 17:28:30 ms:673 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 17:28:30 ms:675 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:31 ms:022 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 17:28:31 ms:023 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 17:28:31 ms:024 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:31 ms:370 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 17:28:31 ms:372 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 17:28:31 ms:373 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:31 ms:735 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 17:28:31 ms:735 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 17:28:31 ms:738 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:32 ms:083 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 17:28:32 ms:083 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 17:28:32 ms:083 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:32 ms:431 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 17:28:32 ms:433 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 17:28:32 ms:435 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:32 ms:798 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 17:28:32 ms:800 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 17:28:32 ms:800 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:33 ms:164 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 17:28:33 ms:164 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 17:28:33 ms:166 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:33 ms:514 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 17:28:33 ms:514 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 17:28:33 ms:517 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 12-18 17:28:33 ms:862 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 12-18 17:28:33 ms:863 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 12-18 17:28:33 ms:867 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-09 13:15:22 ms:216 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-09 13:15:22 ms:834 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-09 13:15:22 ms:834 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-09 13:15:22 ms:834 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-09 13:15:23 ms:219 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-09 13:15:23 ms:219 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-09 13:15:23 ms:219 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-09 13:15:23 ms:609 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-09 13:15:23 ms:609 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-09 13:15:23 ms:609 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-09 13:15:23 ms:974 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-09 13:15:23 ms:974 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-09 13:15:23 ms:974 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-09 13:15:24 ms:371 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-09 13:15:24 ms:371 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-09 13:15:24 ms:371 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-09 13:15:24 ms:720 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-09 13:15:24 ms:720 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-09 13:15:24 ms:720 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-09 13:15:25 ms:069 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-09 13:15:25 ms:069 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-09 13:15:25 ms:069 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-09 13:15:25 ms:418 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-12 15:37:51 ms:432 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-12 15:37:52 ms:050 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-12 15:37:52 ms:051 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-12 15:37:52 ms:051 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-12 15:37:52 ms:402 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-12 15:37:52 ms:404 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-12 15:37:52 ms:404 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-12 15:37:52 ms:734 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-12 15:37:52 ms:735 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-12 15:37:52 ms:736 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-12 15:37:53 ms:112 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-12 15:37:53 ms:112 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-12 15:37:53 ms:112 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-12 15:37:53 ms:471 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-12 15:37:53 ms:471 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-12 15:37:53 ms:473 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-12 15:37:53 ms:814 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-12 15:37:53 ms:816 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-12 15:37:53 ms:817 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-12 15:37:54 ms:143 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-12 15:37:54 ms:144 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-12 15:37:54 ms:145 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:09:48 ms:855 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:09:49 ms:369 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-28 11:09:49 ms:370 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-28 11:09:49 ms:371 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:09:49 ms:736 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-28 11:09:49 ms:737 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-28 11:09:49 ms:738 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:09:50 ms:082 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-28 11:09:50 ms:082 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-28 11:09:50 ms:082 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:09:50 ms:416 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-28 11:09:50 ms:416 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-28 11:09:50 ms:416 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:09:50 ms:767 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-28 11:09:50 ms:767 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-28 11:09:50 ms:767 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:09:51 ms:128 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-28 11:09:51 ms:130 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-28 11:09:51 ms:130 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:14:38 ms:735 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:14:39 ms:112 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-28 11:14:39 ms:112 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-28 11:14:39 ms:112 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:14:39 ms:456 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-28 11:14:39 ms:456 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-28 11:14:39 ms:456 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:14:39 ms:784 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-28 11:14:39 ms:784 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-28 11:14:39 ms:784 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:14:40 ms:139 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-28 11:14:40 ms:140 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-28 11:14:40 ms:141 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:14:40 ms:488 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-28 11:14:40 ms:488 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-28 11:14:40 ms:488 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:14:40 ms:831 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-28 11:14:40 ms:833 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-28 11:14:40 ms:834 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:14:41 ms:189 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-28 11:14:41 ms:189 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-28 11:14:41 ms:189 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:14:41 ms:518 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-28 11:14:41 ms:519 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-28 11:14:41 ms:519 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-28 11:14:41 ms:875 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-28 11:14:41 ms:880 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-28 11:14:41 ms:888 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:22:29 ms:612 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:22:30 ms:183 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:22:30 ms:183 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:22:30 ms:183 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:22:30 ms:532 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:22:30 ms:532 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:22:30 ms:532 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:22:30 ms:880 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:22:30 ms:880 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:22:30 ms:880 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:22:31 ms:233 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:22:31 ms:234 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:22:31 ms:235 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:22:31 ms:583 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:22:31 ms:584 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:22:31 ms:584 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:22:31 ms:935 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:22:31 ms:935 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:22:31 ms:935 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:22:32 ms:412 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:22:32 ms:412 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:22:32 ms:414 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:22:32 ms:775 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:22:32 ms:775 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:22:32 ms:778 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:22:33 ms:125 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:22:33 ms:126 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:22:33 ms:127 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:39 ms:462 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:39 ms:841 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:39 ms:841 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:39 ms:841 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:40 ms:206 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:40 ms:206 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:40 ms:206 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:40 ms:570 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:40 ms:570 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:40 ms:570 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:40 ms:918 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:40 ms:918 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:40 ms:918 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:41 ms:282 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:41 ms:282 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:41 ms:282 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:41 ms:629 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:41 ms:629 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:41 ms:629 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:41 ms:993 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:41 ms:993 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:41 ms:993 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:42 ms:343 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:42 ms:343 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:42 ms:343 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:42 ms:707 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:42 ms:707 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:42 ms:707 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:43 ms:072 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:43 ms:072 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:43 ms:072 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:43 ms:419 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:43 ms:419 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:43 ms:419 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:43 ms:783 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:43 ms:783 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:43 ms:783 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:44 ms:147 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:44 ms:147 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:44 ms:147 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:44 ms:511 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:44 ms:511 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:44 ms:511 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:44 ms:874 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:44 ms:906 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:44 ms:906 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:45 ms:382 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:45 ms:382 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:45 ms:382 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:45 ms:746 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:45 ms:746 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:45 ms:746 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:46 ms:094 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:46 ms:094 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:46 ms:094 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:46 ms:442 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:46 ms:442 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:46 ms:442 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:46 ms:804 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:46 ms:805 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:46 ms:805 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:47 ms:170 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:47 ms:170 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:47 ms:170 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:47 ms:502 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:47 ms:502 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:47 ms:502 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:47 ms:851 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:47 ms:851 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:47 ms:851 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:48 ms:200 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:48 ms:200 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:48 ms:200 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:48 ms:579 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:48 ms:579 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:48 ms:579 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:48 ms:943 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:48 ms:947 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:49 ms:007 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:49 ms:372 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:49 ms:372 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:49 ms:372 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:49 ms:720 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:49 ms:720 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:49 ms:720 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:50 ms:099 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:50 ms:099 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:50 ms:099 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:50 ms:448 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:50 ms:448 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:50 ms:448 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:50 ms:813 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:50 ms:813 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:50 ms:813 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:51 ms:160 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:51 ms:160 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:51 ms:160 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:51 ms:510 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:51 ms:510 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:51 ms:510 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:51 ms:859 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:51 ms:875 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:51 ms:875 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:52 ms:225 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:52 ms:225 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:52 ms:225 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:52 ms:622 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:52 ms:622 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:52 ms:622 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:52 ms:986 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:52 ms:986 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:52 ms:986 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:53 ms:383 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:53 ms:383 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:53 ms:383 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:53 ms:763 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:53 ms:766 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:53 ms:767 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:54 ms:113 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:54 ms:113 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:54 ms:113 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:54 ms:477 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:54 ms:477 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:54 ms:477 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:54 ms:826 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:54 ms:826 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:54 ms:826 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:55 ms:175 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:55 ms:175 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:55 ms:175 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:55 ms:561 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:55 ms:561 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:55 ms:561 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:55 ms:927 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:55 ms:927 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:55 ms:927 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:56 ms:323 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:56 ms:323 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:56 ms:323 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-29 16:26:56 ms:671 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-29 16:26:56 ms:671 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-29 16:26:56 ms:671 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-30 08:43:26 ms:499 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-30 08:43:27 ms:407 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-30 08:43:27 ms:407 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-30 08:43:27 ms:407 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-30 08:43:27 ms:755 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-30 08:43:27 ms:755 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-30 08:43:27 ms:757 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-30 08:43:28 ms:088 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-30 08:43:28 ms:089 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-30 08:43:28 ms:089 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-30 08:43:28 ms:423 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-30 08:43:28 ms:424 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-30 08:43:28 ms:424 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-30 08:43:28 ms:790 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-30 08:43:28 ms:790 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-30 08:43:28 ms:790 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-30 08:43:29 ms:173 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-30 08:43:29 ms:174 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-30 08:43:29 ms:174 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-30 08:43:29 ms:541 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-30 08:43:29 ms:545 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-30 08:43:29 ms:545 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 01-30 08:43:29 ms:888 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 01-30 08:43:29 ms:888 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 01-30 08:43:29 ms:888 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:32 ms:971 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:33 ms:732 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:33 ms:733 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:33 ms:735 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:34 ms:094 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:34 ms:094 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:34 ms:094 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:34 ms:458 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:34 ms:458 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:34 ms:458 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:34 ms:806 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:34 ms:806 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:34 ms:806 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:35 ms:155 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:35 ms:155 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:35 ms:158 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:35 ms:519 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:35 ms:519 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:35 ms:519 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:35 ms:900 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:35 ms:900 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:35 ms:900 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:36 ms:297 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:36 ms:298 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:36 ms:299 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:36 ms:630 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:36 ms:630 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:36 ms:630 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:36 ms:997 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:36 ms:999 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:37 ms:000 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:37 ms:346 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:37 ms:346 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:37 ms:346 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:37 ms:697 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:37 ms:698 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:37 ms:698 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:38 ms:094 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:38 ms:095 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:38 ms:095 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:38 ms:444 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:38 ms:444 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:38 ms:444 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:38 ms:826 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:38 ms:827 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:38 ms:828 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:39 ms:190 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:39 ms:192 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:39 ms:193 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:39 ms:561 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:39 ms:563 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:39 ms:563 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:39 ms:958 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:39 ms:960 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:39 ms:960 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:40 ms:308 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:40 ms:309 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:40 ms:309 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:40 ms:658 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:40 ms:659 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:40 ms:659 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:41 ms:008 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:41 ms:008 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:41 ms:013 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:41 ms:373 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:41 ms:374 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:41 ms:374 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:41 ms:754 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:41 ms:756 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:41 ms:758 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:42 ms:117 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:42 ms:143 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:42 ms:143 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:42 ms:516 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:42 ms:516 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:42 ms:516 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:42 ms:896 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:42 ms:898 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:42 ms:898 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:43 ms:245 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:43 ms:247 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:43 ms:250 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:43 ms:611 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:43 ms:611 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:43 ms:611 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:43 ms:960 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:43 ms:961 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:43 ms:961 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:44 ms:310 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:44 ms:310 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:44 ms:310 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:44 ms:697 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:44 ms:698 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:44 ms:699 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:45 ms:086 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:45 ms:087 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:45 ms:089 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:45 ms:433 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:45 ms:433 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:45 ms:433 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:45 ms:831 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:45 ms:833 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:45 ms:835 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:46 ms:210 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:46 ms:212 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:46 ms:212 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:46 ms:576 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:46 ms:576 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:46 ms:576 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:46 ms:923 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:46 ms:923 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:46 ms:923 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:47 ms:287 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:47 ms:287 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:47 ms:287 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:47 ms:637 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:47 ms:637 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:47 ms:637 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:47 ms:997 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:47 ms:997 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:47 ms:997 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:48 ms:360 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:48 ms:361 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:48 ms:361 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:48 ms:738 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:48 ms:738 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:48 ms:742 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:49 ms:118 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:49 ms:118 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:49 ms:118 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:49 ms:514 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:49 ms:514 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:49 ms:514 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:49 ms:894 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:49 ms:894 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:49 ms:894 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:50 ms:244 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:50 ms:244 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:50 ms:244 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:50 ms:592 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:50 ms:592 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:50 ms:592 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:50 ms:951 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:50 ms:953 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:50 ms:953 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:51 ms:297 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:51 ms:298 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:51 ms:300 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:51 ms:656 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:51 ms:656 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:51 ms:672 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:52 ms:038 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:52 ms:040 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:52 ms:042 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:52 ms:407 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:52 ms:427 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:52 ms:427 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:52 ms:782 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:52 ms:784 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:52 ms:787 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:53 ms:112 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:53 ms:112 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:53 ms:116 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:53 ms:479 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:53 ms:479 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:53 ms:479 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:53 ms:853 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:53 ms:853 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:53 ms:853 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:54 ms:202 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:54 ms:202 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:54 ms:202 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:54 ms:540 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:54 ms:541 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:54 ms:541 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:54 ms:887 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:54 ms:889 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:54 ms:891 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:55 ms:332 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:55 ms:332 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:55 ms:332 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:45:55 ms:681 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:45:55 ms:681 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:45:55 ms:681 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:20 ms:096 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:20 ms:429 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:20 ms:430 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:20 ms:431 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:20 ms:810 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:20 ms:811 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:20 ms:812 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:21 ms:193 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:21 ms:195 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:21 ms:195 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:21 ms:546 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:21 ms:546 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:21 ms:546 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:21 ms:927 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:21 ms:927 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:21 ms:927 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:22 ms:296 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:22 ms:296 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:22 ms:296 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:22 ms:679 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:22 ms:679 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:22 ms:679 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:23 ms:029 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:23 ms:034 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:23 ms:034 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:23 ms:413 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:23 ms:414 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:23 ms:417 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:23 ms:812 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:23 ms:812 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:23 ms:812 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:24 ms:211 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:24 ms:214 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:24 ms:214 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:24 ms:592 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:24 ms:592 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:24 ms:592 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:24 ms:942 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:24 ms:944 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:24 ms:944 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:25 ms:305 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:25 ms:305 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:25 ms:305 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:25 ms:687 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:25 ms:687 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:25 ms:688 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:26 ms:039 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:26 ms:040 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:26 ms:040 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:26 ms:390 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:26 ms:390 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:26 ms:390 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:26 ms:756 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:26 ms:757 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:26 ms:757 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:27 ms:100 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:27 ms:114 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:27 ms:115 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:27 ms:497 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:27 ms:497 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:27 ms:499 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:27 ms:862 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:27 ms:862 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:27 ms:862 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:28 ms:244 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:28 ms:245 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:28 ms:245 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:28 ms:624 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:28 ms:626 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:28 ms:626 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:29 ms:005 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:29 ms:005 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:29 ms:009 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:29 ms:370 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:29 ms:370 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:29 ms:370 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:29 ms:736 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:29 ms:738 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:29 ms:738 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:30 ms:086 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:30 ms:088 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:30 ms:089 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:30 ms:451 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:30 ms:451 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:30 ms:451 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:30 ms:819 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:30 ms:821 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:30 ms:821 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:31 ms:185 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:31 ms:187 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:31 ms:187 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:31 ms:553 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:31 ms:553 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:31 ms:556 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:31 ms:918 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:31 ms:920 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:31 ms:922 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:32 ms:300 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:32 ms:300 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:32 ms:300 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:32 ms:666 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:32 ms:666 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:32 ms:666 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:33 ms:044 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:33 ms:046 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:33 ms:049 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:33 ms:429 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:33 ms:432 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:33 ms:434 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:33 ms:831 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:33 ms:833 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:33 ms:835 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:34 ms:212 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:34 ms:212 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:34 ms:212 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:34 ms:560 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:34 ms:560 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:34 ms:562 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:34 ms:913 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:34 ms:914 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:34 ms:915 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:35 ms:283 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:35 ms:292 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:35 ms:299 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:35 ms:649 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:35 ms:649 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:35 ms:652 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:47:36 ms:011 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:47:36 ms:011 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:47:36 ms:011 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:04 ms:085 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:04 ms:465 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:04 ms:465 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:04 ms:465 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:04 ms:830 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:04 ms:830 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:04 ms:830 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:05 ms:178 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:05 ms:178 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:05 ms:178 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:05 ms:541 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:05 ms:542 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:05 ms:543 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:05 ms:904 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:05 ms:920 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:05 ms:920 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:06 ms:299 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:06 ms:299 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:06 ms:299 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:06 ms:681 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:06 ms:681 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:06 ms:681 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:07 ms:076 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:07 ms:076 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:07 ms:076 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:07 ms:439 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:07 ms:439 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:07 ms:439 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:07 ms:788 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:07 ms:788 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:07 ms:788 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:08 ms:151 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:08 ms:151 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:08 ms:151 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:08 ms:518 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:08 ms:518 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:08 ms:518 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:08 ms:897 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:08 ms:897 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:08 ms:897 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:09 ms:261 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:09 ms:263 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:09 ms:266 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:09 ms:625 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:09 ms:627 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:09 ms:627 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:09 ms:977 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:09 ms:984 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:09 ms:985 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:10 ms:347 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:10 ms:347 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:10 ms:347 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:10 ms:728 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:10 ms:730 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:10 ms:731 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:11 ms:092 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:11 ms:092 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:11 ms:092 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:11 ms:441 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:11 ms:441 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:11 ms:445 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:11 ms:807 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:11 ms:807 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:11 ms:807 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:12 ms:187 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:12 ms:189 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:12 ms:189 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:12 ms:537 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:12 ms:537 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:12 ms:537 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:12 ms:934 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:12 ms:935 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:12 ms:936 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:13 ms:316 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:13 ms:318 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:13 ms:319 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:13 ms:683 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:13 ms:685 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:13 ms:687 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 02-02 08:48:14 ms:048 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 02-02 08:48:14 ms:048 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 02-02 08:48:14 ms:049 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:23 ms:334 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:23 ms:788 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:23 ms:788 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:23 ms:788 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:24 ms:148 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:24 ms:148 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:24 ms:148 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:24 ms:492 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:24 ms:492 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:24 ms:492 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:24 ms:881 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:24 ms:881 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:24 ms:883 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:25 ms:256 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:25 ms:256 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:25 ms:256 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:25 ms:695 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:25 ms:695 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:25 ms:695 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:26 ms:039 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:26 ms:039 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:26 ms:040 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:26 ms:384 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:26 ms:384 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:26 ms:385 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:26 ms:734 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:26 ms:735 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:26 ms:735 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:27 ms:085 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:27 ms:085 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:27 ms:085 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:27 ms:445 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:27 ms:445 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:27 ms:445 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:27 ms:835 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:27 ms:835 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:27 ms:835 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:28 ms:398 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:28 ms:398 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:28 ms:398 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:28 ms:790 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:28 ms:791 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:28 ms:792 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:29 ms:178 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:29 ms:178 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:29 ms:179 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:29 ms:506 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:29 ms:506 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:29 ms:506 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:29 ms:851 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:29 ms:851 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:29 ms:852 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:30 ms:196 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:30 ms:196 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:30 ms:196 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:30 ms:552 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:30 ms:554 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:30 ms:554 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:30 ms:897 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:30 ms:898 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:30 ms:898 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:31 ms:257 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:31 ms:257 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:31 ms:257 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:31 ms:617 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:31 ms:617 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:31 ms:617 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:31 ms:976 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:31 ms:976 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:31 ms:977 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:32 ms:382 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:32 ms:382 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:32 ms:383 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:32 ms:803 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:32 ms:803 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:32 ms:805 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:33 ms:148 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:33 ms:148 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:33 ms:148 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:33 ms:477 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:33 ms:477 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:33 ms:478 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:33 ms:849 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:33 ms:849 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:33 ms:851 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:34 ms:211 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:34 ms:211 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:34 ms:211 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:34 ms:569 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:34 ms:569 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:34 ms:569 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:34 ms:960 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:34 ms:960 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:34 ms:962 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:35 ms:321 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:35 ms:321 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:35 ms:321 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:35 ms:680 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:35 ms:680 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:35 ms:683 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:36 ms:069 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:36 ms:069 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:36 ms:069 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:36 ms:415 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:36 ms:415 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:36 ms:415 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:36 ms:757 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:36 ms:758 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:36 ms:760 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:37 ms:132 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:37 ms:133 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:37 ms:133 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:37 ms:476 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:37 ms:511 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:37 ms:511 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:37 ms:867 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:37 ms:868 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:37 ms:870 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:38 ms:184 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:38 ms:184 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:38 ms:184 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:38 ms:538 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:38 ms:539 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:38 ms:540 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:38 ms:900 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:38 ms:900 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:38 ms:900 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:39 ms:258 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:39 ms:258 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:39 ms:258 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:39 ms:618 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:39 ms:618 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:39 ms:618 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:39 ms:961 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:39 ms:961 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:39 ms:961 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:40 ms:430 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:40 ms:430 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:40 ms:430 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:40 ms:772 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:40 ms:773 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:40 ms:773 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:41 ms:117 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:41 ms:117 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:41 ms:117 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:41 ms:445 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:41 ms:445 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:41 ms:447 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:41 ms:773 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:41 ms:773 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:41 ms:775 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:42 ms:100 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:42 ms:101 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:42 ms:103 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:42 ms:446 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:42 ms:451 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:42 ms:454 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-18 11:51:42 ms:803 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-18 11:51:42 ms:803 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-18 11:51:42 ms:806 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 10:09:14 ms:177 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 10:09:15 ms:151 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-24 10:09:15 ms:151 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-24 10:09:15 ms:151 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 10:09:15 ms:519 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-24 10:09:15 ms:520 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-24 10:09:15 ms:520 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 10:09:15 ms:882 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-24 10:09:15 ms:882 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-24 10:09:15 ms:885 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 10:09:16 ms:261 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-24 10:09:16 ms:262 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-24 10:09:16 ms:262 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 10:09:16 ms:625 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-24 10:09:16 ms:627 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-24 10:09:16 ms:627 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 10:09:17 ms:006 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-24 10:09:17 ms:008 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-24 10:09:17 ms:010 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 10:09:17 ms:344 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-24 10:09:17 ms:345 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-24 10:09:17 ms:347 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 11:47:00 ms:358 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 11:47:00 ms:713 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-24 11:47:00 ms:713 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-24 11:47:00 ms:716 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 11:47:01 ms:095 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-24 11:47:01 ms:095 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-24 11:47:01 ms:095 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 11:47:01 ms:460 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-24 11:47:01 ms:460 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-24 11:47:01 ms:460 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 11:47:01 ms:823 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-24 11:47:01 ms:823 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-24 11:47:01 ms:825 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 11:47:02 ms:187 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-24 11:47:02 ms:187 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-24 11:47:02 ms:187 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 11:47:02 ms:548 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-24 11:47:02 ms:549 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-24 11:47:02 ms:550 : Level :    LOG ERROR : Message : USB device open failed	
+Time : 03-24 11:47:03 ms:016 : Level :     LOG INFO : Message : [EF,W,0]	
+Time : 03-24 11:47:03 ms:017 : Level :    LOG ERROR : Message : Command channel is not open	
+Time : 03-24 11:47:03 ms:018 : Level :    LOG ERROR : Message : USB device open failed	

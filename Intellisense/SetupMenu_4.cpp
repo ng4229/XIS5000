@@ -1,0 +1,287 @@
+// SetupMenu_4.cpp : 구현 파일입니다.
+//
+
+#include "stdafx.h"
+#include "Intellisense.h"
+#include "SetupMenu_4.h"
+#include "afxdialogex.h"
+
+
+// CSetupMenu_4 대화 상자입니다.
+#include "AdminDlg.h"
+#include "MessageBoxDlg.h"
+
+IMPLEMENT_DYNAMIC(CSetupMenu_4, CDialogEx)
+
+CSetupMenu_4::CSetupMenu_4(CWnd* pParent /*=NULL*/)
+	: CDialogEx(CSetupMenu_4::IDD, pParent)
+	, b_IsChange(false)
+	, b_ChangedLanguage(false)
+{
+
+	m_NewPassword = _T("");
+	m_OldPassword = _T("");
+	m_Language = g_NationalCode;
+	b_ChangedLanguage=false;
+}
+
+CSetupMenu_4::~CSetupMenu_4()
+{
+}
+
+void CSetupMenu_4::DoDataExchange(CDataExchange* pDX)
+{
+	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDCANCEL, m_Bt_Close);
+	DDX_Control(pDX, IDOK, m_Bt_Save);
+	DDX_Text(pDX, IDC_EDIT_NEWNAME, m_NewPassword);
+	DDX_Text(pDX, IDC_EDIT_OLDNAME, m_OldPassword);
+	DDX_Radio(pDX, IDC_RLANGUAGE, m_Language);
+}
+
+
+BEGIN_MESSAGE_MAP(CSetupMenu_4, CDialogEx)
+	ON_WM_PAINT()
+	ON_BN_CLICKED(IDOK, &CSetupMenu_4::OnBnClickedOk)
+	ON_BN_CLICKED(IDCANCEL, &CSetupMenu_4::OnBnClickedCancel)
+	ON_WM_CTLCOLOR()
+END_MESSAGE_MAP()
+
+
+// CSetupMenu_4 메시지 처리기입니다.
+
+
+BOOL CSetupMenu_4::OnInitDialog()
+{
+	CDialogEx::OnInitDialog();
+
+	// TODO:  여기에 추가 초기화 작업을 추가합니다.
+	Brush.CreateStockObject(NULL_BRUSH);
+	SetWindowPos(NULL, 672, 119, 0, 0, SWP_NOSIZE | SWP_NOZORDER);
+	LoadBackground();
+
+	return TRUE;  // return TRUE unless you set the focus to a control
+	// 예외: OCX 속성 페이지는 FALSE를 반환해야 합니다.
+}
+
+void CSetupMenu_4::LoadBackground()
+{
+	BITMAP bmpInfo;
+	if(g_NationalCode==0)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_SETUPMENU_4); 
+		m_Bt_Save.LoadBitmaps(IDB_BTSETUPMENU_SAVE,IDB_BTSETUPMENU_SAVE_1);
+		m_Bt_Close.LoadBitmaps(IDB_SELPRODUCT_EXIT,IDB_SELPRODUCT_EXIT_0); 
+	}
+	else if(g_NationalCode==1)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_SETUPMENU_4_ENG); 
+		m_Bt_Save.LoadBitmaps(IDB_BTSETUPMENU_SAVE_ENG,IDB_BTSETUPMENU_SAVE_1_ENG); 
+		m_Bt_Close.LoadBitmaps(IDB_SELPRODUCT_EXIT_ENG,IDB_SELPRODUCT_EXIT_0_ENG); 
+	}
+	else if(g_NationalCode==2)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_SETUPMENU_4_CHI); 
+		m_Bt_Save.LoadBitmaps(IDB_BTSETUPMENU_SAVE_CHI,IDB_BTSETUPMENU_SAVE_1_CHI); 
+		m_Bt_Close.LoadBitmaps(IDB_SELPRODUCT_EXIT_CHI,IDB_SELPRODUCT_EXIT_0_CHI); 
+	}
+	else if(g_NationalCode==3)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_SETUPMENU_4_SPN); 
+		m_Bt_Save.LoadBitmaps(IDB_BTSETUPMENU_SAVE_SPN,IDB_BTSETUPMENU_SAVE_1_SPN); 
+		m_Bt_Close.LoadBitmaps(IDB_SELPRODUCT_EXIT_SPN,IDB_SELPRODUCT_EXIT_0_SPN); 
+	}
+
+	SetDlgItemText(IDC_STATIC_1, g_MessageArr[180]);//_T("프로그램 적용 언어 선택"));
+	SetDlgItemText(IDC_RLANGUAGE, g_MessageArr[181]);//_T("국문(Korean)"));
+	SetDlgItemText(IDC_RLANGUAGE1, g_MessageArr[182]);//_T("영문(English)"));
+	SetDlgItemText(IDC_RLANGUAGE2, g_MessageArr[183]);//_T("중문(Chinese)"));
+	SetDlgItemText(IDC_RLANGUAGE3, g_MessageArr[238]);//_T("스페인어(Spanish)"));
+
+    m_bmpMainBG.GetBitmap(&bmpInfo);
+    m_nMainWidth = bmpInfo.bmWidth; 
+    m_nMainHeight = bmpInfo.bmHeight; 	
+
+	m_Bt_Save.SizeToContent();
+	m_Bt_Close.SizeToContent();
+}
+
+BOOL CSetupMenu_4::PreTranslateMessage(MSG* pMsg)
+{
+	// TODO: 여기에 특수화된 코드를 추가 및/또는 기본 클래스를 호출합니다.
+	if(pMsg->wParam == VK_ESCAPE)
+		return FALSE; 
+	
+	if(pMsg->wParam == VK_RETURN)
+		return FALSE;	
+
+	if(FromHandle(pMsg->hwnd)->GetDlgCtrlID() == IDC_EDIT_OLDNAME)
+	{			
+		if(pMsg->message==WM_LBUTTONDOWN || pMsg->message==WM_LBUTTONDBLCLK)
+		{		
+			CAdminDlg login;
+			login.m_Mode=2;
+			int result=login.DoModal();
+			if(result==2)
+			{
+				m_OldPassword = login.m_Password;
+				if(m_OldPassword!=g_Password)
+				{
+					if(m_OldPassword!="")
+					{
+						CMessageBoxDlg dlg;
+						dlg.m_Message=g_MessageArr[184];//"이전 비밀번호와 일치하지 않습니다. (E5002)";
+						dlg.DoModal();
+						m_OldPassword="";
+					}
+				}
+				else
+				{
+					UpdateData(false);
+				}
+			}
+			else
+				m_OldPassword="";
+			
+		}
+	}
+
+	if(FromHandle(pMsg->hwnd)->GetDlgCtrlID() == IDC_EDIT_NEWNAME)
+	{			
+		if(pMsg->message==WM_LBUTTONDOWN || pMsg->message==WM_LBUTTONDBLCLK)
+		{		
+			if(m_OldPassword=="")
+				return FALSE;
+
+			CAdminDlg login;
+			login.m_Mode=2;
+			int result=login.DoModal();
+			if(result==2)
+			{
+				m_NewPassword = login.m_Password;
+				b_IsChange=true;
+				UpdateData(false);
+			}
+			else
+				m_NewPassword="";
+		}
+	}
+
+	return CDialogEx::PreTranslateMessage(pMsg);
+}
+
+
+void CSetupMenu_4::OnPaint()
+{
+	CPaintDC dc(this); // device context for painting
+    CDC MemDC; 
+	MemDC.CreateCompatibleDC(&dc);
+	MemDC.SelectObject(&m_bmpMainBG);
+    dc.BitBlt(0, 0, m_nMainWidth, m_nMainHeight, &MemDC, 0, 0, SRCCOPY);
+	MemDC.DeleteDC();
+}
+
+
+void CSetupMenu_4::OnBnClickedOk()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	if(b_IsChange)
+	{
+		g_Password=m_NewPassword;
+
+		SetFileAttributes(_T("D:\\Database\\password.dat"), FILE_ATTRIBUTE_NORMAL);
+		
+		CStdioFile m_File;
+		m_File.Open(_T("D:\\Database\\password.dat"), CStdioFile::modeCreate | CStdioFile::modeWrite);
+		m_File.WriteString(g_Password);
+		m_File.Close();
+
+		SetFileAttributes(_T("D:\\Database\\password.dat"), FILE_ATTRIBUTE_HIDDEN);
+		OnWriteReport();
+		b_IsChange=false;
+	}
+
+	UpdateData(true);
+
+	if(m_Language!=g_NationalCode)
+	{
+		g_NationalCode=m_Language;
+		b_ChangedLanguage=true;
+	}
+}
+
+
+void CSetupMenu_4::OnWriteReport(void)
+{
+	CString strdate, strtime;
+	CTime time;
+	time = CTime::GetCurrentTime();
+	strdate.Format(_T("%04d-%02d-%02d"), time.GetYear(),time.GetMonth(),time.GetDay());		
+	strtime.Format(_T("%04d-%02d-%02d %02d:%02d:%02d"), time.GetYear(),time.GetMonth(),time.GetDay(), time.GetHour(), time.GetMinute(), time.GetSecond());
+	
+	CString strtext;
+	strtext.Format(g_MessageArr[185]);//_T("관리자 비밀번호 변경됨"));
+
+	bool g_bOpenDB=true;
+
+	Init_Mysql();
+
+	if (!g_Connecting)
+		AfxMessageBox(_T("실패"));
+	else
+	{
+		CString strQuery;
+		strQuery.Format(_T("Insert INTO intellisense_db7(strDate, strErrorText, strErrorTime)") _T("VALUES('%s', '%s', '%s')"),
+			strdate, strtext, strtime);
+		if (mysql_query(&m_mysql, CStringA(strQuery))) {
+			CString error(mysql_error(&m_mysql));
+			AfxMessageBox(error);
+		}
+	}
+
+	Close_Mysql();
+
+	//if(!m_pSet_7.Open_DB(g_StrDirPath[7]))		
+	//{	
+	//	g_bOpenDB=false;
+	//	//RecoveryDatabase(g_StrDirPath[7], g_StrDirPath_copy[7]);
+	//	if(m_pSet_7.Open_DB(g_StrDirPath[7]))		
+	//		g_bOpenDB=true;
+	//}
+	//if(g_bOpenDB)
+	//{
+	//	CString strQuery;
+	//	strQuery.Format(_T("Insert INTO Computer_Log(strDate, strErrorText, strErrorTime)") _T("VALUES('%s', '%s', '%s')"),
+	//		strdate, strtext, strtime);
+	//	m_pSet_7.Insert_DB(strQuery);
+	//	if(m_pSet_7.b_IsOpenedDB)
+	//		m_pSet_7.Close_DB();
+	//}
+}
+
+
+void CSetupMenu_4::OnBnClickedCancel()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	if(b_ChangedLanguage)
+	{
+		CDialogEx::OnOK();
+	}
+	else
+		CDialogEx::OnCancel();
+}
+
+
+HBRUSH CSetupMenu_4::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
+{
+	HBRUSH hbr = CDialogEx::OnCtlColor(pDC, pWnd, nCtlColor);
+
+   if(nCtlColor == CTLCOLOR_STATIC) 
+	{
+        pOldBrush = (CBrush*)pDC->SelectObject(&Brush);
+        pDC->SetBkMode(TRANSPARENT);
+        return (HBRUSH) Brush;
+    }
+
+	return hbr;
+}

@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3426363D-872F-40FC-9E9D-8E7B2F44A5FE}</ProjectGuid>
+    <RootNamespace>Viewer</RootNamespace>
+    <Keyword>MFCDLLProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\NSE\Program\Intellisense\TotalProgram\2015_07_09_GlobalIntellisense\Intellisense\CXImage;$(IncludePath)</IncludePath>
+    <ReferencePath>D:\NSE\Program\Intellisense\TotalProgram\2015_07_09_GlobalIntellisense\Intellisense\Release;$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\opencv4_5_5\build\include;$(IncludePath)</IncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>D:\opencv4_5_5\build\x64\vc15\lib;$(SolutionDir)x64\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>.\Viewer.def</ModuleDefinitionFile>
+      <AdditionalDependencies>../Debug/cxImage.lib;../Debug/Jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>.\Viewer.def</ModuleDefinitionFile>
+      <AdditionalDependencies>opencv_world455d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\opencv4_5_5\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\Viewer.def</ModuleDefinitionFile>
+      <AdditionalDependencies>opencv_world455.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\opencv4_5_5\build\x64\vc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "D:\opencv4_5_5\build\x64\vc15\bin\" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\opencv4_5_5\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\Viewer.def</ModuleDefinitionFile>
+      <AdditionalDependencies>opencv_world455.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\opencv4_5_5\build\x64\vc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "D:\opencv4_5_5\build\x64\vc15\bin\" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\Intellisense_Ver200201_다국어 적용\Viewer\res\BttabngUkr.bmp" />
+    <None Include="ReadMe.txt" />
+    <None Include="res\bitmap3.bmp" />
+    <None Include="res\BtAllselect.bmp" />
+    <None Include="res\BtAllselect_1.bmp" />
+    <None Include="res\BtAllselect_1_CHI.bmp" />
+    <None Include="res\BtAllselect_1_ENG.bmp" />
+    <None Include="res\BtAllselect_1_POL.bmp" />
+    <None Include="res\BtAllselect_1_RUS.bmp" />
+    <None Include="res\BtAllselect_1_SPN.bmp" />
+    <None Include="res\BtAllselect_1_TIW.bmp" />
+    <None Include="res\BtAllselect_1_UKR.bmp" />
+    <None Include="res\BtAllselect_CHI.bmp" />
+    <None Include="res\BtAllselect_ENG.bmp" />
+    <None Include="res\BtAllselect_POL.bmp" />
+    <None Include="res\BtAllselect_RUS.bmp" />
+    <None Include="res\BtAllselect_SPN.bmp" />
+    <None Include="res\BtAllselect_TIW.bmp" />
+    <None Include="res\BtAllselect_UKR.bmp" />
+    <None Include="res\BtExitPlay.bmp" />
+    <None Include="res\BtExitPlay_0.bmp" />
+    <None Include="res\BtReject_Copy.bmp" />
+    <None Include="res\BtReject_Copy_1.bmp" />
+    <None Include="res\BtReject_Copy_CHI.bmp" />
+    <None Include="res\BtReject_Copy_CHI_1.bmp" />
+    <None Include="res\BtReject_Copy_ENG.bmp" />
+    <None Include="res\BtReject_Copy_ENG_1.bmp" />
+    <None Include="res\BtReject_Copy_POL.bmp" />
+    <None Include="res\BtReject_Copy_POL_1.bmp" />
+    <None Include="res\BtReject_Copy_RUS.bmp" />
+    <None Include="res\BtReject_Copy_RUS_1.bmp" />
+    <None Include="res\BtReject_Copy_SPN.bmp" />
+    <None Include="res\BtReject_Copy_SPN_1.bmp" />
+    <None Include="res\BtReject_Copy_TIW.bmp" />
+    <None Include="res\BtReject_Copy_TIW_1.bmp" />
+    <None Include="res\BtReject_Copy_UKR.bmp" />
+    <None Include="res\BtReject_Copy_UKR_1.bmp" />
+    <None Include="res\BtSetupMenu_Close.bmp" />
+    <None Include="res\BtSetupMenu_Close_1.bmp" />
+    <None Include="res\BtSetupMenu_Close_1_CHI.bmp" />
+    <None Include="res\BtSetupMenu_Close_1_ENG.bmp" />
+    <None Include="res\BtSetupMenu_Close_1_POL.bmp" />
+    <None Include="res\BtSetupMenu_Close_1_RUS.bmp" />
+    <None Include="res\BtSetupMenu_Close_1_SPN.bmp" />
+    <None Include="res\BtSetupMenu_Close_1_TIW.bmp" />
+    <None Include="res\BtSetupMenu_Close_1_UKR.bmp" />
+    <None Include="res\BtSetupMenu_Close_CHI.bmp" />
+    <None Include="res\BtSetupMenu_Close_ENG.bmp" />
+    <None Include="res\BtSetupMenu_Close_POL.bmp" />
+    <None Include="res\BtSetupMenu_Close_RUS.bmp" />
+    <None Include="res\BtSetupMenu_Close_SPN.bmp" />
+    <None Include="res\BtSetupMenu_Close_TIW.bmp" />
+    <None Include="res\BtSetupMenu_Close_UKR.bmp" />
+    <None Include="res\Bttabng.bmp" />
+    <None Include="res\BttabngChi.bmp" />
+    <None Include="res\BttabngChi_1.bmp" />
+    <None Include="res\BttabngEng.bmp" />
+    <None Include="res\BttabngEng_1.bmp" />
+    <None Include="res\BttabngPol.bmp" />
+    <None Include="res\BttabngPol_1.bmp" />
+    <None Include="res\BttabngRus.bmp" />
+    <None Include="res\BttabngRus_1.bmp" />
+    <None Include="res\BttabngSpn.bmp" />
+    <None Include="res\BttabngSpn_1.bmp" />
+    <None Include="res\BttabngTiw.bmp" />
+    <None Include="res\BttabngTiw_1.bmp" />
+    <None Include="res\BttabngUkr.bmp" />
+    <None Include="res\BttabngUkr_1.bmp" />
+    <None Include="res\Bttabng_1.bmp" />
+    <None Include="res\Bttabomit.bmp" />
+    <None Include="res\BttabomitChi.bmp" />
+    <None Include="res\BttabomitChi_1.bmp" />
+    <None Include="res\BttabomitEng.bmp" />
+    <None Include="res\BttabomitEng_1.bmp" />
+    <None Include="res\BttabomitPol.bmp" />
+    <None Include="res\BttabomitPol_1.bmp" />
+    <None Include="res\BttabomitRus.bmp" />
+    <None Include="res\BttabomitRus_1.bmp" />
+    <None Include="res\BttabomitSpn.bmp" />
+    <None Include="res\BttabomitSpn_1.bmp" />
+    <None Include="res\BttabomitTiw.bmp" />
+    <None Include="res\BttabomitTiw_1.bmp" />
+    <None Include="res\BttabomitUkr.bmp" />
+    <None Include="res\BttabomitUkr_1.bmp" />
+    <None Include="res\Bttabomit_1.bmp" />
+    <None Include="res\Bttabtest.bmp" />
+    <None Include="res\BttabtestChi.bmp" />
+    <None Include="res\BttabtestChi_1.bmp" />
+    <None Include="res\BttabtestEng.bmp" />
+    <None Include="res\BttabtestEng_1.bmp" />
+    <None Include="res\BttabtestPol.bmp" />
+    <None Include="res\BttabtestPol_1.bmp" />
+    <None Include="res\BttabtestRus.bmp" />
+    <None Include="res\BttabtestRus_1.bmp" />
+    <None Include="res\BttabtestSpn.bmp" />
+    <None Include="res\BttabtestSpn_1.bmp" />
+    <None Include="res\BttabtestTiw.bmp" />
+    <None Include="res\BttabtestTiw_1.bmp" />
+    <None Include="res\BttabtestUkr.bmp" />
+    <None Include="res\BttabtestUkr_1.bmp" />
+    <None Include="res\Bttabtest_1.bmp" />
+    <None Include="res\Bttreject.bmp" />
+    <None Include="res\Bttreject_0.bmp" />
+    <None Include="res\Bttreject_0_CHI.bmp" />
+    <None Include="res\Bttreject_0_ENG.bmp" />
+    <None Include="res\Bttreject_0_POL.bmp" />
+    <None Include="res\Bttreject_0_RUS.bmp" />
+    <None Include="res\Bttreject_0_SPN.bmp" />
+    <None Include="res\Bttreject_0_TIW.bmp" />
+    <None Include="res\Bttreject_0_UKR.bmp" />
+    <None Include="res\Bttreject_CHI.bmp" />
+    <None Include="res\Bttreject_Diable.bmp" />
+    <None Include="res\Bttreject_Diable_CHI.bmp" />
+    <None Include="res\Bttreject_Diable_ENG.bmp" />
+    <None Include="res\Bttreject_Diable_POL.bmp" />
+    <None Include="res\Bttreject_Diable_RUS.bmp" />
+    <None Include="res\Bttreject_Diable_SPN.bmp" />
+    <None Include="res\Bttreject_Diable_TIW.bmp" />
+    <None Include="res\Bttreject_Diable_UKR.bmp" />
+    <None Include="res\Bttreject_ENG.bmp" />
+    <None Include="res\Bttreject_POL.bmp" />
+    <None Include="res\Bttreject_RUS.bmp" />
+    <None Include="res\Bttreject_SPN.bmp" />
+    <None Include="res\Bttreject_TIW.bmp" />
+    <None Include="res\Bttreject_UKR.bmp" />
+    <None Include="res\BtUsb_Copy.bmp" />
+    <None Include="res\BtUsb_Copy_1.bmp" />
+    <None Include="res\BtUsb_Copy_1_CHI.bmp" />
+    <None Include="res\BtUsb_Copy_1_ENG.bmp" />
+    <None Include="res\BtUsb_Copy_1_POL.bmp" />
+    <None Include="res\BtUsb_Copy_1_RUS.bmp" />
+    <None Include="res\BtUsb_Copy_1_SPN.bmp" />
+    <None Include="res\BtUsb_Copy_1_TIW.bmp" />
+    <None Include="res\BtUsb_Copy_1_UKR.bmp" />
+    <None Include="res\BtUsb_Copy_CHI.bmp" />
+    <None Include="res\BtUsb_Copy_ENG.bmp" />
+    <None Include="res\BtUsb_Copy_POL.bmp" />
+    <None Include="res\BtUsb_Copy_RUS.bmp" />
+    <None Include="res\BtUsb_Copy_SPN.bmp" />
+    <None Include="res\BtUsb_Copy_TIW.bmp" />
+    <None Include="res\BtUsb_Copy_UKR.bmp" />
+    <None Include="res\BtZoomInOff.bmp" />
+    <None Include="res\BtZoomInOff_CHI.bmp" />
+    <None Include="res\BtZoomInOff_ENG.bmp" />
+    <None Include="res\BtZoomInOff_POL.bmp" />
+    <None Include="res\BtZoomInOff_RUS.bmp" />
+    <None Include="res\BtZoomInOff_SPN.bmp" />
+    <None Include="res\BtZoomInOff_TIW.bmp" />
+    <None Include="res\BtZoomInOff_UKR.bmp" />
+    <None Include="res\BtZoomInOn.bmp" />
+    <None Include="res\BtZoomInOn_CHI.bmp" />
+    <None Include="res\BtZoomInOn_ENG.bmp" />
+    <None Include="res\BtZoomInOn_POL.bmp" />
+    <None Include="res\BtZoomInOn_RUS.bmp" />
+    <None Include="res\BtZoomInOn_SPN.bmp" />
+    <None Include="res\BtZoomInOn_TIW.bmp" />
+    <None Include="res\BtZoomInOn_UKR.bmp" />
+    <None Include="res\BtZoomOutOff.bmp" />
+    <None Include="res\BtZoomOutOff_CHI.bmp" />
+    <None Include="res\BtZoomOutOff_ENG.bmp" />
+    <None Include="res\BtZoomOutOff_POL.bmp" />
+    <None Include="res\BtZoomOutOff_RUS.bmp" />
+    <None Include="res\BtZoomOutOff_SPN.bmp" />
+    <None Include="res\BtZoomOutOff_TIW.bmp" />
+    <None Include="res\BtZoomOutOff_UKR.bmp" />
+    <None Include="res\BtZoomOutOn.bmp" />
+    <None Include="res\BtZoomOutOn_CHI.bmp" />
+    <None Include="res\BtZoomOutOn_ENG.bmp" />
+    <None Include="res\BtZoomOutOn_POL.bmp" />
+    <None Include="res\BtZoomOutOn_RUS.bmp" />
+    <None Include="res\BtZoomOutOn_SPN.bmp" />
+    <None Include="res\BtZoomOutOn_TIW.bmp" />
+    <None Include="res\BtZoomOutOn_UKR.bmp" />
+    <None Include="res\Bt_Listdown.bmp" />
+    <None Include="res\Bt_Listdown_0.bmp" />
+    <None Include="res\Bt_Listup.bmp" />
+    <None Include="res\Bt_Listup_0.bmp" />
+    <None Include="res\Viewer.rc2" />
+    <None Include="res\ViewerBackground.bmp" />
+    <None Include="res\ViewerBackground_CHI.bmp" />
+    <None Include="res\ViewerBackground_ENG.bmp" />
+    <None Include="res\ViewerBackground_POL.bmp" />
+    <None Include="res\ViewerBackground_RUS.bmp" />
+    <None Include="res\ViewerBackground_SPN.bmp" />
+    <None Include="res\ViewerBackground_TIW.bmp" />
+    <None Include="res\ViewerBackground_UKR.bmp" />
+    <None Include="Viewer.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CWMPPlayer4.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Media.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Viewer.cpp" />
+    <ClCompile Include="ViewerDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CWMPPlayer4.h" />
+    <ClInclude Include="Media.h" />
+    <ClInclude Include="Message.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TypeConversion.h" />
+    <ClInclude Include="ViewerDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Viewer.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Viewer.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

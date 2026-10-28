@@ -1,0 +1,455 @@
+
+// stdafx.h : 자주 사용하지만 자주 변경되지는 않는
+// 표준 시스템 포함 파일 및 프로젝트 관련 포함 파일이 
+// 들어 있는 포함 파일입니다.
+
+#pragma once
+
+#ifndef _SECURE_ATL
+#define _SECURE_ATL 1
+#endif
+
+#ifndef VC_EXTRALEAN
+#define VC_EXTRALEAN            // 거의 사용되지 않는 내용은 Windows 헤더에서 제외합니다.
+#endif
+
+#include "targetver.h"
+
+#define _ATL_CSTRING_EXPLICIT_CONSTRUCTORS      // 일부 CString 생성자는 명시적으로 선언됩니다.
+
+// MFC의 공통 부분과 무시 가능한 경고 메시지에 대한 숨기기를 해제합니다.
+#define _AFX_ALL_WARNINGS
+
+#include <afxwin.h>         // MFC 핵심 및 표준 구성 요소입니다.
+#include <afxext.h>         // MFC 확장입니다.
+
+
+#include <afxdisp.h>        // MFC 자동화 클래스입니다.
+
+
+ // 여기에서 최소한의 DB 지원을 요청합니다. 선택된 뷰가 없습니다.
+
+#ifndef _AFX_NO_OLE_SUPPORT
+#include <afxdtctl.h>           // Internet Explorer 4 공용 컨트롤에 대한 MFC 지원입니다.
+#endif
+#ifndef _AFX_NO_AFXCMN_SUPPORT
+#include <afxcmn.h>             // Windows 공용 컨트롤에 대한 MFC 지원입니다.
+#endif // _AFX_NO_AFXCMN_SUPPORT
+
+#include <afxcontrolbars.h>     // MFC의 리본 및 컨트롤 막대 지원
+
+//20160621 중국청도 XP사용
+//#import "c:\program files\common files\system\ado\xp\msado15.dll" rename ("EOF","adoEOF") no_namespace
+#import "c:\program files\common files\system\ado\msado15.dll" rename ("EOF","adoEOF") no_namespace
+
+#include "opencv2\opencv.hpp"
+#include "opencv2\core\core.hpp"
+#include "opencv2\highgui\highgui.hpp"
+#include "opencv2\imgproc\imgproc.hpp"
+#include "D:\opencv4_5_5\sources\modules\imgcodecs\src\grfmt_tiff.hpp"
+
+#include <atlbase.h>
+#include <afxoledb.h>
+#include <atlplus.h>
+
+#include <omp.h>
+#include <windows.h> 
+#include <mmsystem.h>
+#include <math.h>
+
+#include "c:\Advantech\DAQNavi\Inc\bdaqctrl.h"
+using namespace Automation::BDaq;
+
+#include <mysql.h>
+
+#include "CModbusSerial.h"
+#include "C:\PROGRAM FILES\ADVANTECH\ADSAPI\INCLUDE\Driver.h"
+#include "EYH_ADO.h"
+
+#include "DTCommander.h"
+#include "DTConst.h"
+#include "DTDetector.h"
+#include "DTDisplay.h"
+#include "DTImage.h"
+#include "imageobject.h"
+#define  WM_EYH_STOP WM_USER+0x111
+
+// CB01 Detector
+#include "xsystem.h"
+#include "xcommand.h"
+#include "xgig_factory.h"
+#include "xacquisition.h"
+#include "xframe_transfer.h"
+#include "xdisplay.h"
+#include "xoff_correct.h"
+#include "xanalyze.h"
+#include "xdual_eng_correct.h"
+#include "xdual_line_correct.h"
+#include "xpiecewise_correct.h"
+#include "xoff_hilo_correct.h"
+#include "xtif_format.h"
+#include "XDevice.h"
+
+
+
+//Initial Variable
+extern int NSE_VAR_SIZE;      
+extern int NSE_DETECTOR_WIDTH; 
+extern int NSE_TRIGER_HEIGHT;   
+extern int NSE_TRIGER_FRAME_SIZE;
+extern int NSE_WIDTH_SIZE;       
+extern int NSE_XRAY_KV;          
+extern int NSE_XRAY_MA;        
+extern int NSE_XRAY_POWER;  
+extern int NSE_XRAY_KIND;        
+extern int NSE_DT_KIND;  
+extern int NSE_DT_ISBULK;      
+extern bool NSE_ROTATION_UPDOWN;
+extern bool NSE_ROTATION_LEFTRIGHT;   
+extern int NSE_BASIC_KV;  
+extern int NSE_BASIC_MA;  
+extern int NSE_BASIC_KV2;  
+extern int NSE_BASIC_MA2;  
+extern int NSE_BASIC_SPEED;  
+extern int NSE_BASIC_DELAY;  
+extern int NSE_BASIC_KEEP;  
+extern int NSE_BASIC_CONVSPEED;   	
+extern int NSE_BASIC_CONVFACTOR;
+extern int NSE_CONVERYOR_MASKING;       //리젝트 마스팅
+extern int NSE_CONVERYOR_ON;        //리젝트 ON
+extern int NSE_CONVERYOR_OFF; 
+extern int NSE_YELLO_ON;   
+extern int NSE_GREEN_ON;
+extern int NSE_REJECT_MASKING;       //리젝트 마스팅
+extern int NSE_REJECT_ON;        //리젝트 ON
+extern int NSE_REJECT_OFF;         //리젝트 OFF
+extern int NSE_IO_OUPUT_PORT;       //IO보드 출력 포트
+extern int NSE_INTEROCK_EX_LEFT;    //확장좌
+extern int NSE_INTEROCK_EX_RIGHT;    //확장우
+extern int NSE_INTEROCK_MONITOR;    //모니터
+extern int NSE_INTEROCK_BACK;         //후문
+extern int g_KindModel;
+extern int g_ConveyorSpeed;
+extern int g_ConveyorFac;
+extern int g_HandsensorLU; //좌상
+extern int g_HandsensorLD; //좌하
+extern int g_HandsensorRU; //우상
+extern int g_HandsensorRD; //우하
+extern int g_HandCycle; //손 감지 시간
+extern CString g_Model_Kind;
+
+extern bool m_Interock_State;
+
+extern BOOL g_bGenerator;
+extern BOOL g_bDetector;
+extern BOOL g_bIOcard;
+
+//IO board Variable
+extern CModbusSerial ModbusComm;
+extern BOOL g_Bit_In[16];
+extern BOOL g_Bit_Out[16];
+extern BOOL g_bReject;
+extern WORD g_Word_In;
+
+extern LRESULT m_ErrCde;
+extern LONG	m_DriverHandle;		
+extern PT_DioReadPortByte	m_ptDioReadPortByte; 
+extern PT_DioWritePortByte	m_ptDioWritePortByte;	
+extern PT_DioWriteBit      m_ptDioWriteBit;    
+extern PT_DioReadBit	m_ptDioReadBit;	
+extern PT_DioGetCurrentDOByte m_ptDioGetCurrentDOByte;
+extern USHORT gwDoState;
+
+extern unsigned char ***g_Img_Buf;
+extern unsigned char **g_Img_Buf2;
+extern unsigned char ***m_Buffer_1;
+extern unsigned char *m_Buffer_2;
+extern unsigned char *m_Buffer_3;
+extern unsigned char *m_Buffer_4;
+extern bool g_DispArea;
+
+extern unsigned char g_BackupCond1[10000];
+extern unsigned char g_BackupCond2[10000];
+extern unsigned char g_BackupCond3[10000];
+extern unsigned char g_BackupCond4[10000];
+extern unsigned char g_BackupCond5[10000];
+extern unsigned char g_BackupCond6[10000];
+extern int g_BackupFront;
+extern int g_BackupRear;
+
+// int b_EventReconi;
+
+
+extern int iv_1;
+extern int iv_2; 
+extern CString g_Filename;
+extern int g_Xray_kv;
+extern int g_Xray_ma;
+extern int g_Xray_kv2; 
+extern int g_Xray_ma2; 
+extern int g_DTScanspeed;
+extern float g_DTGain;
+extern int g_RejectUse;
+extern int	g_RejectDelay;
+extern int g_RejectKeep;
+extern int g_SaveHard;
+extern int g_SaveFile;
+extern int	g_Code;
+extern int	g_Size;
+extern int	g_Condition1;
+extern int	g_Condition2;
+extern int	g_Condition3;
+extern int	g_Condition4;
+extern int	g_Condition5;
+extern int	g_Condition6;
+extern int	g_OmitCondition1;
+extern int	g_OmitCondition2;
+extern int	g_OmitCondition3;
+extern int	g_OmitCondition4;
+extern int	g_OmitCondition5;
+extern int  g_MassCondition1;
+extern int  g_MassCondition2;
+extern int  g_MassCondition3;
+//AutoSetup
+extern bool g_bAutoSetup;
+extern int g_AutoCount;
+extern int g_AutoCond1;
+extern int g_AutoCond2;
+extern int g_AutoCond3;
+extern int g_AutoCond4;
+extern int g_AutoCond5;
+extern int g_AutoCond6;
+extern int g_AutoCond1_1;
+extern int g_AutoCond2_1;
+extern int g_AutoCond3_1;
+extern int g_AutoCond4_1;
+extern int g_AutoCond5_1;
+extern int g_AutoCond6_1;
+extern bool g_bXrayAutoSetup;
+extern int g_AutoXrayValue;
+extern int g_AutoXrayCount;
+extern int g_OmitCondUse;
+extern int g_MassCondUse;
+extern int g_CountCondUse;
+extern int g_MaskBoxUse;
+extern int g_MaskClipUse;
+extern int g_MaskTalUse;
+
+extern int g_MaskBoxCondition1;
+extern int g_MaskBoxCondition2;
+extern int g_MaskBoxCondition3;
+extern int g_MaskBoxCondition4;
+extern int g_MaskBoxCondition5;
+extern int g_MaskBoxCondition6;
+extern int g_MaskClip_Direction;
+extern int g_MaskClip_Length;
+extern int g_MaskClip_Deep;
+extern int g_Countnum;
+extern int g_Countnoise;
+extern int g_PageMaskLR;
+extern int g_PageMaskUD;
+extern int g_TalMask_Bright;
+extern int g_TalMask_Bright2;
+
+extern bool g_bOptionD;
+extern bool g_bOptionE;
+extern int g_bOptionD_1;
+extern int g_bOptionD_2;
+extern int g_bOptionE_1;
+extern int g_bOptionE_2;
+
+extern bool g_bUseNormal;
+extern int g_PreproUse;
+extern int g_PreproDisp;
+extern int g_PreproValue;
+
+extern bool g_ChangeNGCond;
+extern bool g_ChangeOmitCond[3];
+extern bool g_ChangeMaskCond[3];
+
+extern CEvent g_EventAlarm;
+extern CEvent g_EventPaint;
+extern CEvent g_EventReject;
+extern CEvent g_EventDrawImage;
+extern CEvent g_EventSave;
+
+extern int g_Margin;
+extern int g_Height;
+extern int g_Width;
+extern int g_XrayState;
+extern int g_iXrayOn;
+extern int g_AirconCycle; 
+
+extern bool g_OffInspection;
+
+//SmartView
+extern bool b_UseSmartView;
+extern CStdioFile m_SmartFile;
+extern void WriteProductionInfo(int value, int total, int ok, int ng, int omit);
+extern void WriteProductInfo(CString value);
+extern void WriteMachineStatus(CString value);
+
+//Reject
+extern int g_Starttime;	
+extern DWORD g_Endtime;	
+extern int g_Rejecttime[10000];	
+extern int g_RejectFront;
+extern int g_RejectRear;
+
+//Login
+extern bool g_bAdmin;
+extern CString g_Password;
+
+extern CString g_ProductName;
+extern BITMAPINFO *BmInfo;
+
+//20160428
+extern int g_DispOpenBox1;
+extern int g_DispOpenBox2;
+
+//Database
+extern CString g_StrDirPath[11];
+extern CString g_StrDirPath_copy[11];
+extern void RecoveryDatabase(CString path, CString path_copy);
+
+//IO board
+extern bool OnDigitalOutPut_All22();
+extern void OnAnalogOutPut_1(int speed);
+extern void OnAnalogOutPut_3(int kv);
+extern void OnAnalogOutPut_4(int ma);
+extern int  OnXray_kv_Output();
+extern int	 OnXray_ma_Output();
+extern void OnDigitalOutPut_All();
+extern bool OnDigitalOutPut_All_Init();
+extern void OnDigitalInPut_All();
+
+extern int g_NationalCode;
+extern CString g_MessageArr[250];
+
+extern void Sleepms(DWORD msec);
+
+extern unsigned char ***g_Img_Buf3D;
+extern unsigned char ***g_Img_Bufx2;
+extern unsigned char ***g_Img_Bufx2_o;
+extern unsigned char **g_Img_temp;
+extern int g_3D_Count;
+extern int g_Thread_Count;
+
+extern int g_Dsize;
+extern int g_SizeDisp;
+
+extern int iv_11;
+extern int iv_22;
+
+extern int g_Margin2;
+extern int g_iGrab_Count;
+extern int g_Margin22[50];
+
+extern bool g_bSavingCondition;
+
+extern CCriticalSection g_cs; 
+
+extern int g_Dent_L;
+extern int g_Dent_R;
+extern bool g_Dent_Save;
+
+extern int *g_Arry_Save;
+extern int *g_Savecount;
+extern int *g_Savekind;
+
+extern bool g_bComiDaq1;
+
+extern int g_iRejectCounter;
+extern int g_ConReject;
+extern int g_SetRejectcount;
+extern int g_SetRejectrate;
+
+extern int g_reject_new_time;
+
+extern int g_Model_Select;
+
+extern int g_KindofOmit;
+
+extern int g_OmitAvr;
+
+extern bool g_Count_Flag;
+
+extern int g_RejectType;
+
+extern int g_AlamUse;
+
+extern int g_xray_il;
+
+extern int g_ShowMaskUse;
+
+extern int g_Continu_Ng;
+
+extern int m_Icount;
+
+extern CString g_SaveExternalName;
+extern CString g_SaveExternalName1;
+extern CString g_SaveExternalName2;
+
+//메뉴선택 기능 추가 20171102
+extern int g_Masking1;
+extern int g_Masking2;
+extern int g_Masking3;
+extern int g_Masking4;
+extern int g_Masking5;
+
+extern int g_Special1;
+extern int g_Special2;
+extern int g_Special3;
+extern int g_Special4;
+//메뉴선택 기능 추가 20171102
+
+extern int g_ExHardUse; //외장하드 선택 적용 개발 20171226
+
+extern int g_ViewControl; //영상 강제 보정 20171115
+
+extern bool g_Accept; //영상 보정 검사 적용 20171130
+
+extern CString g_STime[50];
+
+extern int g_left;
+extern int g_right;
+extern int g_bottom;
+
+extern int g_KindBottle;
+//20200525
+extern InstantDiCtrl* m_instantDi;
+extern InstantDoCtrl* m_instantDo;
+
+extern int g_portCount;
+extern byte * g_portReadData;
+extern byte g_portWriteData;
+//20200525
+
+extern CString g_Today; //20191202
+extern CString g_Adress; //20191202
+extern CString g_Line; //20191202
+//20191202
+extern int g_Sum_Total_Count;
+extern int g_Sum_Ok_Count;
+extern int g_Sum_Ng_Count;
+extern int g_Sum_Omit_Count;
+//20191202
+extern int g_SendKind;
+extern CString g_PGStartTime;
+extern CString g_PGEndTime;
+extern int g_StopKind;
+extern int g_SignalTime;
+
+extern MYSQL m_mysql;
+extern bool g_Connecting;
+extern CString SqlQuery;
+
+extern void Init_Mysql();
+extern void Close_Mysql();
+
+extern int g_SelDetector;
+
+extern int g_leftm;
+extern int g_rightm;
+extern unsigned char* g_Img_Buf_AI; //20260102 AI 추가
+

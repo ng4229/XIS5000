@@ -1,0 +1,181 @@
+// ModifyProductName.cpp : 구현 파일입니다.
+//
+
+#include "stdafx.h"
+#include "Intellisense.h"
+#include "ModifyProductName.h"
+#include "afxdialogex.h"
+
+#include "KeyboardDlg.h"
+#include "MessageBoxDlg.h"
+
+
+// CModifyProductName 대화 상자입니다.
+
+IMPLEMENT_DYNAMIC(CModifyProductName, CDialogEx)
+
+CModifyProductName::CModifyProductName(CWnd* pParent /*=NULL*/)
+	: CDialogEx(CModifyProductName::IDD, pParent)
+{
+
+	m_NewName = _T("");
+	m_OldName = _T("");
+}
+
+CModifyProductName::~CModifyProductName()
+{
+}
+
+void CModifyProductName::DoDataExchange(CDataExchange* pDX)
+{
+	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDOK, m_Bt_Ok);
+	DDX_Control(pDX, IDCANCEL, m_Bt_Cancel);
+	DDX_Text(pDX, IDC_EDIT_NEWNAME, m_NewName);
+	DDX_Text(pDX, IDC_EDIT_OLDNAME, m_OldName);
+}
+
+
+BEGIN_MESSAGE_MAP(CModifyProductName, CDialogEx)
+	ON_WM_PAINT()
+	ON_BN_CLICKED(IDOK, &CModifyProductName::OnBnClickedOk)
+END_MESSAGE_MAP()
+
+
+// CModifyProductName 메시지 처리기입니다.
+BOOL CModifyProductName::OnInitDialog()
+{
+	CDialogEx::OnInitDialog();
+
+	// TODO:  여기에 추가 초기화 작업을 추가합니다.
+	SetWindowPos(NULL, 672, 119, 0, 0, SWP_NOSIZE | SWP_NOZORDER);
+	LoadBackground();
+	m_OldName=g_ProductName;
+	GetDlgItem(IDC_EDIT_OLDNAME)->SetWindowText(m_OldName);
+
+	return TRUE;  // return TRUE unless you set the focus to a control
+	// 예외: OCX 속성 페이지는 FALSE를 반환해야 합니다.
+}
+
+void CModifyProductName::LoadBackground(void)
+{
+	BITMAP bmpInfo;
+	if(g_NationalCode==0)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_CHANGE_NAME); 
+		m_Bt_Ok.LoadBitmaps(IDB_BTSETUPMENU_OK,IDB_BTSETUPMENU_OK_0); 
+		m_Bt_Cancel.LoadBitmaps(IDB_SELPRODUCT_EXIT,IDB_SELPRODUCT_EXIT_0); 
+	}
+	else if(g_NationalCode==1)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_CHANGE_NAME_ENG); 
+		m_Bt_Ok.LoadBitmaps(IDB_BTSETUPMENU_OK_ENG,IDB_BTSETUPMENU_OK_0_ENG); 
+		m_Bt_Cancel.LoadBitmaps(IDB_SELPRODUCT_EXIT_ENG,IDB_SELPRODUCT_EXIT_0_ENG); 
+	}
+	else if(g_NationalCode==2)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_CHANGE_NAME_CHI); 
+		m_Bt_Ok.LoadBitmaps(IDB_BTSETUPMENU_OK_CHI,IDB_BTSETUPMENU_OK_0_CHI); 
+		m_Bt_Cancel.LoadBitmaps(IDB_SELPRODUCT_EXIT_CHI,IDB_SELPRODUCT_EXIT_0_CHI); 
+	}
+	else if(g_NationalCode==3)
+	{
+		m_bmpMainBG.LoadBitmap(IDB_BG_CHANGE_NAME_SPN); 
+		m_Bt_Ok.LoadBitmaps(IDB_BTSETUPMENU_OK_SPN,IDB_BTSETUPMENU_OK_0_SPN); 
+		m_Bt_Cancel.LoadBitmaps(IDB_SELPRODUCT_EXIT_SPN,IDB_SELPRODUCT_EXIT_0_SPN); 
+	}
+	
+    m_bmpMainBG.GetBitmap(&bmpInfo);
+    m_nMainWidth = bmpInfo.bmWidth; 
+    m_nMainHeight = bmpInfo.bmHeight; 
+
+	
+	m_Bt_Ok.SizeToContent();	
+	m_Bt_Cancel.SizeToContent();	
+}
+
+
+void CModifyProductName::OnPaint()
+{
+	CPaintDC dc(this); // device context for painting
+	// TODO: 여기에 메시지 처리기 코드를 추가합니다.
+	// 그리기 메시지에 대해서는 CDialogEx::OnPaint()을(를) 호출하지 마십시오.
+    CDC MemDC; 
+	MemDC.CreateCompatibleDC(&dc);
+	MemDC.SelectObject(&m_bmpMainBG);
+    dc.BitBlt(0, 0, m_nMainWidth, m_nMainHeight, &MemDC, 0, 0, SRCCOPY);
+	MemDC.DeleteDC();
+}
+
+BOOL CModifyProductName::PreTranslateMessage(MSG* pMsg)
+{
+	// TODO: 여기에 특수화된 코드를 추가 및/또는 기본 클래스를 호출합니다.
+	if(pMsg->wParam == VK_ESCAPE)
+		return FALSE;
+	
+	if(pMsg->wParam == VK_RETURN)
+		return FALSE;
+
+	if(FromHandle(pMsg->hwnd)->GetDlgCtrlID() == IDC_EDIT_NEWNAME)
+	{			
+		if(pMsg->message==WM_LBUTTONDOWN || pMsg->message==WM_LBUTTONDBLCLK)
+		{			
+			CKeyboardDlg dlg;
+			dlg.m_NationalCode = g_NationalCode;
+			int result = dlg.DoModal();
+			if(result == IDOK)
+			{
+				m_NewName=dlg.m_TestName;
+				GetDlgItem(IDC_EDIT_NEWNAME)->SetWindowText(m_NewName);
+			}
+			else
+				GetDlgItem(IDC_EDIT_NEWNAME)->SetWindowText(_T(""));
+		}
+	}
+
+	return CDialogEx::PreTranslateMessage(pMsg);
+}
+
+
+void CModifyProductName::OnBnClickedOk()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	UpdateData(true);
+	if(m_OldName==m_NewName)
+	{
+		CMessageBoxDlg dlg;
+		dlg.m_Message=g_MessageArr[148];//"변경된 제품명이 기존과 동일합니다."
+		dlg.DoModal();
+		return;
+	}
+	else if(m_NewName==_T(""))
+	{
+		CMessageBoxDlg dlg;
+		dlg.m_Message=g_MessageArr[149];//"변경할 제품명이 입력되지 않았습니다."
+		dlg.DoModal();
+		return;
+	}
+	else
+	{
+		//20131226
+		if(m_pSet_p.Open_DB(g_StrDirPath[0]))		
+		{
+			CString strQuery;
+			strQuery.Format(_T("Update Product SET ProductName = '%s' WHERE ProductName = '%s'"), m_NewName, g_ProductName);
+			if(!m_pSet_p.Update_DB(strQuery))
+			{
+				CMessageBoxDlg dlg;
+				dlg.m_Message=g_MessageArr[150];//"제품명 수정을 실패하였습니다.\n동일한 제품명이 존재합니다.";
+				dlg.DoModal();	
+				if(m_pSet_p.b_IsOpenedDB)
+					m_pSet_p.Close_DB();
+				EndDialog(0);
+				//return 해야함.. 인철오류...
+			}
+			
+			if(m_pSet_p.b_IsOpenedDB)
+				m_pSet_p.Close_DB();
+		}
+	}
+	CDialogEx::OnOK();
+}

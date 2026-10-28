@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="Viewer.def">
+      <Filter>소스 파일</Filter>
+    </None>
+    <None Include="res\Viewer.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttabng.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttabng_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttabomit.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttabomit_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOff.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOn.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOff.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOn.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\ViewerBackground.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect_1_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect_1_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_1_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_1_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy_1_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy_1_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOff_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOff_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOn_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOn_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOff_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOff_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOn_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOn_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\ViewerBackground_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\ViewerBackground_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabngEng.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabngEng_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabomitEng.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabomitEng_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabngChi.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabngChi_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabomitChi.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabomitChi_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\bitmap3.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy_ENG_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy_CHI_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bt_Listup.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bt_Listdown.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bt_Listdown_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bt_Listup_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttabtest.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttabtest_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabtestChi.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabtestChi_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabtestEng.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabtestEng_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_Diable.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtExitPlay.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtExitPlay_0.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_0_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_Diable_ENG.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_0_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_Diable_CHI.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy_RUS_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy_UKR_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_0_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_0_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_Diable_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_Diable_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect_1_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect_1_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_1_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_1_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy_1_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy_1_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabngRus.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabngUkr.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabngRus_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabngUkr_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabomitRus.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabomitUkr.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabomitRus_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabomitUkr_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabtestRus.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabtestUkr.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabtestRus_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabtestUkr_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOff_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOff_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOn_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOn_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOff_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOff_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOn_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOn_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\ViewerBackground_RUS.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\ViewerBackground_UKR.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect_1_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_1_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy_1_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOff_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOn_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOff_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOn_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\ViewerBackground_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabngSpn.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabngSpn_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabomitSpn.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabomitSpn_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy_SPN_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabtestSpn.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabtestSpn_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_0_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_Diable_SPN.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\..\Intellisense_Ver200201_다국어 적용\Viewer\res\BttabngUkr.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect_1_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_1_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy_1_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOff_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOn_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOff_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOn_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\ViewerBackground_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabngPol.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabngPol_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabomitPol.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabomitPol_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy_POL_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabtestPol.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabtestPol_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_0_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_Diable_POL.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect_1_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtAllselect_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_1_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtSetupMenu_Close_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy_1_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtUsb_Copy_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOff_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomInOn_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOff_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtZoomOutOn_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\ViewerBackground_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabngTiw.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabngTiw_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabomitTiw.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabomitTiw_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BtReject_Copy_TIW_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabtestTiw.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\BttabtestTiw_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_0_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="res\Bttreject_Diable_TIW.bmp">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Viewer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewerDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Media.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CWMPPlayer4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewerDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Viewer.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

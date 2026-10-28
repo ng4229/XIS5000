@@ -1,0 +1,349 @@
+// IntellisenseDoc.cpp : CIntellisenseDoc 클래스의 구현
+//
+#include "stdafx.h"
+// SHARED_HANDLERS는 미리 보기, 축소판 그림 및 검색 필터 처리기를 구현하는 ATL 프로젝트에서 정의할 수 있으며
+// 해당 프로젝트와 문서 코드를 공유하도록 해 줍니다.
+#ifndef SHARED_HANDLERS
+#include "Intellisense.h"
+#endif
+
+#include "IntellisenseDoc.h"
+#include "MainFrm.h"
+#include "ChildFrm.h"
+#include "IntellisenseView.h"
+
+#include <propkey.h>
+
+#include "ImageProcessing.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#endif
+
+// CIntellisenseDoc
+IMPLEMENT_DYNCREATE(CIntellisenseDoc, CDocument)
+
+BEGIN_MESSAGE_MAP(CIntellisenseDoc, CDocument)
+END_MESSAGE_MAP()
+
+// CIntellisenseDoc 생성/소멸
+CIntellisenseDoc::CIntellisenseDoc()
+{
+	// TODO: 여기에 일회성 생성 코드를 추가합니다.
+	m_CondInfo="";
+}
+
+CIntellisenseDoc::~CIntellisenseDoc()
+{
+}
+
+BOOL CIntellisenseDoc::OnNewDocument()
+{
+	if (!CDocument::OnNewDocument())
+		return FALSE;
+
+	// TODO: 여기에 재초기화 코드를 추가합니다.
+	// SDI 문서는 이 문서를 다시 사용합니다.
+
+	return TRUE;
+}
+
+
+
+void CIntellisenseDoc::OnFileOpen()
+{
+	
+	CString m_strFilePass, extension;
+	CFileDialog dlgFile (TRUE); 
+	LPTSTR filter = _T("Text (*.bmp, *.jpg)\0*.bmp;*");
+	dlgFile.m_ofn.Flags = 0x0;
+	dlgFile.m_ofn.Flags = OFN_EXPLORER | OFN_ENABLEHOOK;
+	dlgFile.m_ofn.lpstrCustomFilter = NULL;
+	dlgFile.m_ofn.nFilterIndex = 0;
+	dlgFile.m_ofn.lpstrFilter = filter;
+
+
+	int user_choice = dlgFile.DoModal();
+//	CommDlgExtendedError();
+	if (user_choice == IDOK) 
+	{
+		m_strFilePass = dlgFile.GetPathName();
+		extension = dlgFile.GetFileExt();
+		extension.MakeLower();
+		CFileFind check;
+		if ( !(extension == "bmp") && !(extension == "jpg"))
+		{ 
+			AfxMessageBox(_T("Unsupported file format!"));
+		}
+		else if ( (check.FindFile((LPCTSTR) m_strFilePass, 0)) == 0 )
+		{
+			// check if user's file already exists, go inside 'if' if file exists  
+			AfxMessageBox(_T("File not found!")); 
+		}
+		else
+		{
+		
+//*********************************************************
+	/*	CFileFind ff;
+		CString str;
+		int i=0;
+		str.Format("D:\\NSE\\Project\\NewDesignXIS-2000\\image\\2008년03월11일\\이물검출");
+		if(ff.FindFile(str+ "\\*.*") == TRUE)
+		{
+		BOOL bFlag = TRUE;
+		while(bFlag)
+		{
+			bFlag = ff.FindNextFile();
+
+			if(ff.IsDirectory() || ff.IsDots())
+				continue;
+			
+			m_strFilePass = ff.GetFileName();
+			extension = ff.GetFileTitle();
+			extension.MakeLower();
+//*******************************************************************************
+*/
+			cv::Mat cvOrigin;
+			NSE::Load(cvOrigin, m_strFilePass, 0);
+
+			if (cvOrigin.empty())	
+				return;
+
+			cv::Mat cvCopyImgT(cvOrigin.rows, cvOrigin.cols / 2, cvOrigin.type());
+			cv::Mat cvCopyImg;
+			if (cvOrigin.cols >= cvOrigin.rows * 2)
+			{
+				cvCopyImgT = cvOrigin(cv::Rect(cvOrigin.cols / 2, 0, cvOrigin.cols / 2, cvOrigin.rows));
+				cvCopyImg = cvCopyImgT.clone();
+			}
+			else
+				cvCopyImg = cvOrigin.clone();
+
+			g_3D_Count++;
+			if (g_3D_Count >= 50)
+			{
+				g_3D_Count = 1;
+
+			}
+			
+			cv::flip(cvCopyImg, cvCopyImg, 0);
+			uchar* pt = cvCopyImg.data;
+			for (int row = 0; row < cvCopyImg.rows; row++)
+				for (int col = 0; col < cvCopyImg.cols; col++) {
+					//g_Img_Bufx2_o[g_3D_Count][row][col] = pt[cvCopyImg.cols * row + col];
+					g_Img_Buf3D[g_3D_Count][row][col] = pt[cvCopyImg.cols * row + col];
+				}
+
+
+			g_Height = cvCopyImg.rows;
+			g_Width = cvCopyImg.cols;
+
+
+			CMainFrame* pFrm = (CMainFrame* )AfxGetApp()->m_pMainWnd;
+			CIntellisenseView* pView = (CIntellisenseView*)((CChildFrame*)pFrm->m_pFirstChildFrm)->GetDisplayView();
+			//b_EventReconi = 1;
+			//pView->OnThreadRecoginition();
+			
+		}
+	}	
+}
+
+// CIntellisenseDoc serialization
+
+void CIntellisenseDoc::Serialize(CArchive& ar)
+{
+	if (ar.IsStoring())
+	{
+		// TODO: 여기에 저장 코드를 추가합니다.
+	}
+	else
+	{
+		// TODO: 여기에 로딩 코드를 추가합니다.
+	}
+}
+
+#ifdef SHARED_HANDLERS
+
+// 축소판 그림을 지원합니다.
+void CIntellisenseDoc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
+{
+	// 문서의 데이터를 그리려면 이 코드를 수정하십시오.
+	dc.FillSolidRect(lprcBounds, RGB(255, 255, 255));
+
+	CString strText = _T("TODO: implement thumbnail drawing here");
+	LOGFONT lf;
+
+	CFont* pDefaultGUIFont = CFont::FromHandle((HFONT) GetStockObject(DEFAULT_GUI_FONT));
+	pDefaultGUIFont->GetLogFont(&lf);
+	lf.lfHeight = 36;
+
+	CFont fontDraw;
+	fontDraw.CreateFontIndirect(&lf);
+
+	CFont* pOldFont = dc.SelectObject(&fontDraw);
+	dc.DrawText(strText, lprcBounds, DT_CENTER | DT_WORDBREAK);
+	dc.SelectObject(pOldFont);
+}
+
+// 검색 처리기를 지원합니다.
+void CIntellisenseDoc::InitializeSearchContent()
+{
+	CString strSearchContent;
+	// 문서의 데이터에서 검색 콘텐츠를 설정합니다.
+	// 콘텐츠 부분은 ";"로 구분되어야 합니다.
+
+	// 예: strSearchContent = _T("point;rectangle;circle;ole object;");
+	SetSearchContent(strSearchContent);
+}
+
+void CIntellisenseDoc::SetSearchContent(const CString& value)
+{
+	if (value.IsEmpty())
+	{
+		RemoveChunk(PKEY_Search_Contents.fmtid, PKEY_Search_Contents.pid);
+	}
+	else
+	{
+		CMFCFilterChunkValueImpl *pChunk = NULL;
+		ATLTRY(pChunk = new CMFCFilterChunkValueImpl);
+		if (pChunk != NULL)
+		{
+			pChunk->SetTextValue(PKEY_Search_Contents, value, CHUNK_TEXT);
+			SetChunkValue(pChunk);
+		}
+	}
+}
+
+#endif // SHARED_HANDLERS
+
+// CIntellisenseDoc 진단
+
+#ifdef _DEBUG
+void CIntellisenseDoc::AssertValid() const
+{
+	CDocument::AssertValid();
+}
+
+void CIntellisenseDoc::Dump(CDumpContext& dc) const
+{
+	CDocument::Dump(dc);
+}
+#endif //_DEBUG
+
+
+// CIntellisenseDoc 명령
+void CIntellisenseDoc::OnFileSave(int mode)
+{
+	if(g_SaveFile && g_SaveHard)
+		return;
+
+	if(!g_SaveFile)
+	{
+		switch(mode)
+		{
+			case 2:
+				m_CondInfo="";
+				m_Fullname=m_SaveFolderName+_T("\\NG\\")+g_Filename+_T(".jpg");
+				OnSaveDocument(m_Fullname);
+				m_LogFilename=m_SaveFolderName+_T("\\NG\\Log\\")+g_Filename+_T(".dat");
+				break;
+			case 3:
+				m_Fullname=m_SaveFolderName+_T("\\OMIT\\")+g_Filename+_T(".jpg");
+				OnSaveDocument(m_Fullname);
+				//20160229
+				m_LogFilename=m_SaveFolderName+_T("\\OMIT\\Log\\")+g_Filename+_T(".dat");
+				break;
+		}
+		m_Fullname="";
+
+		if(mode==2)
+		{
+			CMainFrame* pFrm = (CMainFrame* )AfxGetApp()->m_pMainWnd;
+			CIntellisenseView* pView = (CIntellisenseView*)((CChildFrame*)pFrm->m_pFirstChildFrm)->GetDisplayView();
+			m_CondInfo=pView->m_ConditionInfo[1];
+			CStdioFile fileString;
+			CString bad=_T("");
+			//char* pLocale = setlocale(LC_ALL, "Korean");
+
+
+			if(fileString.Open(m_LogFilename,
+				CStdioFile::modeCreate | CStdioFile::modeWrite | CStdioFile::shareDenyNone))
+			{
+				USES_CONVERSION;
+				char* str = W2A(g_ProductName); //기록할 문자열을 유니코드에서 MBCS 문자열로 변환
+				fileString.Write(str, strlen(str)); 
+
+				bad.Format(_T("@%s!"), m_CondInfo);
+				fileString.WriteString(bad);
+				//20160707
+				//for(int i=g_Margin;i<g_Height-g_Margin;i++)
+				for(int i=0;i<g_Height;i++)
+				{
+					//for(int j=g_Margin; j<g_Width-g_Margin;j++)
+					for(int j=0; j<g_Width;j++)
+					{
+						if(pView->m_BadImg[i][j]!=0 && pView->m_BadImg[i][j]<7)
+						{
+							bad.Format(_T("%d.%d.%d+"), pView->m_BadImg[i][j], i, j);
+							fileString.WriteString(bad);
+						}
+					}
+				}
+			
+				fileString.WriteString(_T("#"));
+				fileString.Close();
+			}
+		}
+		//20160229
+		else if(mode==3)
+		{
+			CMainFrame* pFrm = (CMainFrame* )AfxGetApp()->m_pMainWnd;
+			CIntellisenseView* pView = (CIntellisenseView*)((CChildFrame*)pFrm->m_pFirstChildFrm)->GetDisplayView();
+			m_CondInfo=pView->m_ConditionInfo1[1];
+			CStdioFile fileString;
+			CString bad=_T("");
+			if(fileString.Open(m_LogFilename,
+				CStdioFile::modeCreate | CStdioFile::modeWrite | CStdioFile::shareDenyNone))
+			{
+				USES_CONVERSION;
+				char* str = W2A(g_ProductName); //기록할 문자열을 유니코드에서 MBCS 문자열로 변환
+				fileString.Write(str, strlen(str)); 
+
+				//bad.Format(_T("@%s!#"), m_CondInfo);
+				bad.Format(_T("@!#"));
+				fileString.WriteString(bad);
+			}
+			fileString.Close();
+		}
+	}
+	if(!g_SaveHard)
+	{
+		switch(mode)
+		{
+			case 1:
+				m_Fullname=m_SaveExternalName+_T("\\")+g_Filename+_T(".jpg");
+				break;
+			case 2:
+				m_Fullname=m_SaveExternalName1+_T("\\")+g_Filename+_T(".jpg");
+				break;
+			case 3:
+				m_Fullname=m_SaveExternalName2+_T("\\")+g_Filename+_T(".jpg");
+				break;
+		}
+
+		OnSaveDocument(m_Fullname);
+	}
+	
+}
+
+BOOL CIntellisenseDoc::OnSaveDocument(LPCTSTR lpszPathName)
+{
+	// TODO: 여기에 특수화된 코드를 추가 및/또는 기본 클래스를 호출합니다.
+	wchar_t *ext = (wchar_t *)wcsstr(lpszPathName,_T("."));
+	ext=wcslwr(ext);
+
+	cv::Mat mImg(g_Height, g_Width, CV_8UC1, m_Buffer_1);
+	NSE::Save(mImg, lpszPathName);
+	
+	return true;
+}

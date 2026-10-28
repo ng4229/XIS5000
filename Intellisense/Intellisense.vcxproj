@@ -1,0 +1,1029 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6406CAF1-21DD-497A-88A9-A78199A81651}</ProjectGuid>
+    <RootNamespace>Intellisense</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\NSE\Program\Intellisense\TotalProgram\2015_07_09_GlobalIntellisense\Intellisense\CXImage;C:\Program Files\Advantech\Adsapi\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\NSE\Program\Intellisense\TotalProgram\2015_07_09_GlobalIntellisense\Intellisense\Intellisense\Debug;C:\Program Files\Advantech\Adsapi\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files\Advantech\Adsapi\include;C:\Program Files\MariaDB 10.1\include;C:\Program Files\MariaDB 10.1\include\mysql;D:\opencv4_5_5\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\Advantech\Adsapi\lib;C:\Program Files\MariaDB 10.1\lib;D:\opencv4_5_5\build\x64\vc15\lib;$(SolutionDir)x64\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files\Advantech\Adsapi\include;C:\Program Files\MariaDB 10.1;C:\Program Files\MariaDB 10.1\include\mysql;D:\opencv3\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\Advantech\Adsapi\lib;C:\Program Files\MariaDB 10.1\lib;C:\Program Files\MariaDB 10.1\lib\plugin;D:\opencv3\build\x86\vc12\lib;$(SolutionDir)\win32\Release;$(LibraryPath)</LibraryPath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files\Advantech\Adsapi\include;D:\MariaDB 10.1\include;D:\MariaDB 10.1\include\mysql;D:\opencv4_5_5\build\include;C:\Program Files\DT\X-View2\X-LIB SDK\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\Advantech\Adsapi\lib;D:\MariaDB 10.1\lib;D:\MariaDB 10.1\lib\plugin;D:\opencv4_5_5\build\x64\vc15\lib;$(SolutionDir)x64\Release;C:\Program Files\DT\X-View2\X-LIB SDK\lib\vs2019\x64;$(LibraryPath)</LibraryPath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OpenMPSupport>true</OpenMPSupport>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>msdasc.lib;%(AdditionalDependencies);winmm.lib;Adsapi32.lib;../Debug/Viewer.lib;../Debug/ReportDll.lib;../Debug/cximage.lib;../Debug/Jpeg.lib;../Debug/Keyboard.lib;../Debug/VkDll.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OpenMPSupport>true</OpenMPSupport>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>msdasc.lib;%(AdditionalDependencies);winmm.lib;Adsapi32.lib;Viewer.lib;ReportDll.lib;Keyboard.lib;VkDll.lib;libmysql.lib;opencv_world455d.lib;DTControl.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>msdasc.lib;%(AdditionalDependencies);winmm.lib;Adsapi32.lib;../Release/Viewer.lib;../Release/ReportDll.lib;../Release/cximage.lib;../Release/Jpeg.lib;../Release/Keyboard.lib;../Release/VkDll.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/stack:0x1f5e100 %(AdditionalOptions)</AdditionalOptions>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Manifest>
+      <EnableDPIAwareness>false</EnableDPIAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_HAS_STD_BYTE=0;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OpenMPSupport>true</OpenMPSupport>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>msdasc.lib;%(AdditionalDependencies);winmm.lib;Viewer.lib;ReportDll.lib;Keyboard.lib;VkDll.lib;libmysql.lib;opencv_world455.lib;DTControl.lib;XLibDll.lib;Deep_dll.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/stack:0x1f5e100 %(AdditionalOptions)</AdditionalOptions>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Manifest>
+      <EnableDPIAwareness>false</EnableDPIAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\Admin0.bmp" />
+    <None Include="res\Admin0_1.bmp" />
+    <None Include="res\Admin1.bmp" />
+    <None Include="res\Admin1_1.bmp" />
+    <None Include="res\Admin2.bmp" />
+    <None Include="res\Admin2_1.bmp" />
+    <None Include="res\Admin3.bmp" />
+    <None Include="res\Admin3_1.bmp" />
+    <None Include="res\Admin4.bmp" />
+    <None Include="res\Admin4_1.bmp" />
+    <None Include="res\Admin5.bmp" />
+    <None Include="res\Admin5_1.bmp" />
+    <None Include="res\Admin6.bmp" />
+    <None Include="res\Admin6_1.bmp" />
+    <None Include="res\Admin7.bmp" />
+    <None Include="res\Admin7_1.bmp" />
+    <None Include="res\Admin8.bmp" />
+    <None Include="res\Admin8_1.bmp" />
+    <None Include="res\Admin9.bmp" />
+    <None Include="res\Admin9_1.bmp" />
+    <None Include="res\AdminReInput.bmp" />
+    <None Include="res\AdminReInput_1.bmp" />
+    <None Include="res\BgAdmin.bmp" />
+    <None Include="res\BgAutoSetup.bmp" />
+    <None Include="res\BgAutoSetupChild.bmp" />
+    <None Include="res\BgAutoSetupChild_4.bmp" />
+    <None Include="res\BgChangeProductname.bmp" />
+    <None Include="res\BgConditionOmitSetup.bmp" />
+    <None Include="res\BgConditionOmitSetup_1.bmp" />
+    <None Include="res\BgConditionOmitSetup_2.bmp" />
+    <None Include="res\BgConditionSetup.bmp" />
+    <None Include="res\BgConditionSetup_0.bmp" />
+    <None Include="res\BgConditionSetup_2.bmp" />
+    <None Include="res\BgConditionSetup_2_0.bmp" />
+    <None Include="res\BgConditionSetup_3.bmp" />
+    <None Include="res\BgConditionSetup_4.bmp" />
+    <None Include="res\BgConditionSetup_5.bmp" />
+    <None Include="res\BgConditionSetup_6.bmp" />
+    <None Include="res\BgConditionSetup_Tal.bmp" />
+    <None Include="res\BgExit.bmp" />
+    <None Include="res\BgMessageBox.bmp" />
+    <None Include="res\BgNumpad.bmp" />
+    <None Include="res\BgNumpad_Back1.bmp" />
+    <None Include="res\BgProductcopy.bmp" />
+    <None Include="res\BgProgress.bmp" />
+    <None Include="res\BgSelectProduct.bmp" />
+    <None Include="res\BgSetupAuto.bmp" />
+    <None Include="res\BgSetupAutoXray.bmp" />
+    <None Include="res\BgSetupMenu.bmp" />
+    <None Include="res\BgSetupMenu_0.bmp" />
+    <None Include="res\BgSetupMenu_1.bmp" />
+    <None Include="res\BgSetupMenu_2.bmp" />
+    <None Include="res\BgSetupMenu_3.bmp" />
+    <None Include="res\BgSetupMenu_31.bmp" />
+    <None Include="res\BgSetupMenu_4.bmp" />
+    <None Include="res\BgSpaceDlg.bmp" />
+    <None Include="res\btaddimage.bmp" />
+    <None Include="res\btaddimage_1.bmp" />
+    <None Include="res\BtConveyOn.bmp" />
+    <None Include="res\BtConveyOn_1.bmp" />
+    <None Include="res\btdelimage.bmp" />
+    <None Include="res\btdelimage_1.bmp" />
+    <None Include="res\BtExitMenu1.bmp" />
+    <None Include="res\BtExitMenu1_1.bmp" />
+    <None Include="res\BtExitMenu2.bmp" />
+    <None Include="res\BtExitMenu2_1.bmp" />
+    <None Include="res\BtExitMenu3.bmp" />
+    <None Include="res\BtExitMenu3_1.bmp" />
+    <None Include="res\BtSelectProduct_Add.bmp" />
+    <None Include="res\BtSelectProduct_Add_0.bmp" />
+    <None Include="res\BtSelectProduct_Choose.bmp" />
+    <None Include="res\BtSelectProduct_Choose_0.bmp" />
+    <None Include="res\BtSelectProduct_Del.bmp" />
+    <None Include="res\BtSelectProduct_Del_0.bmp" />
+    <None Include="res\BtSelectProduct_Exit.bmp" />
+    <None Include="res\BtSelectProduct_Exit_0.bmp" />
+    <None Include="res\BtSelectProduct_Ok.bmp" />
+    <None Include="res\BtSelectProduct_Ok_0.bmp" />
+    <None Include="res\BtSelectProduct_Revise.bmp" />
+    <None Include="res\BtSelectProduct_Revise_1.bmp" />
+    <None Include="res\BtSetupMenu_11.bmp" />
+    <None Include="res\BtSetupMenu_111.bmp" />
+    <None Include="res\BtSetupMenu_12.bmp" />
+    <None Include="res\BtSetupMenu_13.bmp" />
+    <None Include="res\BtSetupMenu_21.bmp" />
+    <None Include="res\BtSetupMenu_22.bmp" />
+    <None Include="res\BtSetupMenu_23.bmp" />
+    <None Include="res\BtSetupMenu_31.bmp" />
+    <None Include="res\BtSetupMenu_32.bmp" />
+    <None Include="res\BtSetupMenu_33.bmp" />
+    <None Include="res\BtSetupMenu_41.bmp" />
+    <None Include="res\BtSetupMenu_43.bmp" />
+    <None Include="res\BtSetupMenu_43_1.bmp" />
+    <None Include="res\BtSetupMenu_51.bmp" />
+    <None Include="res\BtSetupMenu_Close.bmp" />
+    <None Include="res\BtSetupMenu_Close_1.bmp" />
+    <None Include="res\BtSetupMenu_Next.bmp" />
+    <None Include="res\BtSetupMenu_Next_1.bmp" />
+    <None Include="res\BtSetupMenu_Save.bmp" />
+    <None Include="res\BtSetupMenu_Save_1.bmp" />
+    <None Include="res\BtWindow.bmp" />
+    <None Include="res\BtXrayAutoSetup.bmp" />
+    <None Include="res\BtXrayAutoSetup_1.bmp" />
+    <None Include="res\Bt_close.bmp" />
+    <None Include="res\Bt_close_0.bmp" />
+    <None Include="res\Bt_help.bmp" />
+    <None Include="res\ConddnBt.bmp" />
+    <None Include="res\ConddnBt_1.bmp" />
+    <None Include="res\ConditionGrid.bmp" />
+    <None Include="res\ConditionTabMenu1.bmp" />
+    <None Include="res\ConditionTabMenu1_0.bmp" />
+    <None Include="res\ConditionTabMenu2.bmp" />
+    <None Include="res\ConditionTabMenu2_0.bmp" />
+    <None Include="res\ConditionTabMenu3.bmp" />
+    <None Include="res\ConditionTabMenu3_0.bmp" />
+    <None Include="res\CondminusBt.bmp" />
+    <None Include="res\CondminusBt_1.bmp" />
+    <None Include="res\CondplusBt.bmp" />
+    <None Include="res\CondplusBt_1.bmp" />
+    <None Include="res\CondupBt.bmp" />
+    <None Include="res\CondupBt_1.bmp" />
+    <None Include="res\Detector_Result_NG.bmp" />
+    <None Include="res\Detector_Result_OK.bmp" />
+    <None Include="res\Encoder_ng.bmp" />
+    <None Include="res\Encoder_ok.bmp" />
+    <None Include="res\GraphGrid.bmp" />
+    <None Include="res\Help.bmp" />
+    <None Include="res\icon1.ico" />
+    <None Include="res\Intellisense.ico" />
+    <None Include="res\Intellisense.rc2" />
+    <None Include="res\IntellisenseDoc.ico" />
+    <None Include="res\Interock_Backdoor.bmp" />
+    <None Include="res\Interock_Emergency.bmp" />
+    <None Include="res\Interock_Frontdoor.bmp" />
+    <None Include="res\Interock_Left.bmp" />
+    <None Include="res\Interock_Left_ex.bmp" />
+    <None Include="res\Interock_Left_hand.bmp" />
+    <None Include="res\Interock_Monitor.bmp" />
+    <None Include="res\Interock_Right.bmp" />
+    <None Include="res\Interock_Right_ex.bmp" />
+    <None Include="res\Interock_Right_hand.bmp" />
+    <None Include="res\MainBtCountReset.bmp" />
+    <None Include="res\MainBtCountReset_1.bmp" />
+    <None Include="res\MainBtCountReset_2.bmp" />
+    <None Include="res\MainCondition1.bmp" />
+    <None Include="res\MainCondition2.bmp" />
+    <None Include="res\MainCondition3.bmp" />
+    <None Include="res\MainCondition4.bmp" />
+    <None Include="res\MainCondition5.bmp" />
+    <None Include="res\MainCondition6.bmp" />
+    <None Include="res\MainCtrlScreen.bmp" />
+    <None Include="res\MainScreen.bmp" />
+    <None Include="res\MenuExitBt.bmp" />
+    <None Include="res\MenuExitBt_0.bmp" />
+    <None Include="res\MenuSetupBt.bmp" />
+    <None Include="res\MenuSetupBt_0.bmp" />
+    <None Include="res\MenuSetupBt_2.bmp" />
+    <None Include="res\MenuStartBt.bmp" />
+    <None Include="res\MenuStartBt_0.bmp" />
+    <None Include="res\MenuStartBt_2.bmp" />
+    <None Include="res\MenuStopBt.bmp" />
+    <None Include="res\MenuStopBt_0.bmp" />
+    <None Include="res\MenuStopBt_2.bmp" />
+    <None Include="res\MenuViewerBt.bmp" />
+    <None Include="res\MenuViewerBt_0.bmp" />
+    <None Include="res\MenuViewerBt_2.bmp" />
+    <None Include="res\NoImage.bmp" />
+    <None Include="res\NumPad0.bmp" />
+    <None Include="res\NumPad0_0.bmp" />
+    <None Include="res\NumPad1.bmp" />
+    <None Include="res\NumPad1_0.bmp" />
+    <None Include="res\NumPad2.bmp" />
+    <None Include="res\NumPad2_0.bmp" />
+    <None Include="res\NumPad3.bmp" />
+    <None Include="res\NumPad3_0.bmp" />
+    <None Include="res\NumPad4.bmp" />
+    <None Include="res\NumPad4_0.bmp" />
+    <None Include="res\NumPad5.bmp" />
+    <None Include="res\NumPad5_0.bmp" />
+    <None Include="res\NumPad6.bmp" />
+    <None Include="res\NumPad6_0.bmp" />
+    <None Include="res\NumPad7.bmp" />
+    <None Include="res\NumPad7_0.bmp" />
+    <None Include="res\NumPad8.bmp" />
+    <None Include="res\NumPad8_0.bmp" />
+    <None Include="res\NumPad9.bmp" />
+    <None Include="res\NumPad9_0.bmp" />
+    <None Include="res\NumPadCancel.bmp" />
+    <None Include="res\NumPadCancel_0.bmp" />
+    <None Include="res\NumPadOk.bmp" />
+    <None Include="res\NumPadOk_0.bmp" />
+    <None Include="res\NumPadReset.bmp" />
+    <None Include="res\NumPadReset_0.bmp" />
+    <None Include="res\OmitPorgress.bmp" />
+    <None Include="res\OmitPorgress_1.bmp" />
+    <None Include="res\OmitPorgress_NG.bmp" />
+    <None Include="res\OmitPorgress_NG_1.bmp" />
+    <None Include="res\OmitPorgress_OK.bmp" />
+    <None Include="res\OmitPorgress_OK_1.bmp" />
+    <None Include="res\Result_NG.bmp" />
+    <None Include="res\Result_OK.bmp" />
+    <None Include="res\Result_Ready.bmp" />
+    <None Include="res\Result_Soup.bmp" />
+    <None Include="res\Result_Soup_2.bmp" />
+    <None Include="res\Result_Soup_3.bmp" />
+    <None Include="res\SettingScreen.bmp" />
+    <None Include="res\SetupMenuIcon.bmp" />
+    <None Include="res\SubScreen_2.bmp" />
+    <None Include="res\SubScreen_3.bmp" />
+    <None Include="res\SubScreen_4.bmp" />
+    <None Include="res\SubScreen_5.bmp" />
+    <None Include="res\Toolbar.bmp" />
+    <None Include="res\Toolbar256.bmp" />
+    <None Include="res\XrayAni.bmp" />
+    <None Include="res\XrayAni_1.bmp" />
+    <None Include="res\XrayAni_Clear.bmp" />
+    <None Include="res\Xray_OFF.bmp" />
+    <None Include="res\Xray_ON.bmp" />
+    <None Include="res\Xray_Prepare.bmp" />
+    <None Include="res_CHI\AdminReInput.bmp" />
+    <None Include="res_CHI\AdminReInput_1.bmp" />
+    <None Include="res_CHI\BgAdmin.bmp" />
+    <None Include="res_CHI\BgAutoSetup.bmp" />
+    <None Include="res_CHI\BgChangeProductname.bmp" />
+    <None Include="res_CHI\BgConditionOmitSetup.bmp" />
+    <None Include="res_CHI\BgConditionOmitSetup_1.bmp" />
+    <None Include="res_CHI\BgConditionOmitSetup_2.bmp" />
+    <None Include="res_CHI\BgConditionSetup.bmp" />
+    <None Include="res_CHI\BgConditionSetup_2.bmp" />
+    <None Include="res_CHI\BgConditionSetup_2_0.bmp" />
+    <None Include="res_CHI\BgConditionSetup_3.bmp" />
+    <None Include="res_CHI\BgConditionSetup_6.bmp" />
+    <None Include="res_CHI\BgConditionSetup_Tal.bmp" />
+    <None Include="res_CHI\BgMessageBox.bmp" />
+    <None Include="res_CHI\BgProductcopy.bmp" />
+    <None Include="res_CHI\BgProgress.bmp" />
+    <None Include="res_CHI\BgSelectProduct.bmp" />
+    <None Include="res_CHI\BgSetupAuto.bmp" />
+    <None Include="res_CHI\BgSetupAutoXray.bmp" />
+    <None Include="res_CHI\BgSetupMenu.bmp" />
+    <None Include="res_CHI\BgSetupMenu_0.bmp" />
+    <None Include="res_CHI\BgSetupMenu_1.bmp" />
+    <None Include="res_CHI\BgSetupMenu_2.bmp" />
+    <None Include="res_CHI\BgSetupMenu_3.bmp" />
+    <None Include="res_CHI\BgSetupMenu_31.bmp" />
+    <None Include="res_CHI\BgSetupMenu_4.bmp" />
+    <None Include="res_CHI\BgSpaceDlg.bmp" />
+    <None Include="res_CHI\BtConveyOn.bmp" />
+    <None Include="res_CHI\BtConveyOn_1.bmp" />
+    <None Include="res_CHI\BtSelectProduct_Add.bmp" />
+    <None Include="res_CHI\BtSelectProduct_Add_0.bmp" />
+    <None Include="res_CHI\BtSelectProduct_Choose.bmp" />
+    <None Include="res_CHI\BtSelectProduct_Choose_0.bmp" />
+    <None Include="res_CHI\BtSelectProduct_Del.bmp" />
+    <None Include="res_CHI\BtSelectProduct_Del_0.bmp" />
+    <None Include="res_CHI\BtSelectProduct_Exit.bmp" />
+    <None Include="res_CHI\BtSelectProduct_Exit_0.bmp" />
+    <None Include="res_CHI\BtSelectProduct_Ok.bmp" />
+    <None Include="res_CHI\BtSelectProduct_Ok_0.bmp" />
+    <None Include="res_CHI\BtSelectProduct_Revise.bmp" />
+    <None Include="res_CHI\BtSelectProduct_Revise_1.bmp" />
+    <None Include="res_CHI\BtSetupMenu_11.bmp" />
+    <None Include="res_CHI\BtSetupMenu_111.bmp" />
+    <None Include="res_CHI\BtSetupMenu_12.bmp" />
+    <None Include="res_CHI\BtSetupMenu_13.bmp" />
+    <None Include="res_CHI\BtSetupMenu_21.bmp" />
+    <None Include="res_CHI\BtSetupMenu_22.bmp" />
+    <None Include="res_CHI\BtSetupMenu_23.bmp" />
+    <None Include="res_CHI\BtSetupMenu_31.bmp" />
+    <None Include="res_CHI\BtSetupMenu_32.bmp" />
+    <None Include="res_CHI\BtSetupMenu_33.bmp" />
+    <None Include="res_CHI\BtSetupMenu_41.bmp" />
+    <None Include="res_CHI\BtSetupMenu_43.bmp" />
+    <None Include="res_CHI\BtSetupMenu_43_1.bmp" />
+    <None Include="res_CHI\BtSetupMenu_51.bmp" />
+    <None Include="res_CHI\BtSetupMenu_Close.bmp" />
+    <None Include="res_CHI\BtSetupMenu_Close_1.bmp" />
+    <None Include="res_CHI\BtSetupMenu_Next.bmp" />
+    <None Include="res_CHI\BtSetupMenu_Next_1.bmp" />
+    <None Include="res_CHI\BtSetupMenu_Save.bmp" />
+    <None Include="res_CHI\BtSetupMenu_Save_1.bmp" />
+    <None Include="res_CHI\BtXrayAutoSetup.bmp" />
+    <None Include="res_CHI\BtXrayAutoSetup_1.bmp" />
+    <None Include="res_CHI\ConditionTabMenu1.bmp" />
+    <None Include="res_CHI\ConditionTabMenu1_0.bmp" />
+    <None Include="res_CHI\ConditionTabMenu2.bmp" />
+    <None Include="res_CHI\ConditionTabMenu2_0.bmp" />
+    <None Include="res_CHI\ConditionTabMenu3.bmp" />
+    <None Include="res_CHI\ConditionTabMenu3_0.bmp" />
+    <None Include="res_CHI\Help.bmp" />
+    <None Include="res_CHI\Interock_Backdoor.bmp" />
+    <None Include="res_CHI\Interock_Emergency.bmp" />
+    <None Include="res_CHI\Interock_Frontdoor.bmp" />
+    <None Include="res_CHI\Interock_Left.bmp" />
+    <None Include="res_CHI\Interock_Left_ex.bmp" />
+    <None Include="res_CHI\Interock_Left_hand.bmp" />
+    <None Include="res_CHI\Interock_Monitor.bmp" />
+    <None Include="res_CHI\Interock_Right.bmp" />
+    <None Include="res_CHI\Interock_Right_ex.bmp" />
+    <None Include="res_CHI\Interock_Right_hand.bmp" />
+    <None Include="res_CHI\MainBtCountReset.bmp" />
+    <None Include="res_CHI\MainBtCountReset_1.bmp" />
+    <None Include="res_CHI\MainBtCountReset_2.bmp" />
+    <None Include="res_CHI\MainCondition1.bmp" />
+    <None Include="res_CHI\MainCondition2.bmp" />
+    <None Include="res_CHI\MainCondition3.bmp" />
+    <None Include="res_CHI\MainCondition4.bmp" />
+    <None Include="res_CHI\MainCondition5.bmp" />
+    <None Include="res_CHI\MainCondition6.bmp" />
+    <None Include="res_CHI\MainCtrlScreen.bmp" />
+    <None Include="res_CHI\MainScreen.bmp" />
+    <None Include="res_CHI\MenuSetupBt.bmp" />
+    <None Include="res_CHI\MenuSetupBt_0.bmp" />
+    <None Include="res_CHI\MenuSetupBt_2.bmp" />
+    <None Include="res_CHI\MenuStartBt.bmp" />
+    <None Include="res_CHI\MenuStartBt_0.bmp" />
+    <None Include="res_CHI\MenuStartBt_2.bmp" />
+    <None Include="res_CHI\MenuStopBt.bmp" />
+    <None Include="res_CHI\MenuStopBt_0.bmp" />
+    <None Include="res_CHI\MenuStopBt_2.bmp" />
+    <None Include="res_CHI\MenuViewerBt.bmp" />
+    <None Include="res_CHI\MenuViewerBt_0.bmp" />
+    <None Include="res_CHI\MenuViewerBt_2.bmp" />
+    <None Include="res_CHI\NumPadCancel.bmp" />
+    <None Include="res_CHI\NumPadCancel_0.bmp" />
+    <None Include="res_CHI\NumPadOk.bmp" />
+    <None Include="res_CHI\NumPadOk_0.bmp" />
+    <None Include="res_CHI\NumPadReset.bmp" />
+    <None Include="res_CHI\NumPadReset_0.bmp" />
+    <None Include="res_CHI\Result_Soup1.bmp" />
+    <None Include="res_CHI\Result_Soup2.bmp" />
+    <None Include="res_CHI\Result_Soup3.bmp" />
+    <None Include="res_CHI\SettingScreen.bmp" />
+    <None Include="res_CHI\Xray_OFF.bmp" />
+    <None Include="res_CHI\Xray_ON.bmp" />
+    <None Include="res_CHI\Xray_Prepare.bmp" />
+    <None Include="res_ENG\Admin0.bmp" />
+    <None Include="res_ENG\Admin0_1.bmp" />
+    <None Include="res_ENG\Admin1.bmp" />
+    <None Include="res_ENG\Admin1_1.bmp" />
+    <None Include="res_ENG\Admin2.bmp" />
+    <None Include="res_ENG\Admin2_1.bmp" />
+    <None Include="res_ENG\Admin3.bmp" />
+    <None Include="res_ENG\Admin3_1.bmp" />
+    <None Include="res_ENG\Admin4.bmp" />
+    <None Include="res_ENG\Admin4_1.bmp" />
+    <None Include="res_ENG\Admin5.bmp" />
+    <None Include="res_ENG\Admin5_1.bmp" />
+    <None Include="res_ENG\Admin6.bmp" />
+    <None Include="res_ENG\Admin6_1.bmp" />
+    <None Include="res_ENG\Admin7.bmp" />
+    <None Include="res_ENG\Admin7_1.bmp" />
+    <None Include="res_ENG\Admin8.bmp" />
+    <None Include="res_ENG\Admin8_1.bmp" />
+    <None Include="res_ENG\Admin9.bmp" />
+    <None Include="res_ENG\Admin9_1.bmp" />
+    <None Include="res_ENG\AdminReInput.bmp" />
+    <None Include="res_ENG\AdminReInput_1.bmp" />
+    <None Include="res_ENG\BgAdmin.bmp" />
+    <None Include="res_ENG\BgAutoSetup.bmp" />
+    <None Include="res_ENG\BgAutoSetupChild.bmp" />
+    <None Include="res_ENG\BgAutoSetupChild_4.bmp" />
+    <None Include="res_ENG\BgChangeProductname.bmp" />
+    <None Include="res_ENG\BgConditionOmitSetup.bmp" />
+    <None Include="res_ENG\BgConditionOmitSetup_1.bmp" />
+    <None Include="res_ENG\BgConditionOmitSetup_2.bmp" />
+    <None Include="res_ENG\BgConditionSetup.bmp" />
+    <None Include="res_ENG\BgConditionSetup_0.bmp" />
+    <None Include="res_ENG\BgConditionSetup_2.bmp" />
+    <None Include="res_ENG\BgConditionSetup_2_0.bmp" />
+    <None Include="res_ENG\BgConditionSetup_3.bmp" />
+    <None Include="res_ENG\BgConditionSetup_4.bmp" />
+    <None Include="res_ENG\BgConditionSetup_6.bmp" />
+    <None Include="res_ENG\BgConditionSetup_Tal.bmp" />
+    <None Include="res_ENG\BgMessageBox.bmp" />
+    <None Include="res_ENG\BgNumpad.bmp" />
+    <None Include="res_ENG\BgNumpad_Back1.bmp" />
+    <None Include="res_ENG\BgProductcopy.bmp" />
+    <None Include="res_ENG\BgProgress.bmp" />
+    <None Include="res_ENG\BgSelectProduct.bmp" />
+    <None Include="res_ENG\BgSetupAuto.bmp" />
+    <None Include="res_ENG\BgSetupAutoXray.bmp" />
+    <None Include="res_ENG\BgSetupMenu.bmp" />
+    <None Include="res_ENG\BgSetupMenu_0.bmp" />
+    <None Include="res_ENG\BgSetupMenu_1.bmp" />
+    <None Include="res_ENG\BgSetupMenu_2.bmp" />
+    <None Include="res_ENG\BgSetupMenu_3.bmp" />
+    <None Include="res_ENG\BgSetupMenu_31.bmp" />
+    <None Include="res_ENG\BgSetupMenu_4.bmp" />
+    <None Include="res_ENG\BgSpaceDlg.bmp" />
+    <None Include="res_ENG\BtConveyOn.bmp" />
+    <None Include="res_ENG\BtConveyOn_1.bmp" />
+    <None Include="res_ENG\BtSelectProduct_Add.bmp" />
+    <None Include="res_ENG\BtSelectProduct_Add_0.bmp" />
+    <None Include="res_ENG\BtSelectProduct_Choose.bmp" />
+    <None Include="res_ENG\BtSelectProduct_Choose_0.bmp" />
+    <None Include="res_ENG\BtSelectProduct_Del.bmp" />
+    <None Include="res_ENG\BtSelectProduct_Del_0.bmp" />
+    <None Include="res_ENG\BtSelectProduct_Exit.bmp" />
+    <None Include="res_ENG\BtSelectProduct_Exit_0.bmp" />
+    <None Include="res_ENG\BtSelectProduct_Ok.bmp" />
+    <None Include="res_ENG\BtSelectProduct_Ok_0.bmp" />
+    <None Include="res_ENG\BtSelectProduct_Revise.bmp" />
+    <None Include="res_ENG\BtSelectProduct_Revise_1.bmp" />
+    <None Include="res_ENG\BtSetupMenu_11.bmp" />
+    <None Include="res_ENG\BtSetupMenu_111.bmp" />
+    <None Include="res_ENG\BtSetupMenu_12.bmp" />
+    <None Include="res_ENG\BtSetupMenu_13.bmp" />
+    <None Include="res_ENG\BtSetupMenu_21.bmp" />
+    <None Include="res_ENG\BtSetupMenu_22.bmp" />
+    <None Include="res_ENG\BtSetupMenu_23.bmp" />
+    <None Include="res_ENG\BtSetupMenu_31.bmp" />
+    <None Include="res_ENG\BtSetupMenu_32.bmp" />
+    <None Include="res_ENG\BtSetupMenu_33.bmp" />
+    <None Include="res_ENG\BtSetupMenu_41.bmp" />
+    <None Include="res_ENG\BtSetupMenu_43.bmp" />
+    <None Include="res_ENG\BtSetupMenu_43_1.bmp" />
+    <None Include="res_ENG\BtSetupMenu_51.bmp" />
+    <None Include="res_ENG\BtSetupMenu_Close.bmp" />
+    <None Include="res_ENG\BtSetupMenu_Close_1.bmp" />
+    <None Include="res_ENG\BtSetupMenu_Next.bmp" />
+    <None Include="res_ENG\BtSetupMenu_Next_1.bmp" />
+    <None Include="res_ENG\BtSetupMenu_Save.bmp" />
+    <None Include="res_ENG\BtSetupMenu_Save_1.bmp" />
+    <None Include="res_ENG\BtWindow.bmp" />
+    <None Include="res_ENG\BtXrayAutoSetup.bmp" />
+    <None Include="res_ENG\BtXrayAutoSetup_1.bmp" />
+    <None Include="res_ENG\Bt_help.bmp" />
+    <None Include="res_ENG\ConddnBt.bmp" />
+    <None Include="res_ENG\ConddnBt_1.bmp" />
+    <None Include="res_ENG\ConditionGrid.bmp" />
+    <None Include="res_ENG\ConditionTabMenu1.bmp" />
+    <None Include="res_ENG\ConditionTabMenu1_0.bmp" />
+    <None Include="res_ENG\ConditionTabMenu2.bmp" />
+    <None Include="res_ENG\ConditionTabMenu2_0.bmp" />
+    <None Include="res_ENG\ConditionTabMenu3.bmp" />
+    <None Include="res_ENG\ConditionTabMenu3_0.bmp" />
+    <None Include="res_ENG\CondminusBt.bmp" />
+    <None Include="res_ENG\CondminusBt_1.bmp" />
+    <None Include="res_ENG\CondplusBt.bmp" />
+    <None Include="res_ENG\CondplusBt_1.bmp" />
+    <None Include="res_ENG\CondupBt.bmp" />
+    <None Include="res_ENG\CondupBt_1.bmp" />
+    <None Include="res_ENG\Help.bmp" />
+    <None Include="res_ENG\Interock_Backdoor.bmp" />
+    <None Include="res_ENG\Interock_Emergency.bmp" />
+    <None Include="res_ENG\Interock_Frontdoor.bmp" />
+    <None Include="res_ENG\Interock_Left.bmp" />
+    <None Include="res_ENG\Interock_Left_ex.bmp" />
+    <None Include="res_ENG\Interock_Left_hand.bmp" />
+    <None Include="res_ENG\Interock_Monitor.bmp" />
+    <None Include="res_ENG\Interock_Right.bmp" />
+    <None Include="res_ENG\Interock_Right_ex.bmp" />
+    <None Include="res_ENG\Interock_Right_hand.bmp" />
+    <None Include="res_ENG\MainBtCountReset.bmp" />
+    <None Include="res_ENG\MainBtCountReset_1.bmp" />
+    <None Include="res_ENG\MainBtCountReset_2.bmp" />
+    <None Include="res_ENG\MainCondition1.bmp" />
+    <None Include="res_ENG\MainCondition2.bmp" />
+    <None Include="res_ENG\MainCondition3.bmp" />
+    <None Include="res_ENG\MainCondition4.bmp" />
+    <None Include="res_ENG\MainCondition5.bmp" />
+    <None Include="res_ENG\MainCondition6.bmp" />
+    <None Include="res_ENG\MainCtrlScreen.bmp" />
+    <None Include="res_ENG\MainScreen.bmp" />
+    <None Include="res_ENG\MenuExitBt.bmp" />
+    <None Include="res_ENG\MenuExitBt_0.bmp" />
+    <None Include="res_ENG\MenuSetupBt.bmp" />
+    <None Include="res_ENG\MenuSetupBt_0.bmp" />
+    <None Include="res_ENG\MenuSetupBt_2.bmp" />
+    <None Include="res_ENG\MenuStartBt.bmp" />
+    <None Include="res_ENG\MenuStartBt_0.bmp" />
+    <None Include="res_ENG\MenuStartBt_2.bmp" />
+    <None Include="res_ENG\MenuStopBt.bmp" />
+    <None Include="res_ENG\MenuStopBt_0.bmp" />
+    <None Include="res_ENG\MenuStopBt_2.bmp" />
+    <None Include="res_ENG\MenuViewerBt.bmp" />
+    <None Include="res_ENG\MenuViewerBt_0.bmp" />
+    <None Include="res_ENG\MenuViewerBt_2.bmp" />
+    <None Include="res_ENG\NumPad0.bmp" />
+    <None Include="res_ENG\NumPad0_0.bmp" />
+    <None Include="res_ENG\NumPad1.bmp" />
+    <None Include="res_ENG\NumPad1_0.bmp" />
+    <None Include="res_ENG\NumPad2.bmp" />
+    <None Include="res_ENG\NumPad2_0.bmp" />
+    <None Include="res_ENG\NumPad3.bmp" />
+    <None Include="res_ENG\NumPad3_0.bmp" />
+    <None Include="res_ENG\NumPad4.bmp" />
+    <None Include="res_ENG\NumPad4_0.bmp" />
+    <None Include="res_ENG\NumPad5.bmp" />
+    <None Include="res_ENG\NumPad5_0.bmp" />
+    <None Include="res_ENG\NumPad6.bmp" />
+    <None Include="res_ENG\NumPad6_0.bmp" />
+    <None Include="res_ENG\NumPad7.bmp" />
+    <None Include="res_ENG\NumPad7_0.bmp" />
+    <None Include="res_ENG\NumPad8.bmp" />
+    <None Include="res_ENG\NumPad8_0.bmp" />
+    <None Include="res_ENG\NumPad9.bmp" />
+    <None Include="res_ENG\NumPad9_0.bmp" />
+    <None Include="res_ENG\NumPadCancel.bmp" />
+    <None Include="res_ENG\NumPadCancel_0.bmp" />
+    <None Include="res_ENG\NumPadOk.bmp" />
+    <None Include="res_ENG\NumPadOk_0.bmp" />
+    <None Include="res_ENG\NumPadReset.bmp" />
+    <None Include="res_ENG\NumPadReset_0.bmp" />
+    <None Include="res_ENG\OmitPorgress.bmp" />
+    <None Include="res_ENG\OmitPorgress_NG.bmp" />
+    <None Include="res_ENG\OmitPorgress_OK.bmp" />
+    <None Include="res_ENG\Result_NG.bmp" />
+    <None Include="res_ENG\Result_OK.bmp" />
+    <None Include="res_ENG\Result_Ready.bmp" />
+    <None Include="res_ENG\Result_Soup.bmp" />
+    <None Include="res_ENG\Result_Soup2_ENG.bmp" />
+    <None Include="res_ENG\Result_Soup3_ENG.bmp" />
+    <None Include="res_ENG\Result_Soup_ENG.bmp" />
+    <None Include="res_ENG\SettingScreen.bmp" />
+    <None Include="res_ENG\SubScreen_2.bmp" />
+    <None Include="res_ENG\SubScreen_3.bmp" />
+    <None Include="res_ENG\SubScreen_4.bmp" />
+    <None Include="res_ENG\SubScreen_5.bmp" />
+    <None Include="res_ENG\Toolbar.bmp" />
+    <None Include="res_ENG\Toolbar256.bmp" />
+    <None Include="res_ENG\XrayAni.bmp" />
+    <None Include="res_ENG\XrayAni_Clear.bmp" />
+    <None Include="res_ENG\Xray_OFF.bmp" />
+    <None Include="res_ENG\Xray_ON.bmp" />
+    <None Include="res_ENG\Xray_Prepare.bmp" />
+    <None Include="res_SPN\AdminReInput.bmp" />
+    <None Include="res_SPN\AdminReInput_1.bmp" />
+    <None Include="res_SPN\BgAdmin.bmp" />
+    <None Include="res_SPN\BgAutoSetup.bmp" />
+    <None Include="res_SPN\BgChangeProductname.bmp" />
+    <None Include="res_SPN\BgConditionOmitSetup.bmp" />
+    <None Include="res_SPN\BgConditionOmitSetup_1.bmp" />
+    <None Include="res_SPN\BgConditionOmitSetup_2.bmp" />
+    <None Include="res_SPN\BgConditionSetup.bmp" />
+    <None Include="res_SPN\BgConditionSetup_2.bmp" />
+    <None Include="res_SPN\BgConditionSetup_2_0.bmp" />
+    <None Include="res_SPN\BgConditionSetup_3.bmp" />
+    <None Include="res_SPN\BgConditionSetup_6.bmp" />
+    <None Include="res_SPN\BgConditionSetup_Tal.bmp" />
+    <None Include="res_SPN\BgMessageBox.bmp" />
+    <None Include="res_SPN\BgProductcopy.bmp" />
+    <None Include="res_SPN\BgProgress.bmp" />
+    <None Include="res_SPN\BgSelectProduct.bmp" />
+    <None Include="res_SPN\BgSetupAuto.bmp" />
+    <None Include="res_SPN\BgSetupAutoXray.bmp" />
+    <None Include="res_SPN\BgSetupMenu.bmp" />
+    <None Include="res_SPN\BgSetupMenu_0.bmp" />
+    <None Include="res_SPN\BgSetupMenu_1.bmp" />
+    <None Include="res_SPN\BgSetupMenu_2.bmp" />
+    <None Include="res_SPN\BgSetupMenu_3.bmp" />
+    <None Include="res_SPN\BgSetupMenu_31.bmp" />
+    <None Include="res_SPN\BgSetupMenu_4.bmp" />
+    <None Include="res_SPN\BgSpaceDlg.bmp" />
+    <None Include="res_SPN\BtConveyOn.bmp" />
+    <None Include="res_SPN\BtConveyOn_1.bmp" />
+    <None Include="res_SPN\BtSelectProduct_Add.bmp" />
+    <None Include="res_SPN\BtSelectProduct_Add_0.bmp" />
+    <None Include="res_SPN\BtSelectProduct_Choose.bmp" />
+    <None Include="res_SPN\BtSelectProduct_Choose_0.bmp" />
+    <None Include="res_SPN\BtSelectProduct_Del.bmp" />
+    <None Include="res_SPN\BtSelectProduct_Del_0.bmp" />
+    <None Include="res_SPN\BtSelectProduct_Exit.bmp" />
+    <None Include="res_SPN\BtSelectProduct_Exit_0.bmp" />
+    <None Include="res_SPN\BtSelectProduct_Ok.bmp" />
+    <None Include="res_SPN\BtSelectProduct_Ok_0.bmp" />
+    <None Include="res_SPN\BtSelectProduct_Revise.bmp" />
+    <None Include="res_SPN\BtSelectProduct_Revise_1.bmp" />
+    <None Include="res_SPN\BtSetupMenu_11.bmp" />
+    <None Include="res_SPN\BtSetupMenu_111.bmp" />
+    <None Include="res_SPN\BtSetupMenu_12.bmp" />
+    <None Include="res_SPN\BtSetupMenu_13.bmp" />
+    <None Include="res_SPN\BtSetupMenu_21.bmp" />
+    <None Include="res_SPN\BtSetupMenu_22.bmp" />
+    <None Include="res_SPN\BtSetupMenu_23.bmp" />
+    <None Include="res_SPN\BtSetupMenu_31.bmp" />
+    <None Include="res_SPN\BtSetupMenu_32.bmp" />
+    <None Include="res_SPN\BtSetupMenu_33.bmp" />
+    <None Include="res_SPN\BtSetupMenu_41.bmp" />
+    <None Include="res_SPN\BtSetupMenu_43.bmp" />
+    <None Include="res_SPN\BtSetupMenu_43_1.bmp" />
+    <None Include="res_SPN\BtSetupMenu_51.bmp" />
+    <None Include="res_SPN\BtSetupMenu_Close.bmp" />
+    <None Include="res_SPN\BtSetupMenu_Close_1.bmp" />
+    <None Include="res_SPN\BtSetupMenu_Next.bmp" />
+    <None Include="res_SPN\BtSetupMenu_Next_1.bmp" />
+    <None Include="res_SPN\BtSetupMenu_Save.bmp" />
+    <None Include="res_SPN\BtSetupMenu_Save_1.bmp" />
+    <None Include="res_SPN\BtXrayAutoSetup.bmp" />
+    <None Include="res_SPN\BtXrayAutoSetup_1.bmp" />
+    <None Include="res_SPN\ConditionTabMenu1.bmp" />
+    <None Include="res_SPN\ConditionTabMenu1_0.bmp" />
+    <None Include="res_SPN\ConditionTabMenu2.bmp" />
+    <None Include="res_SPN\ConditionTabMenu2_0.bmp" />
+    <None Include="res_SPN\ConditionTabMenu3.bmp" />
+    <None Include="res_SPN\ConditionTabMenu3_0.bmp" />
+    <None Include="res_SPN\Help.bmp" />
+    <None Include="res_SPN\Interock_Backdoor.bmp" />
+    <None Include="res_SPN\Interock_Emergency.bmp" />
+    <None Include="res_SPN\Interock_Frontdoor.bmp" />
+    <None Include="res_SPN\Interock_Left.bmp" />
+    <None Include="res_SPN\Interock_Left_ex.bmp" />
+    <None Include="res_SPN\Interock_Left_hand.bmp" />
+    <None Include="res_SPN\Interock_Monitor.bmp" />
+    <None Include="res_SPN\Interock_Right.bmp" />
+    <None Include="res_SPN\Interock_Right_ex.bmp" />
+    <None Include="res_SPN\Interock_Right_hand.bmp" />
+    <None Include="res_SPN\MainBtCountReset.bmp" />
+    <None Include="res_SPN\MainBtCountReset_1.bmp" />
+    <None Include="res_SPN\MainBtCountReset_2.bmp" />
+    <None Include="res_SPN\MainCondition1.bmp" />
+    <None Include="res_SPN\MainCondition2.bmp" />
+    <None Include="res_SPN\MainCondition3.bmp" />
+    <None Include="res_SPN\MainCondition4.bmp" />
+    <None Include="res_SPN\MainCondition5.bmp" />
+    <None Include="res_SPN\MainCondition6.bmp" />
+    <None Include="res_SPN\MainCtrlScreen.bmp" />
+    <None Include="res_SPN\MainScreen.bmp" />
+    <None Include="res_SPN\MenuSetupBt.bmp" />
+    <None Include="res_SPN\MenuSetupBt_0.bmp" />
+    <None Include="res_SPN\MenuSetupBt_2.bmp" />
+    <None Include="res_SPN\MenuStartBt.bmp" />
+    <None Include="res_SPN\MenuStartBt_0.bmp" />
+    <None Include="res_SPN\MenuStartBt_2.bmp" />
+    <None Include="res_SPN\MenuStopBt.bmp" />
+    <None Include="res_SPN\MenuStopBt_0.bmp" />
+    <None Include="res_SPN\MenuStopBt_2.bmp" />
+    <None Include="res_SPN\MenuViewerBt.bmp" />
+    <None Include="res_SPN\MenuViewerBt_0.bmp" />
+    <None Include="res_SPN\MenuViewerBt_2.bmp" />
+    <None Include="res_SPN\NumPadCancel.bmp" />
+    <None Include="res_SPN\NumPadCancel_0.bmp" />
+    <None Include="res_SPN\NumPadOk.bmp" />
+    <None Include="res_SPN\NumPadOk_0.bmp" />
+    <None Include="res_SPN\NumPadReset.bmp" />
+    <None Include="res_SPN\NumPadReset_0.bmp" />
+    <None Include="res_SPN\Result_Soup.bmp" />
+    <None Include="res_SPN\Result_Soup2.bmp" />
+    <None Include="res_SPN\Result_Soup3.bmp" />
+    <None Include="res_SPN\SettingScreen.bmp" />
+    <None Include="res_SPN\Xray_OFF.bmp" />
+    <None Include="res_SPN\Xray_ON.bmp" />
+    <None Include="res_SPN\Xray_Prepare.bmp" />
+    <None Include="UserImages.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\CXImage\ximage.h" />
+    <ClInclude Include="AdminDlg.h" />
+    <ClInclude Include="AutoSetup.h" />
+    <ClInclude Include="AutoSetup_0.h" />
+    <ClInclude Include="AutoSetup_1.h" />
+    <ClInclude Include="AutoSetup_2.h" />
+    <ClInclude Include="AutoSetup_3.h" />
+    <ClInclude Include="AutoSetup_4.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="CModbusSerial.h" />
+    <ClInclude Include="comidaq.h" />
+    <ClInclude Include="ComiDaqComm.h" />
+    <ClInclude Include="comidaqctrl2.h" />
+    <ClInclude Include="Comidas.h" />
+    <ClInclude Include="ComidasCommon.h" />
+    <ClInclude Include="ComiEncoderMng.h" />
+    <ClInclude Include="ConditionMaskSetup_0.h" />
+    <ClInclude Include="ConditionMaskSetup_1.h" />
+    <ClInclude Include="ConditionMaskSetup_2.h" />
+    <ClInclude Include="ConditionOmitSetup_0.h" />
+    <ClInclude Include="ConditionOmitSetup_1.h" />
+    <ClInclude Include="ConditionOmitSetup_2.h" />
+    <ClInclude Include="ConditionSetup.h" />
+    <ClInclude Include="ConditionSetup_0.h" />
+    <ClInclude Include="ConditionSetup_1.h" />
+    <ClInclude Include="ConditionSetup_2.h" />
+    <ClInclude Include="ConditionSetup_3.h" />
+    <ClInclude Include="ConditionSetup_4.h" />
+    <ClInclude Include="ConditionSetup_5.h" />
+    <ClInclude Include="ConditionTabCtrl.h" />
+    <ClInclude Include="CtrlPanelView.h" />
+    <ClInclude Include="Deep.h" />
+    <ClInclude Include="DTCommander.h" />
+    <ClInclude Include="DTConst.h" />
+    <ClInclude Include="DTDetector.h" />
+    <ClInclude Include="DTDisplay.h" />
+    <ClInclude Include="DTImage.h" />
+    <ClInclude Include="EventManagerIF.h" />
+    <ClInclude Include="ExitDlg.h" />
+    <ClInclude Include="EYH_ADO.h" />
+    <ClInclude Include="FlatSplitterWnd.h" />
+    <ClInclude Include="GeneratorComm.h" />
+    <ClInclude Include="HelperFunction.h" />
+    <ClInclude Include="imageobject.h" />
+    <ClInclude Include="ImageProcessing.h" />
+    <ClInclude Include="InitailDlg.h" />
+    <ClInclude Include="Intellisense.h" />
+    <ClInclude Include="IntellisenseDoc.h" />
+    <ClInclude Include="IntellisenseView.h" />
+    <ClInclude Include="InterockDlg.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="Maintenance.h" />
+    <ClInclude Include="MessageBoxDlg.h" />
+    <ClInclude Include="ModifyProductName.h" />
+    <ClInclude Include="NSEException.h" />
+    <ClInclude Include="NSEHeader.h" />
+    <ClInclude Include="NumPad.h" />
+    <ClInclude Include="NumPadBack.h" />
+    <ClInclude Include="Product_Copy.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SelectProduct.h" />
+    <ClInclude Include="SerialComm.h" />
+    <ClInclude Include="SetupAuto.h" />
+    <ClInclude Include="SetupAutoXray.h" />
+    <ClInclude Include="SetupMenu.h" />
+    <ClInclude Include="SetupMenu_0.h" />
+    <ClInclude Include="SetupMenu_1.h" />
+    <ClInclude Include="SetupMenu_2.h" />
+    <ClInclude Include="SetupMenu_3.h" />
+    <ClInclude Include="SetupMenu_4.h" />
+    <ClInclude Include="SpaceMsg.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TypeConversion.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AdminDlg.cpp" />
+    <ClCompile Include="AutoSetup.cpp" />
+    <ClCompile Include="AutoSetup_0.cpp" />
+    <ClCompile Include="AutoSetup_1.cpp" />
+    <ClCompile Include="AutoSetup_2.cpp" />
+    <ClCompile Include="AutoSetup_3.cpp" />
+    <ClCompile Include="AutoSetup_4.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="CModbusSerial.cpp" />
+    <ClCompile Include="comidaq.cpp" />
+    <ClCompile Include="comidaqctrl2.cpp" />
+    <ClCompile Include="Comidas.cpp" />
+    <ClCompile Include="ComiEncoderMng.cpp" />
+    <ClCompile Include="ConditionMaskSetup_0.cpp" />
+    <ClCompile Include="ConditionMaskSetup_1.cpp" />
+    <ClCompile Include="ConditionMaskSetup_2.cpp" />
+    <ClCompile Include="ConditionOmitSetup_0.cpp" />
+    <ClCompile Include="ConditionOmitSetup_1.cpp" />
+    <ClCompile Include="ConditionOmitSetup_2.cpp" />
+    <ClCompile Include="ConditionSetup.cpp" />
+    <ClCompile Include="ConditionSetup_0.cpp" />
+    <ClCompile Include="ConditionSetup_1.cpp" />
+    <ClCompile Include="ConditionSetup_2.cpp" />
+    <ClCompile Include="ConditionSetup_3.cpp" />
+    <ClCompile Include="ConditionSetup_4.cpp" />
+    <ClCompile Include="ConditionSetup_5.cpp" />
+    <ClCompile Include="ConditionTabCtrl.cpp" />
+    <ClCompile Include="CtrlPanelView.cpp" />
+    <ClCompile Include="ExitDlg.cpp" />
+    <ClCompile Include="EYH_ADO.cpp" />
+    <ClCompile Include="FlatSplitterWnd.cpp" />
+    <ClCompile Include="GeneratorComm.cpp" />
+    <ClCompile Include="HelperFunction.cpp" />
+    <ClCompile Include="ImageProcessing.cpp" />
+    <ClCompile Include="InitailDlg.cpp" />
+    <ClCompile Include="Intellisense.cpp" />
+    <ClCompile Include="IntellisenseDoc.cpp" />
+    <ClCompile Include="IntellisenseView.cpp" />
+    <ClCompile Include="InterockDlg.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="Maintenance.cpp" />
+    <ClCompile Include="MessageBoxDlg.cpp" />
+    <ClCompile Include="ModifyProductName.cpp" />
+    <ClCompile Include="NSEException.cpp" />
+    <ClCompile Include="NumPad.cpp" />
+    <ClCompile Include="NumPadBack.cpp" />
+    <ClCompile Include="Product_Copy.cpp" />
+    <ClCompile Include="SelectProduct.cpp" />
+    <ClCompile Include="SerialComm.cpp" />
+    <ClCompile Include="SetupAuto.cpp" />
+    <ClCompile Include="SetupAutoXray.cpp" />
+    <ClCompile Include="SetupMenu.cpp" />
+    <ClCompile Include="SetupMenu_0.cpp" />
+    <ClCompile Include="SetupMenu_1.cpp" />
+    <ClCompile Include="SetupMenu_2.cpp" />
+    <ClCompile Include="SetupMenu_3.cpp" />
+    <ClCompile Include="SetupMenu_4.cpp" />
+    <ClCompile Include="SpaceMsg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Intellisense.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ReportDll\ReportDll.vcxproj">
+      <Project>{e6ef1ad4-592c-499a-a20b-b94e475c5543}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Viewer\Viewer.vcxproj">
+      <Project>{3426363d-872f-40fc-9e9d-8e7b2f44a5fe}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Keyboard.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Intellisense.rc" _x007B_7D934547-7258-4C06-9AD3-A3143E9056CA_x007D_="CDtcommanderf31" _x007B_D3120961-C570-471D-B62E-5B2636502D85_x007D_="CDtdetector1" _x007B_F984B792-41DB-4D78-95A7-1C80E40938FD_x007D_="CDtdisplay1" _x007B_ADDEC18D-6A72-4873-9BE7-B708463B8ADC_x007D_="CDtimage1" _x007B_D638FBDD-9AFD-4C6D-B709-3246179BB116_x007D_="CComidaqctrl2" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
