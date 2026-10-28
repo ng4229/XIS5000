@@ -2184,6 +2184,24 @@
     <ClInclude Include="Deep.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="SetupMenu_4_Admin.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupMenu4_Sub0.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupMenu4_Sub1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupMenu4_Sub2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupMenu4_Sub3.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupMenu4_TabCtrl.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Intellisense.cpp">
@@ -2361,6 +2379,24 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="ImageProcessing.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupMenu_4_Admin.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupMenu4_Sub0.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupMenu4_Sub1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupMenu4_Sub2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupMenu4_Sub3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupMenu4_TabCtrl.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

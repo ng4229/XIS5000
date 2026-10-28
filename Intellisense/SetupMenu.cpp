@@ -13,6 +13,12 @@
 #include "SetupMenu_3.h"
 #include "SetupMenu_4.h"
 
+//20200331
+#include "SetupMenu_4_Admin.h"
+
+#include "CtrlPanelView.h"
+#include "MainFrm.h"
+#include "ChildFrm.h"
 // CSetupMenu 대화 상자입니다.
 
 IMPLEMENT_DYNAMIC(CSetupMenu, CDialogEx)

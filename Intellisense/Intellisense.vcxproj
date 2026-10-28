@@ -928,11 +928,17 @@
     <ClInclude Include="SetupAuto.h" />
     <ClInclude Include="SetupAutoXray.h" />
     <ClInclude Include="SetupMenu.h" />
+    <ClInclude Include="SetupMenu4_Sub0.h" />
+    <ClInclude Include="SetupMenu4_Sub1.h" />
+    <ClInclude Include="SetupMenu4_Sub2.h" />
+    <ClInclude Include="SetupMenu4_Sub3.h" />
+    <ClInclude Include="SetupMenu4_TabCtrl.h" />
     <ClInclude Include="SetupMenu_0.h" />
     <ClInclude Include="SetupMenu_1.h" />
     <ClInclude Include="SetupMenu_2.h" />
     <ClInclude Include="SetupMenu_3.h" />
     <ClInclude Include="SetupMenu_4.h" />
+    <ClInclude Include="SetupMenu_4_Admin.h" />
     <ClInclude Include="SpaceMsg.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -991,11 +997,17 @@
     <ClCompile Include="SetupAuto.cpp" />
     <ClCompile Include="SetupAutoXray.cpp" />
     <ClCompile Include="SetupMenu.cpp" />
+    <ClCompile Include="SetupMenu4_Sub0.cpp" />
+    <ClCompile Include="SetupMenu4_Sub1.cpp" />
+    <ClCompile Include="SetupMenu4_Sub2.cpp" />
+    <ClCompile Include="SetupMenu4_Sub3.cpp" />
+    <ClCompile Include="SetupMenu4_TabCtrl.cpp" />
     <ClCompile Include="SetupMenu_0.cpp" />
     <ClCompile Include="SetupMenu_1.cpp" />
     <ClCompile Include="SetupMenu_2.cpp" />
     <ClCompile Include="SetupMenu_3.cpp" />
     <ClCompile Include="SetupMenu_4.cpp" />
+    <ClCompile Include="SetupMenu_4_Admin.cpp" />
     <ClCompile Include="SpaceMsg.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
